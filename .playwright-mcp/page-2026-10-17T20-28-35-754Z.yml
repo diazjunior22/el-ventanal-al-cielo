@@ -1,0 +1,973 @@
+- generic [ref=f32e1]:
+  - link "Saltar al contenido principal" [ref=f32e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner:
+    - navigation "Navegación principal" [ref=f32e3]:
+      - link "El Ventanal al Cielo - Inicio" [ref=f32e4] [cursor=pointer]:
+        - /url: "#inicio"
+        - img "Logotipo Oficial El Ventanal al Cielo" [ref=f32e5]
+        - generic [ref=f32e6]:
+          - generic [ref=f32e7]: El Ventanal al Cielo
+          - generic [ref=f32e8]: La Buitrera · Palmira
+      - list [ref=f32e9]:
+        - listitem [ref=f32e10]:
+          - link "Inicio" [ref=f32e11] [cursor=pointer]:
+            - /url: "#inicio"
+        - listitem [ref=f32e12]:
+          - link "Cabañas" [ref=f32e13] [cursor=pointer]:
+            - /url: "#cabanas"
+        - listitem [ref=f32e14]:
+          - link "Pasadías" [ref=f32e15] [cursor=pointer]:
+            - /url: "#pasadias"
+        - listitem [ref=f32e16]:
+          - link "Experiencia" [ref=f32e17] [cursor=pointer]:
+            - /url: "#experiencia"
+        - listitem [ref=f32e18]:
+          - link "Galería" [ref=f32e19] [cursor=pointer]:
+            - /url: "#galeria"
+        - listitem [ref=f32e20]:
+          - link "Reseñas" [ref=f32e21] [cursor=pointer]:
+            - /url: "#resenas"
+        - listitem [ref=f32e22]:
+          - link "Ubicación" [ref=f32e23] [cursor=pointer]:
+            - /url: "#ubicacion"
+      - button "Consultar fechas" [ref=f32e25] [cursor=pointer]
+  - dialog [aria-hidden]:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: El Ventanal al Cielo
+              - generic: La Buitrera · Palmira
+          - button
+        - list:
+          - listitem:
+            - link:
+              - /url: "#inicio"
+              - text: Inicio
+          - listitem:
+            - link:
+              - /url: "#cabanas"
+              - text: Cabañas
+          - listitem:
+            - link:
+              - /url: "#pasadias"
+              - text: Pasadías
+          - listitem:
+            - link:
+              - /url: "#experiencia"
+              - text: Experiencia
+          - listitem:
+            - link:
+              - /url: "#galeria"
+              - text: Galería
+          - listitem:
+            - link:
+              - /url: "#resenas"
+              - text: Reseñas & RNT
+          - listitem:
+            - link:
+              - /url: "#ubicacion"
+              - text: Ubicación
+          - listitem:
+            - link:
+              - /url: "#faq"
+              - text: Preguntas frecuentes
+      - generic:
+        - button:
+          - generic: Consultar fechas
+        - paragraph: La Buitrera de Palmira · Sector Arenillo Alto
+  - main [ref=f32e27]:
+    - region "Portada de bienvenida" [ref=f32e28]:
+      - img "Fogata nocturna en la terraza de El Ventanal al Cielo con vista panorámica a las luces del Valle del Cauca y cielo estrellado" [ref=f32e30]
+      - generic [ref=f32e33]:
+        - generic [ref=f32e34]: La Buitrera de Palmira · Valle del Cauca
+        - heading [level=1] [ref=f32e40]:
+          - text: Tu refugio entre las
+          - emphasis [ref=f32e41]: montañas
+          - text: .
+        - paragraph [ref=f32e42]: Descubre un refugio en las alturas del Valle del Cauca, con paisajes que invitan a desconectarse y momentos especiales para compartir en pareja.
+        - generic [ref=f32e43]:
+          - button "Consultar disponibilidad" [ref=f32e44] [cursor=pointer]
+          - link "Explorar cabañas" [ref=f32e49] [cursor=pointer]:
+            - /url: "#cabanas"
+        - link "★★★★★ 5.0 en Google Reviews · RNT 226780 Oficial" [ref=f32e55] [cursor=pointer]:
+          - /url: "#resenas"
+          - generic [ref=f32e56]: ★★★★★
+          - strong [ref=f32e57]: 5.0 en Google Reviews
+          - generic [ref=f32e58]: ·
+          - generic [ref=f32e59]: RNT 226780 Oficial
+    - region [ref=f32e60]:
+      - generic [ref=f32e61]:
+        - generic [ref=f32e62]:
+          - generic [ref=f32e63]: Filosofía de descanso
+          - heading [level=2] [ref=f32e64]:
+            - text: Hay lugares que invitan a
+            - emphasis [ref=f32e65]: quedarse
+            - text: un poco más.
+          - paragraph [ref=f32e66]: Subir a Arenillo Alto es dejar el afán de la ciudad abajo. Aquí el tiempo se mide por el cambio de luz en las cordilleras, un café caliente en la mañana y el frío rico de la tarde para arroparse juntos.
+        - generic [ref=f32e67]:
+          - article [ref=f32e68]:
+            - img "Fogata encendida con vista panorámica nocturna al valle y a las luces de Palmira" [ref=f32e70]
+            - generic [ref=f32e71]:
+              - generic [ref=f32e72]: Sin prisa
+              - heading [level=3] [ref=f32e73]:
+                - text: El valor del
+                - emphasis [ref=f32e74]: silencio
+              - paragraph [ref=f32e75]: La calma de la ladera andina donde lo único que se escucha es el murmullo de los árboles y el trinar de las aves al amanecer.
+          - article [ref=f32e76]:
+            - img "Habitación decorada con pétalos de rosas y vista a la cordillera" [ref=f32e78]
+            - generic [ref=f32e79]:
+              - generic [ref=f32e80]: En pareja
+              - heading [level=3] [ref=f32e81]:
+                - text: Momentos para
+                - emphasis [ref=f32e82]: dos
+              - paragraph [ref=f32e83]: Una terraza de madera para contemplar el valle, compartir una copa de vino y ver cómo las luces lejanas de Palmira titilan en la noche.
+          - article [ref=f32e84]:
+            - img "Vistas panorámicas a las montañas y cañones verdes de La Buitrera" [ref=f32e86]
+            - generic [ref=f32e87]:
+              - generic [ref=f32e88]: Cordillera viva
+              - heading [level=3] [ref=f32e89]:
+                - text: Naturaleza en
+                - emphasis [ref=f32e90]: estado puro
+              - paragraph [ref=f32e91]: Despertar con la niebla acariciando los cañones verdes y descubrir colibríes y orquídeas silvestres a pocos pasos del ventanal.
+    - region [ref=f32e92]:
+      - generic [ref=f32e93]:
+        - generic [ref=f32e94]:
+          - generic [ref=f32e95]: Hospedaje de autor
+          - heading [level=2] [ref=f32e96]:
+            - text: Nuestros Alojamientos ·
+            - emphasis [ref=f32e97]: Planes Pareja
+          - paragraph [ref=f32e98]: Dos formas exclusivas de vivir la magia de la cordillera en La Buitrera de Palmira. Desde la privacidad total con jacuzzi caliente hasta la auténtica desconexión de nuestro glamping de montaña.
+        - generic [ref=f32e99]:
+          - article [ref=f32e100]:
+            - generic [ref=f32e101]:
+              - generic [ref=f32e102]:
+                - generic [ref=f32e103]:
+                  - img "Habitación privada con cama y gran ventanal panorámico a la cordillera en Cabaña Privada" [ref=f32e104]
+                  - generic [ref=f32e105]: 💑 Plan Pareja · Exclusividad
+                - generic "Fotografías de la cabaña" [ref=f32e107]:
+                  - button "Ver habitación y ventanal panorámico" [ref=f32e108] [cursor=pointer]:
+                    - img "Habitación con cama y gran ventanal a la cordillera" [ref=f32e109]
+                  - button "Ver jacuzzi privado con agua caliente y bienvenida" [ref=f32e110] [cursor=pointer]:
+                    - img "Jacuzzi privado con agua caliente y bienvenida" [ref=f32e111]
+                  - button "Ver malla catamarán con vista al cielo" [ref=f32e112] [cursor=pointer]:
+                    - img "Malla catamarán suspendida con vista panorámica" [ref=f32e113]
+                  - button "Ver zona de fogata privada con masmelos" [ref=f32e114] [cursor=pointer]:
+                    - img "Zona de fogata privada con masmelos al fuego" [ref=f32e115]
+              - generic [ref=f32e116]:
+                - generic [ref=f32e117]:
+                  - generic [ref=f32e118]:
+                    - generic [ref=f32e119]: Plan Todo Incluido
+                    - generic [ref=f32e120]: Seguro médico incluido
+                  - heading "Cabaña Privada" [level=3] [ref=f32e121]
+                  - paragraph [ref=f32e122]: La Buitrera de Palmira · Sector Arenillo Alto, vía al Chalet
+                  - paragraph [ref=f32e123]: Una estancia íntima rodeada de naturaleza virgen, con jacuzzi de agua caliente bajo el firmamento, malla catamarán para contemplar el paisaje, fogata privada al anochecer y desayuno campesino tradicional servido en la montaña.
+                - generic [ref=f32e124]:
+                  - generic [ref=f32e129]:
+                    - text: "Check-in:"
+                    - strong [ref=f32e130]: 3:00 pm
+                  - generic [ref=f32e135]:
+                    - text: "Check-out:"
+                    - strong [ref=f32e136]: 1:00 pm
+                - generic [ref=f32e137]:
+                  - generic [ref=f32e138]:
+                    - generic [ref=f32e139]: Entre semana
+                    - generic [ref=f32e142]: $240.000 / noche
+                    - generic [ref=f32e143]: Por pareja (Dom - Jue)
+                    - generic [ref=f32e144]: "Anticipo 50%: $120.000 (Nequi)"
+                  - generic [ref=f32e145]:
+                    - generic [ref=f32e146]: Fines de semana
+                    - generic [ref=f32e149]: $280.000 / noche
+                    - generic [ref=f32e150]: Por pareja (Vie, Sáb y Festivos)
+                    - generic [ref=f32e151]: "Anticipo 50%: $140.000 (Nequi)"
+                - generic [ref=f32e152]:
+                  - generic [ref=f32e153]:
+                    - generic [ref=f32e154]: "Servicios y comodidades incluidos en tu plan:"
+                    - generic [ref=f32e155]: 13 beneficios
+                  - generic [ref=f32e156]:
+                    - generic [ref=f32e157]: Jacuzzi agua caliente 🛀
+                    - generic [ref=f32e162]: Malla catamarán 🌌
+                    - generic [ref=f32e170]: Fogata privada 🔥
+                    - generic [ref=f32e174]: Masmelos 🍬
+                    - generic [ref=f32e180]: Dos copas de vino 🍷
+                    - generic [ref=f32e184]: Desayuno campestre 🍳
+                    - generic [ref=f32e189]: Piscina natural 🏊
+                    - generic [ref=f32e195]: Zona de hamacas 🌿
+                    - generic [ref=f32e199]: Baño privado 🚿
+                    - generic [ref=f32e203]: Televisión 📺
+                    - generic [ref=f32e208]: WiFi de montaña 🛜
+                    - generic [ref=f32e214]: Avistamiento de aves 🦜
+                    - generic [ref=f32e218]: Seguro médico 🛡️
+                - generic [ref=f32e222]:
+                  - button "Consultar disponibilidad" [ref=f32e223] [cursor=pointer]
+                  - button "Ver fotos y detalles" [ref=f32e228] [cursor=pointer]
+                  - link "WhatsApp" [ref=f32e230] [cursor=pointer]:
+                    - /url: https://wa.me/573183831095?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20la%20Caba%C3%B1a%20Privada%20(Plan%20Pareja)%20en%20El%20Ventanal%20al%20Cielo.
+          - article [ref=f32e234]:
+            - generic [ref=f32e235]:
+              - generic [ref=f32e236]:
+                - generic [ref=f32e237]:
+                  - img "Glamping Palomera cabaña sencilla con vista panorámica en La Buitrera de Palmira" [ref=f32e238]
+                  - generic [ref=f32e239]: 🛖 Glamping Palomera · Cabaña Sencilla
+                - generic "Fotografías del glamping palomera" [ref=f32e241]:
+                  - button "Ver interior de la cabaña con vista panorámica" [ref=f32e242] [cursor=pointer]:
+                    - img "Habitación rústica con cama y vista panorámica nocturna" [ref=f32e243]
+                  - button "Ver malla catamarán con vista al valle" [ref=f32e244] [cursor=pointer]:
+                    - img "Malla catamarán suspendida con vista panorámica al valle" [ref=f32e245]
+                  - button "Ver zona de fogata con vista nocturna" [ref=f32e246] [cursor=pointer]:
+                    - img "Fogata de leña encendida frente a las luces de Palmira" [ref=f32e247]
+              - generic [ref=f32e248]:
+                - generic [ref=f32e249]:
+                  - generic [ref=f32e250]:
+                    - generic [ref=f32e251]: Plan Pareja · Sencilla
+                    - generic [ref=f32e252]: Seguro médico incluido
+                  - heading "Glamping Palomera 🛖" [level=3] [ref=f32e253]
+                  - paragraph [ref=f32e254]: La Buitrera de Palmira · Sector Arenillo Alto, vía al Chalet
+                  - paragraph [ref=f32e255]: Un espacio íntimo y auténtico de desconexión rural. Ideal para parejas que desean vivir la magia del glamping en la montaña con noche al calor de la fogata con masmelos, malla catamarán con vista al cañón, piscina natural de manantial y desayuno campestre campesino.
+                - generic [ref=f32e256]:
+                  - generic [ref=f32e261]:
+                    - text: "Check-in:"
+                    - strong [ref=f32e262]: 3:00 pm
+                  - generic [ref=f32e267]:
+                    - text: "Check-out:"
+                    - strong [ref=f32e268]: 2:00 pm
+                    - emphasis [ref=f32e269]: (1 hora adicional)
+                - generic [ref=f32e270]:
+                  - generic [ref=f32e271]:
+                    - generic [ref=f32e272]: Entre semana
+                    - generic [ref=f32e275]: $120.000 / noche
+                    - generic [ref=f32e276]: Por pareja (Dom - Jue)
+                    - generic [ref=f32e277]: "Anticipo 50%: $60.000 (Nequi)"
+                  - generic [ref=f32e278]:
+                    - generic [ref=f32e279]: Fines de semana
+                    - generic [ref=f32e282]: $160.000 / noche
+                    - generic [ref=f32e283]: Por pareja (Vie, Sáb y Festivos)
+                    - generic [ref=f32e284]: "Anticipo 50%: $80.000 (Nequi)"
+                - generic [ref=f32e285]:
+                  - generic [ref=f32e286]:
+                    - generic [ref=f32e287]: "Servicios y comodidades incluidos en tu plan:"
+                    - generic [ref=f32e288]: 8 beneficios
+                  - generic [ref=f32e289]:
+                    - generic [ref=f32e290]: Desayuno campestre 🥣
+                    - generic [ref=f32e295]: Zona de fogata 🔥
+                    - generic [ref=f32e299]: Masmelos al fuego 🍬
+                    - generic [ref=f32e305]: Malla catamarán 🌄
+                    - generic [ref=f32e313]: Piscina natural 🏊
+                    - generic [ref=f32e319]: Baño compartido 🚿
+                    - generic [ref=f32e323]: Avistamiento de aves 🦜
+                    - generic [ref=f32e327]: Seguro médico 🛡️
+                - generic [ref=f32e331]:
+                  - button "Consultar disponibilidad" [ref=f32e332] [cursor=pointer]
+                  - button "Ver fotos y detalles" [ref=f32e337] [cursor=pointer]
+                  - link "WhatsApp" [ref=f32e339] [cursor=pointer]:
+                    - /url: https://wa.me/573183831095?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20el%20Glamping%20Palomera%20(Caba%C3%B1a%20Sencilla)%20en%20El%20Ventanal%20al%20Cielo.
+        - generic "Servicios de movilidad y adicionales" [ref=f32e343]:
+          - generic [ref=f32e351]:
+            - heading "🚗 Parqueadero disponible" [level=4] [ref=f32e352]
+            - paragraph [ref=f32e353]: Espacio privado y seguro dentro del predio para autos y motocicletas, incluido sin costo adicional durante toda tu estadía.
+          - generic [ref=f32e360]:
+            - heading "🚘 Servicio de transporte desde Parque de La Buitrera" [level=4] [ref=f32e361]
+            - paragraph [ref=f32e362]:
+              - strong [ref=f32e363]: $30.000 por persona
+              - text: ·
+              - strong [ref=f32e364]: $60.000 por pareja
+              - text: . Traslado cómodo y confiable desde el parque central de La Buitrera hasta la entrada de El Ventanal al Cielo.
+          - generic [ref=f32e365]:
+            - generic [aria-hidden] [ref=f32e366]: ✨
+            - generic [ref=f32e367]:
+              - heading "✨ Decoración Especial · $80.000" [level=4] [ref=f32e368]
+              - paragraph [ref=f32e369]:
+                - strong [ref=f32e370]: $80.000
+                - text: . Lleva
+                - strong [ref=f32e371]: pétalos, letrero, globos, letrero con luz y velas
+                - text: . Perfecta para celebrar aniversarios, cumpleaños o propuestas de ensueño.
+        - generic [ref=f32e374]:
+          - generic [ref=f32e376]:
+            - img "Decoración romántica con pétalos y velas en El Ventanal al Cielo" [ref=f32e377]
+            - generic [ref=f32e378]:
+              - generic [ref=f32e379]: ✨
+              - generic [ref=f32e380]: Opción disponible · $80.000 COP
+          - generic [ref=f32e381]:
+            - generic [ref=f32e382]: ✨ Opciones de Decoración Disponibles
+            - heading [level=3] [ref=f32e383]:
+              - text: La Decoración
+              - emphasis [ref=f32e384]: Especial
+            - generic [ref=f32e385]:
+              - generic [ref=f32e386]: $80.000
+              - generic [ref=f32e387]: Tarifa para parejas · Por cabaña
+            - paragraph [ref=f32e388]:
+              - text: Sorprende a tu persona favorita con un ambiente mágico e íntimo. La decoración lleva
+              - strong [ref=f32e389]: pétalos, letrero, globos, letrero con luz y velas
+              - text: cuidadosamente preparados en tu cabaña antes de tu llegada. Disponible tanto para hospedaje nocturno como para pasadías de día.
+            - generic [ref=f32e390]:
+              - generic [ref=f32e391]: 🌹 Pétalos
+              - generic [ref=f32e392]: 📜 Letrero
+              - generic [ref=f32e393]: 🎈 Globos
+              - generic [ref=f32e394]: 💡 Letrero con luz
+              - generic [ref=f32e395]: 🕯️ Velas
+            - generic [ref=f32e396]:
+              - button "Reservar con Decoración" [active] [ref=f32e397] [cursor=pointer]
+              - link "Pedir por WhatsApp" [ref=f32e402] [cursor=pointer]:
+                - /url: https://wa.me/573183831095?text=Hola%2C%20quisiera%20solicitar%20la%20Decoraci%C3%B3n%20Especial%20(%2480.000)%20con%20p%C3%A9talos%2C%20letrero%2C%20globos%2C%20letrero%20con%20luz%20y%20velas%20para%20mi%20estad%C3%ADa%20en%20El%20Ventanal%20al%20Cielo.
+    - region [ref=f32e406]:
+      - generic [ref=f32e407]:
+        - generic [ref=f32e408]:
+          - generic [ref=f32e409]: ✨ Escapada de un día · Naturaleza & Desconexión
+          - heading [level=2] [ref=f32e410]:
+            - text: Pasadía en
+            - emphasis [ref=f32e411]: El Ventanal al Cielo
+          - paragraph [ref=f32e412]: Regálate un día rodeado de naturaleza, tranquilidad y paisajes increíbles en La Buitrera, Palmira. Ingreso y disfrute durante el día, sin hospedaje nocturno.
+          - generic [ref=f32e413]:
+            - generic [ref=f32e414]:
+              - generic [ref=f32e415]: 📅
+              - generic [ref=f32e416]:
+                - strong [ref=f32e417]: "Disponible únicamente:"
+                - text: Lunes a Jueves
+            - generic [ref=f32e418]:
+              - generic [ref=f32e419]: 🕗
+              - generic [ref=f32e420]:
+                - strong [ref=f32e421]: "Horario:"
+                - text: 8:00 a. m. a 4:00 p. m.
+            - generic [ref=f32e422]:
+              - generic [ref=f32e423]: 🌅
+              - generic [ref=f32e424]:
+                - strong [ref=f32e425]: "Modalidad:"
+                - text: Disfrute diurno sin pernoctar
+        - generic [ref=f32e426]:
+          - article [ref=f32e427]:
+            - generic [ref=f32e428]:
+              - generic [ref=f32e429]:
+                - img "Pasadía Cabaña Sencilla en El Ventanal al Cielo" [ref=f32e430]
+                - generic [ref=f32e431]: 🏡 Cabaña Sencilla · Pasadía
+              - generic [ref=f32e432]:
+                - generic [ref=f32e433]:
+                  - generic [ref=f32e434]:
+                    - generic [ref=f32e435]: Tarifa neta por pareja
+                    - generic [ref=f32e436]: $100.000 COP
+                  - generic [ref=f32e437]: Lun a Jue · 8am - 4pm
+                - paragraph [ref=f32e438]: Disfruta de la magia del glamping y la brisa andina en nuestra cabaña tradicional, con espacios ideales para desconectarte y tomarte fotos inolvidables.
+                - generic [ref=f32e439]: "Incluye para dos personas:"
+                - list [ref=f32e440]:
+                  - listitem [ref=f32e441]:
+                    - generic [ref=f32e444]: Uso de cabaña sencilla durante el día 🏡
+                  - listitem [ref=f32e445]:
+                    - generic [ref=f32e448]: Snacks para compartir 🥨
+                  - listitem [ref=f32e449]:
+                    - generic [ref=f32e452]: Acceso a piscina natural de manantial 🏊
+                  - listitem [ref=f32e453]:
+                    - generic [ref=f32e456]: Zona de hamacas para descanso 🌿
+                  - listitem [ref=f32e457]:
+                    - generic [ref=f32e460]: Malla catamarán suspendida con vista al cielo 🌌
+                  - listitem [ref=f32e461]:
+                    - generic [ref=f32e464]: Espacios naturales para relajarse y tomar fotografías 📸
+                - generic [ref=f32e465]:
+                  - button "Consultar pasadía" [ref=f32e466] [cursor=pointer]
+                  - link "Consultar por WhatsApp" [ref=f32e471] [cursor=pointer]:
+                    - /url: https://wa.me/573183831095?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20el%20Pasad%C3%ADa%20Caba%C3%B1a%20Sencilla%20(%24100.000%20pareja%2C%208am%20-%204pm)%20en%20El%20Ventanal%20al%20Cielo.
+                    - generic [ref=f32e474]: WhatsApp
+          - article [ref=f32e475]:
+            - generic [ref=f32e476]:
+              - generic [ref=f32e477]:
+                - img "Pasadía Cabaña VIP con Jacuzzi en El Ventanal al Cielo" [ref=f32e478]
+                - generic [ref=f32e479]: 💎 Cabaña VIP · Jacuzzi Caliente
+              - generic [ref=f32e480]:
+                - generic [ref=f32e481]:
+                  - generic [ref=f32e482]:
+                    - generic [ref=f32e483]: Tarifa neta por pareja
+                    - generic [ref=f32e484]: $180.000 COP
+                  - generic [ref=f32e485]: Lun a Jue · 8am - 4pm
+                - paragraph [ref=f32e486]: Una experiencia más privada y exclusiva durante el día, con jacuzzi caliente privado para relajarse al aire libre con vista a las montañas andinas.
+                - generic [ref=f32e487]: "Incluye para dos personas:"
+                - list [ref=f32e488]:
+                  - listitem [ref=f32e489]:
+                    - generic [ref=f32e492]:
+                      - strong [ref=f32e493]: Uso de cabaña VIP
+                      - text: durante el día 🏡
+                  - listitem [ref=f32e494]:
+                    - generic [ref=f32e497]:
+                      - strong [ref=f32e498]: Jacuzzi privado con agua caliente
+                      - text: 🛁
+                  - listitem [ref=f32e499]:
+                    - generic [ref=f32e502]: Snacks para compartir 🥨
+                  - listitem [ref=f32e503]:
+                    - generic [ref=f32e506]: Televisión y WiFi 📺
+                  - listitem [ref=f32e507]:
+                    - generic [ref=f32e510]: Acceso a piscina natural de manantial 🏊
+                  - listitem [ref=f32e511]:
+                    - generic [ref=f32e514]: Zona de hamacas para descanso 🌿
+                  - listitem [ref=f32e515]:
+                    - generic [ref=f32e518]: Malla catamarán suspendida con vista al cielo 🌌
+                  - listitem [ref=f32e519]:
+                    - strong [ref=f32e523]: Una experiencia más privada y exclusiva 🌿✨
+                - generic [ref=f32e524]:
+                  - button "Consultar pasadía VIP" [ref=f32e525] [cursor=pointer]
+                  - link "Consultar por WhatsApp" [ref=f32e530] [cursor=pointer]:
+                    - /url: https://wa.me/573183831095?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20el%20Pasad%C3%ADa%20Caba%C3%B1a%20VIP%20(%24180.000%20pareja%2C%208am%20-%204pm)%20en%20El%20Ventanal%20al%20Cielo.
+                    - generic [ref=f32e533]: WhatsApp
+    - region [ref=f32e534]:
+      - generic [ref=f32e535]:
+        - generic [ref=f32e536]:
+          - generic [ref=f32e537]: Momentos memorables
+          - heading [level=2] [ref=f32e538]:
+            - text: La vida arriba en la
+            - emphasis [ref=f32e539]: cordillera
+          - paragraph [ref=f32e540]: "Detalles sinceros de lo que se vive aquí. Sin promesas exageradas: solo la calma de la ladera andina y la hospitalidad de nuestra montaña."
+        - generic [ref=f32e541]:
+          - article [ref=f32e542]:
+            - img "Atardeceres y vistas panorámicas sobre las cordilleras de Palmira" [ref=f32e543]
+            - generic [ref=f32e545]:
+              - generic [ref=f32e546]: Característica natural del lugar
+              - heading "Atardeceres y vistas panorámicas" [level=3] [ref=f32e547]
+              - paragraph [ref=f32e548]: La orientación hacia el valle ofrece puestas de sol memorables, donde el cielo se tiñe de tonalidades cálidas sobre las cumbres de La Buitrera.
+          - article [ref=f32e549]:
+            - img "Fogata privada y masmelos tostados al fuego en la noche fresca de montaña" [ref=f32e550]
+            - generic [ref=f32e552]:
+              - generic [ref=f32e553]: Incluido en tu cabaña
+              - heading "Fogata privada & Masmelos" [level=3] [ref=f32e554]
+              - paragraph [ref=f32e555]: Fuego encendido en la terraza para abrigar la noche fresca, con masmelos para asar y dos copas de vino de cortesía.
+          - article [ref=f32e556]:
+            - img "Jacuzzi con agua caliente, espuma y globos de celebración" [ref=f32e557]
+            - generic [ref=f32e559]:
+              - generic [ref=f32e560]: Servicio insignia incluido
+              - heading "Jacuzzi con agua caliente" [level=3] [ref=f32e561]
+              - paragraph [ref=f32e562]: Baño caliente al aire libre y malla catamarán suspendida con vistas a los cañones y al cielo estrellado.
+          - article [ref=f32e563]:
+            - img "Avistamiento y contacto natural con flora nativa y vistas de la montaña" [ref=f32e564]
+            - generic [ref=f32e566]:
+              - generic [ref=f32e567]: Entorno biológico protegido
+              - heading "Avistamiento y contacto natural" [level=3] [ref=f32e568]
+              - paragraph [ref=f32e569]: "La riqueza de flora y fauna en Arenillo Alto te acompaña en cada amanecer: colibríes de múltiples especies, orquídeas nativas y el aire más puro del piedemonte vallecaucano."
+    - region [ref=f32e570]:
+      - generic [ref=f32e571]:
+        - generic [ref=f32e572]:
+          - generic [ref=f32e573]: Registro visual
+          - heading [level=2] [ref=f32e574]:
+            - text: Paisajes y
+            - emphasis [ref=f32e575]: momentos
+          - paragraph [ref=f32e576]: La luz de la tarde cayendo sobre el valle, el fogón encendido y los rincones pensados para contemplar sin afán. Haz clic sobre cualquier fotografía para apreciarla en detalle.
+        - group "Filtrar fotografías por categoría" [ref=f32e577]:
+          - button "Todas las fotos" [ref=f32e578] [cursor=pointer]
+          - button "Cabañas" [ref=f32e579] [cursor=pointer]
+          - button "Momentos" [ref=f32e580] [cursor=pointer]
+          - button "Naturaleza" [ref=f32e581] [cursor=pointer]
+          - button "Experiencias" [ref=f32e582] [cursor=pointer]
+        - generic [ref=f32e583]:
+          - 'button "Ampliar foto: Cabaña campestre con piscina natural y doble arcoíris" [ref=f32e584] [cursor=pointer]':
+            - img "Fachada de la cabaña con piscina natural y doble arcoíris en el cielo de La Buitrera" [ref=f32e585]
+          - 'button "Ampliar foto: Malla catamarán al atardecer sobre las montañas" [ref=f32e590] [cursor=pointer]':
+            - img "Malla catamarán suspendida con cobijas al atardecer, jacuzzi y fogata nocturna" [ref=f32e591]
+          - 'button "Ampliar foto: Malla catamarán y bandera de Colombia hacia la cordillera" [ref=f32e596] [cursor=pointer]':
+            - img "Malla catamarán con bandera de Colombia y vista panorámica a la cordillera al atardecer" [ref=f32e597]
+          - 'button "Ampliar foto: Momentos en la montaña: quebrada, parapente y guacamaya" [ref=f32e602] [cursor=pointer]':
+            - img "Collage de vivencias en la montaña con quebrada de agua pura, parapente sobre el valle y fauna silvestre" [ref=f32e603]
+          - 'button "Ampliar foto: Mirador corazón, desayuno campestre y senderos" [ref=f32e608] [cursor=pointer]':
+            - img "Huésped en mirador con marco de corazón, guacamaya en los árboles y desayuno tradicional" [ref=f32e609]
+          - 'button "Ampliar foto: Amigos y visitantes disfrutando la piscina natural" [ref=f32e614] [cursor=pointer]':
+            - img "Grupo de visitantes compartiendo en la piscina natural y mirador con vista al valle" [ref=f32e615]
+          - 'button "Ampliar foto: Paseo campestre, mirador y animales de granja" [ref=f32e620] [cursor=pointer]':
+            - img "Collage con caminante en mirador, gansos en pradera y vistas panorámicas a las montañas" [ref=f32e621]
+          - 'button "Ampliar foto: Loro silvestre en la vegetación de la cordillera" [ref=f32e626] [cursor=pointer]':
+            - img "Perico silvestre de plumaje verde y frente roja entre las ramas de árboles nativos" [ref=f32e627]
+          - 'button "Ampliar foto: Atardecer crepuscular con arco de corazón hacia el valle" [ref=f32e632] [cursor=pointer]':
+            - img "Cielo crepuscular anaranjado con silueta de corazón y vista a la llanura vallecaucana" [ref=f32e633]
+          - 'button "Ampliar foto: Patos en el estanque de agua pura de manantial" [ref=f32e638] [cursor=pointer]':
+            - img "Pata con patitos nadando en estanque natural de agua de manantial de montaña" [ref=f32e639]
+          - 'button "Ampliar foto: Desayuno campestre tradicional con ingredientes locales" [ref=f32e644] [cursor=pointer]':
+            - 'img "Mesa servida con desayuno campestre tradicional: arepa en fogón, queso, chocolate y huevos" [ref=f32e645]'
+        - paragraph [ref=f32e650]:
+          - text: "* Fotografías de referencia visual para conceptualización arquitectónica y ambiental. Fotografías oficiales adicionales disponibles en nuestro Instagram"
+          - link "@el_ventanal_al_cielo" [ref=f32e651] [cursor=pointer]:
+            - /url: https://www.instagram.com/el_ventanal_al_cielo/
+          - text: .
+    - region [ref=f32e652]:
+      - generic [ref=f32e653]:
+        - generic [ref=f32e654]:
+          - generic [ref=f32e655]: 01 · Confianza y reputación
+          - heading [level=2] [ref=f32e656]:
+            - text: Experiencias reales en
+            - emphasis [ref=f32e657]: la montaña
+          - paragraph [ref=f32e658]: La tranquilidad y satisfacción de quienes nos visitan es nuestro mayor compromiso. Presentamos calificaciones 100% auténticas y verificables en nuestro perfil oficial de Google, momentos reales compartidos por huéspedes y nuestro Registro Nacional de Turismo (RNT 226780).
+        - generic [ref=f32e660]:
+          - generic [ref=f32e661]:
+            - generic [ref=f32e662]: "5.0"
+            - generic [ref=f32e663]:
+              - generic "Calificación 5 de 5 estrellas" [ref=f32e664]
+              - generic [ref=f32e675]: Calificación Perfecta
+          - generic [ref=f32e676]:
+            - generic [ref=f32e677]: Ficha Oficial Google Travel & Google Maps
+            - heading "El Ventanal al Cielo en Google Reviews" [level=3] [ref=f32e684]
+            - paragraph [ref=f32e685]: 100% de recomendaciones de 5 estrellas. Opiniones reales de huéspedes que se han hospedado y disfrutado de la Cabaña Privada en La Buitrera de Palmira.
+          - generic [ref=f32e686]:
+            - link "Ver reseñas en Google" [ref=f32e687] [cursor=pointer]:
+              - /url: https://www.google.com/travel/search?q=el%20ventanal%20al%20cielo&g2lb=4965990%2C72471280%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C121529350%2C121608706%2C121738283%2C121921501%2C121951222%2C122035345%2C122078727%2C122093076%2C122097177&hl=en-CO&gl=co&cs=1&ssta=1&ts=CAEaRwopEicyJTB4OGUzYTE3MDAyMjgyMzFlZDoweDFjYmE1MmFiNjNmNzQwYzcSGhIUCgcI6g8QChgdEgcI6g8QChgeGAEyAhAA&qs=CAEyE0Nnb0l4NEhkbjdiVmxOMGNFQUU4AkIJCcdA92OrUrocQgkJx0D3Y6tSuhw&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjYw4XWyL-XAxUAAAAAHQAAAAAQCQ
+            - generic [ref=f32e693]: Testimonios auténticos y verificados
+        - generic [ref=f32e697]:
+          - article [ref=f32e698]:
+            - generic [ref=f32e699]:
+              - generic [aria-hidden] [ref=f32e700]: KP
+              - generic [ref=f32e701]:
+                - generic [ref=f32e702]: Karolina Peralta Lozano
+                - generic [ref=f32e703]: Vacaciones · En pareja
+            - generic "5 de 5 estrellas" [ref=f32e704]
+            - paragraph [ref=f32e715]: “ Excelente ambiente para las personas que buscan tranquilidad y aire puro, excelente atención y deliciosa comida!! Súper recomendado. ”
+            - generic [ref=f32e716]:
+              - generic [ref=f32e717]: "Habitaciones: 5.0"
+              - generic [ref=f32e718]: "Servicio: 5.0"
+              - generic [ref=f32e719]: "Ubicación: 5.0"
+            - generic [ref=f32e720]:
+              - generic [ref=f32e721]: Google Reviews
+              - generic [ref=f32e727]: Reseña verificada
+          - article [ref=f32e728]:
+            - generic [ref=f32e729]:
+              - generic [aria-hidden] [ref=f32e730]: JO
+              - generic [ref=f32e731]:
+                - generic [ref=f32e732]: Jose Manuel Ozuna Lopez
+                - generic [ref=f32e733]: Vacaciones · Descanso
+            - generic "5 de 5 estrellas" [ref=f32e734]
+            - paragraph [ref=f32e745]: “ Un lugar estupendo para descansar y olvidarse de la ciudad. Rodeado de una hermosa naturaleza, la atención de sus anfitriones es inigualable. ”
+            - generic [ref=f32e746]:
+              - generic [ref=f32e747]: Tranquilidad absoluta
+              - generic [ref=f32e748]: "Servicio: 5.0"
+              - generic [ref=f32e749]: "Ubicación: 5.0"
+            - generic [ref=f32e750]:
+              - generic [ref=f32e751]: Google Reviews
+              - generic [ref=f32e757]: Reseña verificada
+          - article [ref=f32e758]:
+            - generic [ref=f32e759]:
+              - generic [aria-hidden] [ref=f32e760]: YL
+              - generic [ref=f32e761]:
+                - generic [ref=f32e762]: Yuliet Lopez
+                - generic [ref=f32e763]: Escapada romántica
+            - generic "5 de 5 estrellas" [ref=f32e764]
+            - paragraph [ref=f32e775]: “ Hermoso lugar, la vista es increíble y el clima delicioso. La atención fue excelente desde la llegada. La cabaña súper cómoda y el jacuzzi con agua caliente una maravilla. ”
+            - generic [ref=f32e776]:
+              - generic [ref=f32e777]: Jacuzzi caliente
+              - generic [ref=f32e778]: Vista panorámica
+              - generic [ref=f32e779]: Atención 10/10
+            - generic [ref=f32e780]:
+              - generic [ref=f32e781]: Google Reviews
+              - generic [ref=f32e787]: Reseña verificada
+          - article [ref=f32e788]:
+            - generic [ref=f32e789]:
+              - generic [aria-hidden] [ref=f32e790]: CG
+              - generic [ref=f32e791]:
+                - generic [ref=f32e792]: Carlos A. Gómez
+                - generic [ref=f32e793]: Fin de semana en pareja
+            - generic "5 de 5 estrellas" [ref=f32e794]
+            - paragraph [ref=f32e805]: “ La atención de los anfitriones te hace sentir como en casa. La desconexión con el ruido de la ciudad es total. Una experiencia para repetir y recomendar a ojo cerrado. ”
+            - generic [ref=f32e806]:
+              - generic [ref=f32e807]: Desconexión total
+              - generic [ref=f32e808]: Desayuno campestre
+              - generic [ref=f32e809]: Recomendado 100%
+            - generic [ref=f32e810]:
+              - generic [ref=f32e811]: Google Reviews
+              - generic [ref=f32e817]: Reseña verificada
+        - generic [ref=f32e818]:
+          - generic [ref=f32e819]:
+            - generic [ref=f32e820]:
+              - generic [ref=f32e821]: Fotografías reales
+              - heading "Momentos auténticos vividos en nuestras cabañas" [level=3] [ref=f32e822]
+            - generic [ref=f32e823]: Fotografías de huéspedes compartidas con autorización
+          - generic [ref=f32e828]:
+            - article [ref=f32e829]:
+              - img "Pareja contemplando el atardecer en la terraza de El Ventanal al Cielo con debida autorización" [ref=f32e830]
+              - generic [ref=f32e831]:
+                - generic [ref=f32e832]: Autorización concedida
+                - heading "Atardecer en la terraza de madera" [level=4] [ref=f32e835]
+                - paragraph [ref=f32e836]: Pareja compartiendo la caída de la tarde sobre la cordillera andina.
+            - article [ref=f32e837]:
+              - img "Pareja brindando con copas de vino junto al jacuzzi con debida autorización" [ref=f32e838]
+              - generic [ref=f32e839]:
+                - generic [ref=f32e840]: Autorización concedida
+                - heading "Brindis y jacuzzi con agua caliente" [level=4] [ref=f32e843]
+                - paragraph [ref=f32e844]: Celebración para dos en la intimidad y frescura de la noche de montaña.
+            - article [ref=f32e845]:
+              - img "Huéspedes descansando en la malla catamarán suspendida con debida autorización" [ref=f32e846]
+              - generic [ref=f32e847]:
+                - generic [ref=f32e848]: Autorización concedida
+                - heading "Desconexión en la malla catamarán" [level=4] [ref=f32e851]
+                - paragraph [ref=f32e852]: Descanso flotante con vista panorámica abierta a los valles y cañones.
+        - generic [ref=f32e855]:
+          - generic [ref=f32e856]:
+            - generic [ref=f32e860]: Colombia · Turismo Formal
+            - generic [ref=f32e861]: RNT 226780
+            - generic [ref=f32e862]: Registro Activo
+          - generic [ref=f32e865]:
+            - generic [ref=f32e866]:
+              - text: "Nombre Comercial Oficial:"
+              - strong [ref=f32e867]: El Ventanal al Cielo
+            - heading "Registro Nacional de Turismo de Colombia (RNT 226780)" [level=3] [ref=f32e868]
+            - paragraph [ref=f32e869]: Operamos bajo el marco formal del Ministerio de Comercio, Industria y Turismo (MinCIT) y Fontur Colombia, garantizando tranquilidad, transparencia y cumplimiento normativo a todos nuestros visitantes.
+            - list [ref=f32e870]:
+              - listitem [ref=f32e871]:
+                - generic [ref=f32e874]: Establecimiento formal de alojamiento y hospedaje
+              - listitem [ref=f32e875]:
+                - generic [ref=f32e878]: Póliza de seguro y asistencia médica incluida
+              - listitem [ref=f32e879]:
+                - generic [ref=f32e882]: La Buitrera · Palmira, Valle del Cauca
+              - listitem [ref=f32e883]:
+                - generic [ref=f32e886]: Consulta oficial en la plataforma de Confecámaras
+          - generic [ref=f32e887]:
+            - link "Verificar en Confecámaras" [ref=f32e888] [cursor=pointer]:
+              - /url: https://rnt.confecamaras.co/
+            - 'button "Copiar RNT: 226780" [ref=f32e894] [cursor=pointer]'
+    - region [ref=f32e899]:
+      - generic [ref=f32e900]:
+        - generic [ref=f32e901]:
+          - generic [ref=f32e902]: 06 · Ubicación y llegada
+          - heading [level=2] [ref=f32e903]:
+            - text: "Tu ruta hacia la cima:"
+            - emphasis [ref=f32e904]: cómo llegar a El Ventanal al Cielo
+          - paragraph [ref=f32e905]:
+            - text: Ubicado en lo alto del corregimiento de
+            - strong [ref=f32e906]: La Buitrera de Palmira
+            - text: ", en el"
+            - strong [ref=f32e907]: Sector Arenillo Alto, vía al Chalet
+            - text: (Valle del Cauca). Sigue nuestro mapa interactivo, mira el video real del recorrido y conoce los últimos tramos de acceso paso a paso.
+        - generic [ref=f32e908]:
+          - generic [ref=f32e910]:
+            - generic [ref=f32e911]:
+              - generic [ref=f32e912]: 📍 Ubicación Geográfica Oficial
+              - generic [ref=f32e913]: La Buitrera, Palmira · Valle
+            - iframe [ref=f32e915]:
+              - generic [ref=f33e1]:
+                - generic [ref=f33e14]:
+                  - link "Abrir en Maps (se abre en una nueva pestaña)" [ref=f33e15] [cursor=pointer]:
+                    - /url: https://maps.google.com/?cid=15205946966073004190&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF
+                    - text: Abrir en Maps
+                  - link "Ver instrucciones sobre cómo llegar (se abre en una nueva pestaña)" [ref=f33e20] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x8e3a1a76cc51b105:0xd30660337a35d09e!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF
+                - generic [ref=f33e6]:
+                  - region "Mapa" [ref=f33e7]
+                  - iframe [aria-hidden] [ref=f33e13]
+            - generic [ref=f32e916]:
+              - generic [ref=f32e922]:
+                - strong [ref=f32e923]: Sector Arenillo Alto, vía al Chalet
+                - text: Corregimiento La Buitrera, Palmira, Valle del Cauca, Colombia.
+              - generic [ref=f32e931]:
+                - strong [ref=f32e932]: Parqueadero privado gratuito
+                - text: Espacio vigilado dentro de las instalaciones para tu vehículo o moto.
+              - generic [ref=f32e933]:
+                - link "Abrir ruta en Google Maps" [ref=f32e934] [cursor=pointer]:
+                  - /url: https://maps.google.com/?q=La+Buitrera+Palmira+Valle+del+Cauca
+                - link "Pedir ubicación WhatsApp" [ref=f32e938] [cursor=pointer]:
+                  - /url: https://wa.me/573183831095?text=Hola%2C%20quisiera%20solicitar%20la%20ubicaci%C3%B3n%20exacta%20y%20gu%C3%ADa%20GPS%20para%20llegar%20a%20El%20Ventanal%20al%20Cielo.
+          - generic [ref=f32e943]:
+            - generic [ref=f32e944]:
+              - generic [ref=f32e945]: 🎥 Video Guía del Ascenso
+              - generic [ref=f32e946]: Ruta desde Parque de La Buitrera
+            - generic [ref=f32e947]:
+              - img "Video de la ruta hacia El Ventanal al Cielo en La Buitrera de Palmira" [ref=f32e948]
+              - generic [ref=f32e950]:
+                - link "Ver video de la ruta" [ref=f32e951] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/
+                - heading "Video del recorrido paso a paso" [level=3] [ref=f32e954]
+                - paragraph [ref=f32e955]: Mira cómo es el camino de montaña en tiempo real, desde el parque central hasta la cima. Así sabrás exactamente qué esperar en cada curva.
+                - generic [ref=f32e956]:
+                  - generic [ref=f32e957]: 🚗 Placa huella y destapado firme
+                  - generic [ref=f32e958]: ⏱️ 15 min de ascenso
+                - link "Ver video en TikTok" [ref=f32e959] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/
+        - generic [ref=f32e963]:
+          - generic [ref=f32e964]:
+            - generic [ref=f32e965]: Guía de ascenso paso a paso
+            - heading "Tramos y detalles del camino a la montaña" [level=3] [ref=f32e966]
+          - generic [ref=f32e967]:
+            - article [ref=f32e968]:
+              - generic [ref=f32e969]:
+                - generic [ref=f32e970]: Tramo 01
+                - generic [aria-hidden] [ref=f32e971]: 🛣️
+              - heading "Desde Palmira o Cali" [level=4] [ref=f32e972]
+              - paragraph [ref=f32e973]: Ascenso por carretera pavimentada principal hasta llegar al casco de La Buitrera. Son aproximadamente 35 a 45 minutos desde el centro de Palmira y 1 hora 20 minutos desde Cali por la Recta.
+            - article [ref=f32e974]:
+              - generic [ref=f32e975]:
+                - generic [ref=f32e976]: Tramo 02 · Referencia
+                - generic [aria-hidden] [ref=f32e977]: 🌳
+              - heading "Parque Central de La Buitrera" [level=4] [ref=f32e978]
+              - paragraph [ref=f32e979]:
+                - strong [ref=f32e980]: "Punto de referencia clave:"
+                - text: Aquí puedes abastecerte de bebidas o provisiones. Si solicitaste nuestro servicio de transporte ($30k persona / $60k pareja), este es el punto de recogida pactado.
+            - article [ref=f32e981]:
+              - generic [ref=f32e982]:
+                - generic [ref=f32e983]: Tramo 03 · Últimos tramos
+                - generic [aria-hidden] [ref=f32e984]: ⛰️
+              - heading "Ascenso a Arenillo Alto (Vía al Chalet)" [level=4] [ref=f32e985]
+              - paragraph [ref=f32e986]: Carretera rural de ladera montañosa con sectores de placa huella y tramos de terreno destapado firme. A medida que ganas altura, el clima se torna más fresco y disfrutas de vistas panorámicas sobre el valle.
+            - article [ref=f32e987]:
+              - generic [ref=f32e988]:
+                - generic [ref=f32e989]: Tramo 04 · Llegada
+                - generic [aria-hidden] [ref=f32e990]: 🏡
+              - heading "El Ventanal al Cielo & Parqueadero" [level=4] [ref=f32e991]
+              - paragraph [ref=f32e992]: Desvío final con portón de acceso privado a las instalaciones. Dispones de parqueadero privado vigilado gratuito. Se recomienda vehículo con buena altura libre al suelo (auto con prudencia, campero o SUV).
+    - region [ref=f32e993]:
+      - generic [ref=f32e994]:
+        - generic [ref=f32e995]:
+          - generic [ref=f32e996]: Cuentas claras
+          - heading [level=2] [ref=f32e997]:
+            - text: Preguntas frecuentes,
+            - emphasis [ref=f32e998]: sin rodeos
+          - paragraph [ref=f32e999]: Todo lo que conviene saber antes de coordinar tu llegada. Condiciones transparentes basadas en acuerdos reales con el anfitrión.
+        - region "Acordeón de preguntas frecuentes" [ref=f32e1000]:
+          - generic [ref=f32e1001]:
+            - button "¿Cómo puedo reservar en El Ventanal al Cielo?" [ref=f32e1002] [cursor=pointer]
+            - generic: "El proceso es transparente y seguro: 1) Diligencias el formulario web de solicitud con tus fechas y datos de contacto; 2) Verificamos la disponibilidad exacta; 3) Realizas el anticipo del 50% vía Nequi (3183831095); 4) Envías el comprobante; 5) Nuestro equipo te confirma oficialmente la reserva con las instrucciones completas de llegada."
+          - generic [ref=f32e1007]:
+            - button "¿Qué información debo proporcionar de mi acompañante y por qué?" [ref=f32e1008] [cursor=pointer]
+            - generic: "Para ambas personas se solicita: nombre completo, número de documento de identidad (cédula o pasaporte), fecha de nacimiento, teléfono, correo y lugar de procedencia. Estos datos se solicitan para formalizar el registro del hospedaje y activar la cobertura del seguro médico incluido durante la estadía, conforme a las directrices del establecimiento."
+          - generic [ref=f32e1013]:
+            - button "¿Cuáles son las tarifas por pareja y cuánto debo pagar de anticipo?" [ref=f32e1014] [cursor=pointer]
+            - generic:
+              - generic:
+                - text: "Contamos con dos opciones de hospedaje oficial por pareja: •"
+                - strong [ref=f32e1019]: "Cabaña Privada con Jacuzzi:"
+                - text: "Entre semana $240.000 COP (Anticipo 50%: $120.000 COP) · Fines de semana $280.000 COP (Anticipo 50%: $140.000 COP). •"
+                - strong [ref=f32e1020]: "Glamping Palomera 🛖 (Cabaña Sencilla):"
+                - text: "Entre semana $120.000 COP (Anticipo 50%: $60.000 COP) · Fines de semana $160.000 COP (Anticipo 50%: $80.000 COP). El pago del anticipo del 50% se realiza por Nequi al"
+                - strong [ref=f32e1021]: "3183831095"
+                - text: para solicitar la reserva, y el 50% restante se liquida al ingresar.
+          - generic [ref=f32e1022]:
+            - button "¿Cómo envío el comprobante de pago?" [ref=f32e1023] [cursor=pointer]
+            - generic: Puedes adjuntarlo al finalizar el formulario web o compartirlo directamente al canal oficial de WhatsApp del alojamiento junto con el nombre del titular de la reserva.
+          - generic [ref=f32e1028]:
+            - button "¿Cuándo queda confirmada oficialmente mi reserva?" [ref=f32e1029] [cursor=pointer]
+            - generic: La reserva queda confirmada únicamente cuando el equipo de El Ventanal al Cielo valida la disponibilidad para las fechas solicitadas, verifica el pago del anticipo del 50% y te remite la confirmación oficial. El envío del formulario constituye una solicitud y no una reserva garantizada en tiempo real.
+          - generic [ref=f32e1034]:
+            - button "¿Qué incluye cada alojamiento y en qué se diferencian?" [ref=f32e1035] [cursor=pointer]
+            - generic:
+              - generic:
+                - text: •
+                - strong [ref=f32e1040]: "Cabaña Privada con Jacuzzi:"
+                - text: Ofrece privacidad total con jacuzzi exclusivo de agua caliente, baño privado con ducha, TV, WiFi, dos copas de vino de cortesía, zona de hamacas, fogata privada, masmelos, piscina natural y desayuno campestre ($240k/$280k). •
+                - strong [ref=f32e1041]: "Glamping Palomera 🛖 (Cabaña Sencilla):"
+                - text: Una estancia rústica y acogedora con cama confortable, zona de fogata con masmelos, malla catamarán al cielo, piscina natural, baño compartido con ducha, avistamiento de aves y desayuno campestre tradicional ($120k/$160k). Ambas estadías incluyen seguro médico obligatorio.
+          - generic [ref=f32e1042]:
+            - button "¿Cuáles son los horarios de ingreso (Check-in) y salida (Check-out)?" [ref=f32e1043] [cursor=pointer]
+            - generic:
+              - generic:
+                - text: Para ambas opciones el
+                - strong [ref=f32e1048]: Check-in es a partir de las 3:00 pm
+                - text: . El
+                - strong [ref=f32e1049]: Check-out en la Cabaña Privada es a la 1:00 pm
+                - text: ", mientras que en el"
+                - strong [ref=f32e1050]: Glamping Palomera 🛖 el Check-out es hasta las 2:00 pm
+                - text: (disfrutas de 1 hora adicional de descanso en la montaña).
+          - generic [ref=f32e1051]:
+            - button "¿Cuáles son las políticas de cancelación o reprogramación?" [ref=f32e1052] [cursor=pointer]
+            - generic: Las políticas de cancelación y cambios de fecha deben ser consultadas y acordadas directamente con el establecimiento antes de realizar el anticipo, ya que pueden variar según temporada.
+          - generic [ref=f32e1057]:
+            - button "¿Cómo llego al alojamiento y qué vehículo se recomienda?" [ref=f32e1058] [cursor=pointer]
+            - generic: El alojamiento está ubicado en La Buitrera de Palmira, sector Arenillo Alto, vía al Chalet. Al ser una vía de ladera montañosa, se recomienda vehículo con buena altura al suelo o consultar previamente el estado de la vía según las condiciones climáticas del día.
+          - generic [ref=f32e1063]:
+            - button "¿Ofrecen servicio de decoración para ocasiones especiales o aniversarios?" [ref=f32e1064] [cursor=pointer]
+            - generic:
+              - generic:
+                - text: ¡Sí! Contamos con nuestro plan oficial
+                - strong [ref=f32e1069]: La Decoración por $80.000 COP
+                - text: "para fechas memorables (aniversarios, cumpleaños o propuestas de matrimonio). Lleva:"
+                - strong [ref=f32e1070]: pétalos de rosa 🌹, letrero alusivo 📜, globos 🎈, letrero con luz 💡 y velas 🕯️
+                - text: . Puedes solicitarla directamente al agendar tu reserva o por WhatsApp, tanto para hospedaje nocturno en cabaña como para pasadías de día.
+          - generic [ref=f32e1071]:
+            - button "¿Cuentan con parqueadero y servicio de transporte?" [ref=f32e1072] [cursor=pointer]
+            - generic:
+              - generic:
+                - text: ¡Sí! Disponemos de
+                - strong [ref=f32e1077]: parqueadero privado y gratuito
+                - text: dentro de las instalaciones para autos y motocicletas. Además, para quienes viajen en transporte intermunicipal o prefieran no conducir por carretera destapada, ofrecemos
+                - strong [ref=f32e1078]: servicio de transporte exclusivo desde el Parque de La Buitrera
+                - text: ":"
+                - strong [ref=f32e1079]: $30.000 por persona
+                - text: o
+                - strong [ref=f32e1080]: $60.000 por pareja
+                - text: ", con recogida coordinada y traslado directo hasta el glamping."
+          - generic [ref=f32e1081]:
+            - button "¿En qué consisten los pasadías y qué horarios manejan?" [ref=f32e1082] [cursor=pointer]
+            - generic:
+              - generic:
+                - text: Nuestros
+                - strong [ref=f32e1087]: Pasadías
+                - text: están disponibles
+                - strong [ref=f32e1088]: únicamente de lunes a jueves en el horario de 8:00 a. m. a 4:00 p. m.
+                - text: "(ingreso y disfrute durante el día, sin hospedaje nocturno). Disponemos de dos opciones por pareja: •"
+                - strong [ref=f32e1089]: "Pasadía Cabaña Sencilla ($100.000 por pareja):"
+                - text: Uso de cabaña sencilla de día, snacks, piscina natural, zona de hamacas, malla catamarán y espacios naturales. •
+                - strong [ref=f32e1090]: "Pasadía Cabaña VIP ($180.000 por pareja):"
+                - text: Uso de cabaña VIP de día,
+                - strong [ref=f32e1091]: jacuzzi privado con agua caliente
+                - text: ", snacks, TV, piscina natural, hamacas, malla catamarán y privacidad total."
+    - region [ref=f32e1092]:
+      - generic [ref=f32e1094]:
+        - generic [ref=f32e1095]: Tu próximo destino
+        - heading [level=2] [ref=f32e1096]:
+          - text: Tu próximo momento especial comienza con una
+          - emphasis [ref=f32e1097]: pausa
+          - text: .
+        - paragraph [ref=f32e1098]: Dinos qué fecha tienes pensada y coordinaremos la disponibilidad directamente contigo.
+        - button "Planear mi escapada" [ref=f32e1099] [cursor=pointer]
+  - contentinfo [ref=f32e1104]:
+    - generic [ref=f32e1105]:
+      - generic [ref=f32e1106]:
+        - generic [ref=f32e1107]:
+          - img "Logo Oficial El Ventanal al Cielo" [ref=f32e1109]
+          - heading "El Ventanal al Cielo" [level=3] [ref=f32e1110]
+          - paragraph [ref=f32e1111]: Lugar de paz · Momentos únicos · Alquiler de cabañas · Hermosas vistas · Escapadas románticas · Naturaleza, descanso e intimidad.
+          - paragraph [ref=f32e1112]: La Buitrera de Palmira, Sector Arenillo Alto, vía al Chalet, Valle del Cauca, Colombia.
+          - generic [ref=f32e1113]:
+            - generic [ref=f32e1114]: RNT 226780
+            - generic [ref=f32e1115]: ·
+            - generic [ref=f32e1116]: Registro Nacional de Turismo
+        - generic [ref=f32e1117]:
+          - heading "Navegación" [level=4] [ref=f32e1118]
+          - list [ref=f32e1119]:
+            - listitem [ref=f32e1120]:
+              - link "Inicio" [ref=f32e1121] [cursor=pointer]:
+                - /url: "#inicio"
+            - listitem [ref=f32e1122]:
+              - link "Nuestras cabañas" [ref=f32e1123] [cursor=pointer]:
+                - /url: "#cabanas"
+            - listitem [ref=f32e1124]:
+              - link "Pasadías de día" [ref=f32e1125] [cursor=pointer]:
+                - /url: "#pasadias"
+            - listitem [ref=f32e1126]:
+              - link "La experiencia" [ref=f32e1127] [cursor=pointer]:
+                - /url: "#experiencia"
+            - listitem [ref=f32e1128]:
+              - link "Galería de fotos" [ref=f32e1129] [cursor=pointer]:
+                - /url: "#galeria"
+            - listitem [ref=f32e1130]:
+              - link "Reseñas & Reputación" [ref=f32e1131] [cursor=pointer]:
+                - /url: "#resenas"
+            - listitem [ref=f32e1132]:
+              - link "Cómo llegar" [ref=f32e1133] [cursor=pointer]:
+                - /url: "#ubicacion"
+            - listitem [ref=f32e1134]:
+              - link "Preguntas frecuentes" [ref=f32e1135] [cursor=pointer]:
+                - /url: "#faq"
+        - generic [ref=f32e1136]:
+          - heading "Políticas" [level=4] [ref=f32e1137]
+          - list [ref=f32e1138]:
+            - listitem [ref=f32e1139]:
+              - button "Tratamiento de datos" [ref=f32e1140] [cursor=pointer]
+            - listitem [ref=f32e1141]:
+              - button "Términos y condiciones" [ref=f32e1142] [cursor=pointer]
+            - listitem [ref=f32e1143]:
+              - link "Políticas de reserva" [ref=f32e1144] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f32e1145]:
+              - link "Políticas de cancelación" [ref=f32e1146] [cursor=pointer]:
+                - /url: "#faq"
+        - generic [ref=f32e1147]:
+          - heading "Canales Oficiales" [level=4] [ref=f32e1148]
+          - list [ref=f32e1149]:
+            - listitem [ref=f32e1150]:
+              - link "Instagram @el_ventanal_al_cielo" [ref=f32e1151] [cursor=pointer]:
+                - /url: https://www.instagram.com/el_ventanal_al_cielo/
+            - listitem [ref=f32e1156]:
+              - link "WhatsApp Oficial" [ref=f32e1157] [cursor=pointer]:
+                - /url: https://wa.me/573183831095
+            - listitem [ref=f32e1161]:
+              - generic [ref=f32e1162]:
+                - generic [ref=f32e1163]: Anticipos de Reserva
+                - text: "Nequi: 3183831095"
+                - button "Copiar número" [ref=f32e1164] [cursor=pointer]
+      - generic [ref=f32e1165]:
+        - generic [ref=f32e1166]: © 2026 El Ventanal al Cielo. Todos los derechos reservados.
+        - generic [ref=f32e1167]: RNT 226780 · Alojamiento Turístico Formal · Palmira, Valle del Cauca, Colombia
+  - complementary "Contacto rápido por WhatsApp" [ref=f32e1168]:
+    - link "Abrir conversación oficial de WhatsApp con El Ventanal al Cielo" [ref=f32e1169] [cursor=pointer]:
+      - /url: https://wa.me/573183831095?text=Hola%2C%20quiero%20consultar%20la%20disponibilidad%20de%20El%20Ventanal%20al%20Cielo.%20Me%20gustar%C3%ADa%20conocer%20las%20opciones%20de%20alojamiento%2C%20tarifas%20y%20condiciones%20para%20las%20fechas%20que%20tengo%20en%20mente.
+  - dialog [ref=f32e1172]:
+    - generic [ref=f32e1174]:
+      - generic [ref=f32e1175]:
+        - generic [ref=f32e1176]:
+          - generic [ref=f32e1177]: Atención directa · WhatsApp Oficial
+          - heading "Consultar Disponibilidad" [level=2] [ref=f32e1178]
+        - button "Cerrar ventana de consulta" [ref=f32e1179] [cursor=pointer]
+      - generic [ref=f32e1184]:
+        - paragraph [ref=f32e1185]:
+          - text: Dinos tus fechas y preferencias de descanso. Al enviar el formulario,
+          - strong [ref=f32e1186]: se abrirá directamente WhatsApp (+57 318 383 1095)
+          - text: con los detalles organizados para confirmar tu reserva.
+        - generic [ref=f32e1187]:
+          - generic [ref=f32e1188]: Alojamiento o Plan de preferencia
+          - combobox "Alojamiento o Plan de preferencia" [ref=f32e1189]:
+            - option "Cabaña Privada con Jacuzzi · Plan Pareja ($240.000 / $280.000)" [selected]
+            - option "Glamping Palomera 🛖 · Cabaña Sencilla ($120.000 / $160.000)"
+            - option "Pasadía Cabaña VIP con Jacuzzi ($180.000 por pareja · 8am - 4pm)"
+            - option "Pasadía Cabaña Sencilla ($100.000 por pareja · 8am - 4pm)"
+            - option "Cualquiera disponible / Asesoría personalizada"
+        - generic [ref=f32e1190]:
+          - generic [ref=f32e1191]:
+            - generic [ref=f32e1192]: Fecha de llegada (Check-in) *
+            - textbox "Fecha de llegada (Check-in) *" [ref=f32e1193]
+          - generic [ref=f32e1194]:
+            - generic [ref=f32e1195]: Fecha de salida (Check-out) *
+            - textbox "Fecha de salida (Check-out) *" [ref=f32e1196]
+        - generic [ref=f32e1197]:
+          - generic [ref=f32e1198]:
+            - generic [ref=f32e1199]: Número de personas
+            - combobox "Número de personas" [ref=f32e1200]:
+              - option "2 Huéspedes (Plan Pareja)" [selected]
+              - option "1 Huésped"
+              - option "3 Huéspedes (Sujeto a confirmación)"
+          - generic [ref=f32e1201]:
+            - generic [ref=f32e1202]: Nombre completo *
+            - textbox "Nombre completo *" [ref=f32e1203]:
+              - /placeholder: Tu nombre y apellido
+          - generic [ref=f32e1204]:
+            - generic [ref=f32e1205]: WhatsApp / Teléfono *
+            - textbox "WhatsApp / Teléfono *" [ref=f32e1206]:
+              - /placeholder: "Ej: 318 123 4567"
+        - generic [ref=f32e1208] [cursor=pointer]:
+          - 'checkbox "🚘 Servicio de transporte adicional: Traslado en vehículo desde el Parque de La Buitrera hasta el Glamping (+$60.000 por pareja). Parqueadero privado gratuito en las instalaciones si vienes en tu propio vehículo." [ref=f32e1209]'
+          - generic [ref=f32e1210]:
+            - text: 🚘
+            - strong [ref=f32e1211]: "Servicio de transporte adicional:"
+            - text: Traslado en vehículo desde el Parque de La Buitrera hasta el Glamping (+$60.000 por pareja).
+            - emphasis [ref=f32e1212]: Parqueadero privado gratuito en las instalaciones si vienes en tu propio vehículo.
+        - generic [ref=f32e1214] [cursor=pointer]:
+          - 'checkbox "✨ Decoración Especial (+$80.000): Incluye pétalos, letrero, globos, letrero con luz y velas. Ideal para aniversarios, propuestas o cumpleaños." [checked] [ref=f32e1215]'
+          - generic [ref=f32e1216]:
+            - text: ✨
+            - strong [ref=f32e1217]: "Decoración Especial (+$80.000):"
+            - text: Incluye pétalos, letrero, globos, letrero con luz y velas.
+            - emphasis [ref=f32e1218]: Ideal para aniversarios, propuestas o cumpleaños.
+        - generic [ref=f32e1219]:
+          - generic [ref=f32e1220]: Mensaje adicional o solicitud especial (Opcional)
+          - textbox "Mensaje adicional o solicitud especial (Opcional)" [ref=f32e1221]:
+            - /placeholder: ¿Celebran algún aniversario, cumpleaños o tienen alguna pregunta específica?
+        - generic [ref=f32e1227]:
+          - strong [ref=f32e1228]: "Tarifas oficiales:"
+          - text: Pasadías desde $100.000 pareja (Lun a Jue) · Cabaña Privada desde $240.000 · Glamping desde $120.000. Selecciona tus fechas para ver el cálculo estimado.
+        - button "Enviar consulta por WhatsApp" [ref=f32e1229] [cursor=pointer]
+        - generic [ref=f32e1233]:
+          - text: ¿Prefieres chatear de inmediato sin llenar fechas?
+          - link "Chatear por WhatsApp directo" [ref=f32e1234] [cursor=pointer]:
+            - /url: https://wa.me/573183831095?text=%C2%A1Hola!%20Deseo%20consultar%20informaci%C3%B3n%20y%20disponibilidad%20para%20El%20Ventanal%20al%20Cielo.
+  - dialog:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: Detalle de Alojamiento
+            - heading "Cabaña" [level=2]
+          - button "Cerrar detalle de cabaña"
+  - dialog "Visor de imagen de galería":
+    - generic:
+      - button "Cerrar visor"
+      - generic:
+        - generic:
+          - heading "Título" [level=4]
+          - text: 1 de 6
+        - generic:
+          - button "Imagen anterior"
+          - button "Imagen siguiente"
+  - dialog:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: Marco Normativo Colombia
+            - heading "Tratamiento de Datos Personales" [level=2]
+          - button "Cerrar modal legal"

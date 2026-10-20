@@ -1,0 +1,257 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "JR MOTOR — Ir al inicio" [ref=e5] [cursor=pointer]:
+        - /url: "#inicio"
+        - generic [aria-hidden] [ref=e6]: JR
+        - generic [ref=e7]:
+          - generic [ref=e8]: JR MOTOR
+          - generic [ref=e9]: Precisión Mecánica
+      - navigation "Navegación principal" [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Inicio" [ref=e13] [cursor=pointer]:
+              - /url: "#inicio"
+          - listitem [ref=e14]:
+            - link "Servicios" [ref=e15] [cursor=pointer]:
+              - /url: "#servicios"
+          - listitem [ref=e16]:
+            - link "Metodología" [ref=e17] [cursor=pointer]:
+              - /url: "#metodologia"
+          - listitem [ref=e18]:
+            - link "Cotizar Cita" [ref=e19] [cursor=pointer]:
+              - /url: "#cotizar"
+          - listitem [ref=e20]:
+            - link "Contacto" [ref=e21] [cursor=pointer]:
+              - /url: "#contacto"
+      - link "Agendar cita en JR MOTOR por WhatsApp" [ref=e23] [cursor=pointer]:
+        - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20consultar%20sobre%20un%20servicio%20t%C3%A9cnico%20%2F%20cotizaci%C3%B3n%20para%20mi%20veh%C3%ADculo.
+        - generic [ref=e26]: Agendar Cita
+  - main [ref=e27]:
+    - region [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: Centro Técnico Especializado
+          - heading "Precisión Mecánica para Máximo Rendimiento" [level=1] [ref=e34]
+          - paragraph [ref=e35]: Diagnóstico computarizado avanzado, mantenimiento preventivo y servicio técnico de alta exigencia para tu vehículo. Cotización previa y atención personalizada sin inventar costos.
+          - generic [ref=e36]:
+            - link "Cotizar servicio por WhatsApp" [ref=e37] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20y%20agendar%20un%20servicio%20t%C3%A9cnico%20para%20mi%20veh%C3%ADculo.
+              - generic [ref=e40]: Cotizar por WhatsApp
+            - link "Explorar Servicios" [ref=e41] [cursor=pointer]:
+              - /url: "#servicios"
+          - generic [ref=e45]:
+            - generic [ref=e49]:
+              - strong [ref=e50]: OBD-II En Vivo
+              - text: Escaneo en tiempo real
+            - generic [ref=e54]:
+              - strong [ref=e55]: Fluidos Certificados
+              - text: Especificación de fábrica
+            - generic [ref=e60]:
+              - strong [ref=e61]: Atención Programada
+              - text: Sin filas innecesarias
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: JR MOTOR // LAB
+            - generic [ref=e65]: SISTEMA ACTIVO
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: Diagnóstico Módulos
+              - generic [ref=e69]: OBD-II / CAN-BUS
+            - generic [ref=e70]:
+              - generic [ref=e71]: Inspección de Seguridad
+              - generic [ref=e72]: 30 Puntos Clave
+            - generic [ref=e73]:
+              - generic [ref=e74]: Canal Oficial de Contacto
+              - generic [ref=e75]: +57 318 383 1095
+            - generic [ref=e76]:
+              - generic [ref=e77]: Presupuesto Previo
+              - generic [ref=e78]: 100% Sin Compromiso
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: ¿Notas algún ruido, testigo en el tablero o falla en tu vehículo?
+            - link "Agendar Evaluación Técnica" [ref=e81] [cursor=pointer]:
+              - /url: "#cotizar"
+    - region [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: Servicios Especializados
+          - heading "Soluciones Técnicas Integrales" [level=2] [ref=e89]
+          - paragraph [ref=e90]: Cada intervención se realiza con herramientas de precisión, torques de fábrica y repuestos homologados.
+        - generic [ref=e91]:
+          - article [ref=e92]:
+            - generic [ref=e93]: SRV-01
+            - generic [ref=e99]: Servicio Profesional con Garantía
+            - heading "Reparación de Motor de Arranque" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Recupera un encendido seguro y confiable con nuestro servicio especializado.
+            - list "Beneficios del servicio" [ref=e105]:
+              - listitem [ref=e106]:
+                - generic [ref=e109]: Diagnóstico preciso del sistema de arranque
+              - listitem [ref=e110]:
+                - generic [ref=e113]: Reparación y mantenimiento del motor de arranque
+              - listitem [ref=e114]:
+                - generic [ref=e117]: Revisión de batería, alternador y conexiones eléctricas
+              - listitem [ref=e118]:
+                - generic [ref=e121]: Reemplazo de piezas con repuestos de calidad
+              - listitem [ref=e122]:
+                - generic [ref=e125]: Servicio profesional con garantía
+            - generic [ref=e126]: Evita fallas al encender tu vehículo y conduce con la tranquilidad de un sistema de arranque en óptimas condiciones.
+            - link "Cotizar Motor de Arranque" [ref=e132] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20el%20servicio%20de%3A%20Reparaci%C3%B3n%20de%20Motor%20de%20Arranque.
+          - article [ref=e136]:
+            - generic [ref=e137]: SRV-02
+            - heading "Mantenimiento Preventivo" [level=3] [ref=e142]
+            - paragraph [ref=e143]: Cambio de lubricantes sintéticos según especificación OEM, sustitución de filtros de aceite, combustible, aire y cabina, e inspección general.
+            - generic [ref=e144]: Inspección de 30 puntos
+            - link "Cotizar este servicio" [ref=e149] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20el%20servicio%20de%3A%20Mantenimiento%20Preventivo.
+          - article [ref=e151]:
+            - generic [ref=e152]: SRV-03
+            - heading "Sincronización & Afinación" [level=3] [ref=e158]
+            - paragraph [ref=e159]: Limpieza ultrasónica y prueba de inyectores, cambio de bujías de iridio o platino, y calibración de cuerpo de aceleración para óptimo consumo.
+            - generic [ref=e160]: Respuesta ágil de aceleración
+            - link "Cotizar este servicio" [ref=e165] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20el%20servicio%20de%3A%20Sincronizaci%C3%B3n%20y%20Afinaci%C3%B3n.
+          - article [ref=e167]:
+            - generic [ref=e168]: SRV-04
+            - heading "Frenos & Suspensión" [level=3] [ref=e178]
+            - paragraph [ref=e179]: Cambio de pastillas cerámicas, discos ventilados, amortiguadores, terminales, axiales y bujes para máxima estabilidad y seguridad en carretera.
+            - generic [ref=e180]: Frenado firme y sin vibración
+            - link "Cotizar este servicio" [ref=e185] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20el%20servicio%20de%3A%20Frenos%20y%20Suspensi%C3%B3n.
+          - article [ref=e187]:
+            - generic [ref=e188]: SRV-05
+            - heading "Sistema Eléctrico & Baterías" [level=3] [ref=e193]
+            - paragraph [ref=e194]: Test de salud de batería, verificación de voltaje de alternador, motor de arranque, cableados principales y detección de consumos parásitos.
+            - generic [ref=e195]: Arranque confiable garantizado
+            - link "Cotizar este servicio" [ref=e200] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20el%20servicio%20de%3A%20Sistema%20El%C3%A9ctrico%20y%20Bater%C3%ADas.
+          - article [ref=e202]:
+            - generic [ref=e203]: SRV-06
+            - heading "Repuestos & Accesorios" [level=3] [ref=e208]
+            - paragraph [ref=e209]: Asesoría y suministro de componentes originales y de grado OEM con compatibilidad certificada para la marca y línea de tu vehículo.
+            - generic [ref=e210]: Trazabilidad de componentes
+            - link "Cotizar este servicio" [ref=e215] [cursor=pointer]:
+              - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20cotizar%20el%20servicio%20de%3A%20Repuestos%20y%20Accesorios.
+    - region [ref=e217]:
+      - generic [ref=e218]:
+        - generic [ref=e219]:
+          - generic [ref=e220]: Rigor de Taller
+          - heading "Metodología de Trabajo en 4 Pasos" [level=2] [ref=e223]
+          - paragraph [ref=e224]: Cero sorpresas. Evaluamos minuciosamente cada vehículo antes de ejecutar cualquier labor técnica.
+        - generic [ref=e225]:
+          - generic [ref=e226]:
+            - generic [ref=e227]: "01"
+            - heading "Recepción & Escaneo" [level=3] [ref=e228]
+            - paragraph [ref=e229]: Registramos síntomas, realizamos inspección visual de compartimento y lectura de fallas activas.
+          - generic [ref=e230]:
+            - generic [ref=e231]: "02"
+            - heading "Cotización Clara" [level=3] [ref=e232]
+            - paragraph [ref=e233]: Detallamos insumos, repuestos y mano de obra necesaria para tu aprobación antes de comenzar.
+          - generic [ref=e234]:
+            - generic [ref=e235]: "03"
+            - heading "Intervención Técnica" [level=3] [ref=e236]
+            - paragraph [ref=e237]: Trabajo con torquímetro, herramientas especializadas e insumos de especificación certificada.
+          - generic [ref=e238]:
+            - generic [ref=e239]: "04"
+            - heading "Prueba de Ruta & Entrega" [level=3] [ref=e240]
+            - paragraph [ref=e241]: Verificación dinámica final de funcionamiento y entrega detallada de las piezas reemplazadas.
+        - generic [ref=e246]:
+          - heading "Compromiso de Honestidad en JR MOTOR" [level=4] [ref=e247]
+          - paragraph [ref=e248]: "No inventamos precios fijos ni garantías no verificables en la web: cada vehículo tiene exigencias distintas. El valor exacto se calcula con base en la evaluación real y repuestos aprobados por ti."
+    - region [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic [ref=e252]: Agendamiento Ágil
+          - heading "Cotiza o Agenda tu Servicio" [level=2] [ref=e255]
+          - paragraph [ref=e256]: Completa los datos de tu vehículo para generar tu solicitud técnica y coordinar disponibilidad de inmediato.
+        - generic [ref=e258]:
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - generic [ref=e261]: Nombre y Apellido *
+              - textbox "Nombre y Apellido *" [ref=e262]:
+                - /placeholder: Ej. Carlos Mendoza
+            - generic [ref=e263]:
+              - generic [ref=e264]: Teléfono / WhatsApp *
+              - textbox "Teléfono / WhatsApp *" [ref=e265]:
+                - /placeholder: Ej. 318 000 0000
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e268]: Vehículo (Marca, Modelo, Año) *
+              - textbox "Vehículo (Marca, Modelo, Año) *" [ref=e269]:
+                - /placeholder: Ej. Chevrolet Onix 2021 / Yamaha MT03
+            - generic [ref=e270]:
+              - generic [ref=e271]: Servicio Requerido *
+              - combobox "Servicio Requerido *" [ref=e272]:
+                - option "Seleccione un servicio..." [disabled] [selected]
+                - option "Reparación de Motor de Arranque"
+                - option "Diagnóstico Computarizado"
+                - option "Mantenimiento Preventivo y Fluidos"
+                - option "Sincronización y Afinación"
+                - option "Frenos y Suspensión"
+                - option "Sistema Eléctrico y Batería"
+                - option "Repuestos o Accesorios"
+                - option "Revisión General Multipunto"
+          - generic [ref=e273]:
+            - generic [ref=e274]: Síntomas o detalles adicionales (Opcional)
+            - textbox "Síntomas o detalles adicionales (Opcional)" [ref=e275]:
+              - /placeholder: Describe algún ruido, testigo encendido en el tablero o requerimiento especial...
+            - generic [ref=e276]: Esta información nos permite preparar los equipos de diagnóstico previamente.
+          - button "Enviar y Coordinar por WhatsApp" [ref=e277] [cursor=pointer]
+    - region [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]:
+          - generic [ref=e284]: Canales Oficiales
+          - heading "Comunícate con JR MOTOR" [level=2] [ref=e287]
+          - paragraph [ref=e288]: Estamos disponibles a través de nuestros canales confirmados para resolver dudas y agendar tu visita.
+        - generic [ref=e289]:
+          - generic [ref=e290]:
+            - heading "WhatsApp Oficial" [level=3] [ref=e294]
+            - paragraph [ref=e295]: Atención técnica directa, cotizaciones y confirmación de citas de taller.
+            - generic [ref=e296]:
+              - generic [ref=e297]: +57 318 383 1095
+              - link "Abrir" [ref=e298] [cursor=pointer]:
+                - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20consultar%20sobre%20un%20servicio%20t%C3%A9cnico%20%2F%20cotizaci%C3%B3n%20para%20mi%20veh%C3%ADculo.
+          - generic [ref=e299]:
+            - heading "Correo Electrónico" [level=3] [ref=e304]
+            - paragraph [ref=e305]: Solicitud de cotizaciones formales, flotas y propuestas comerciales.
+            - generic [ref=e306]:
+              - generic [ref=e307]: contacto.jrmotor@gmail.com
+              - button "Copiar correo de contacto al portapapeles" [ref=e308] [cursor=pointer]
+          - generic [ref=e312]:
+            - heading "Instagram Oficial" [level=3] [ref=e317]
+            - paragraph [ref=e318]: Fotografías reales de intervenciones técnicas, diagnósticos y procesos de taller.
+            - generic [ref=e319]:
+              - generic [ref=e320]: "@jrmotor"
+              - link "Seguir" [ref=e321] [cursor=pointer]:
+                - /url: https://www.instagram.com/jrmotor/
+  - link "Escribir a JR MOTOR por WhatsApp" [ref=e322] [cursor=pointer]:
+    - /url: https://wa.me/573183831095?text=Hola%20JR%20MOTOR%2C%20deseo%20consultar%20sobre%20un%20servicio%20t%C3%A9cnico%20%2F%20cotizaci%C3%B3n%20para%20mi%20veh%C3%ADculo.
+  - contentinfo [ref=e325]:
+    - generic [ref=e326]:
+      - generic [ref=e327]:
+        - generic [ref=e328]:
+          - heading "JR MOTOR" [level=3] [ref=e329]
+          - paragraph [ref=e330]: Centro especializado en mantenimiento mecánico y diagnóstico computarizado. Comprometidos con la precisión y el rendimiento automotriz.
+        - generic [ref=e331]:
+          - heading "Navegación" [level=4] [ref=e332]
+          - list [ref=e333]:
+            - listitem [ref=e334]:
+              - link "Inicio" [ref=e335] [cursor=pointer]:
+                - /url: "#inicio"
+            - listitem [ref=e336]:
+              - link "Servicios Especializados" [ref=e337] [cursor=pointer]:
+                - /url: "#servicios"
+            - listitem [ref=e338]:
+              - link "Proceso de Trabajo" [ref=e339] [cursor=pointer]:
+                - /url: "#metodologia"
+            - listitem [ref=e340]:
+              - link "Cotizar Cita" [ref=e341] [cursor=pointer]:
+                - /url: "#cotizar"
+        - generic [ref=e342]:
+          - heading "Información Técnica" [level=4] [ref=e343]
+          - paragraph [ref=e344]: Atención sujeta a disponibilidad y agendamiento previo. Valle del Cauca, Colombia.
+      - generic [ref=e345]:
+        - paragraph [ref=e346]: © 2026 JR MOTOR. Todos los derechos reservados.
+        - button "Volver arriba" [ref=e347] [cursor=pointer]

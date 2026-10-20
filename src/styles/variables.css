@@ -1,0 +1,98 @@
+/**
+ * DESIGN SYSTEM TOKENS - EL VENTANAL AL CIELO
+ * Paleta cromática oficial y métricas tipográficas editoriales
+ */
+
+:root {
+  /* Paleta cromática estricta del brief */
+  --c-orange-sunset: #F28C28; /* Naranja atardecer: botones principales y focos de acción */
+  --c-orange-sunset-hover: #E07817;
+  --c-solar-gold: #FFD700;    /* Dorado solar: detalles secundarios sutiles */
+  --c-earth-brown: #4A3B32;   /* Marrón tierra: textos principales y secciones oscuras */
+  --c-earth-brown-light: #5E4C41;
+  --c-earth-brown-dark: #372A23;
+  --c-window-gray: #606060;   /* Gris ventanal: textos secundarios, bordes, líneas */
+  --c-window-gray-light: #A09D98;
+  --c-window-gray-faint: rgba(96, 96, 96, 0.12);
+  --c-natural-white: #FCF8F2; /* Blanco natural: fondo principal */
+  --c-natural-white-pure: #FFFFFF;
+  --c-natural-cream: #F4EFE6; /* Superficie secundaria */
+  --c-colibri-red: #A2231D;   /* Rojo colibrí: acentos sutiles de marca */
+  --c-colibri-red-faint: rgba(162, 35, 29, 0.08);
+
+  /* Semántica del sistema */
+  --bg-primary: var(--c-natural-white);
+  --bg-secondary: var(--c-natural-cream);
+  --bg-card: var(--c-natural-white-pure);
+  --bg-dark: var(--c-earth-brown);
+  --bg-dark-deep: var(--c-earth-brown-dark);
+  
+  --text-main: var(--c-earth-brown);
+  --text-muted: var(--c-window-gray);
+  --text-faint: var(--c-window-gray-light);
+  --text-inverse: var(--c-natural-white);
+  --text-inverse-muted: rgba(252, 248, 242, 0.76);
+  
+  --border-subtle: rgba(74, 59, 50, 0.09);
+  --border-card: rgba(74, 59, 50, 0.08);
+  --border-dark: rgba(252, 248, 242, 0.12);
+  --border-focus: var(--c-orange-sunset);
+
+  /* Tipografía Editorial Artesanal (Anti-plantilla IA) */
+  --font-serif: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+
+  /* Escala tipográfica fluida calibrada para Cormorant Garamond */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.2vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.2vw, 0.95rem);
+  --text-base: clamp(1.025rem, 0.98rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.2rem, 1.12rem + 0.4vw, 1.35rem);
+  --text-xl: clamp(1.45rem, 1.32rem + 0.6vw, 1.7rem);
+  --text-2xl: clamp(1.85rem, 1.65rem + 1vw, 2.25rem);
+  --text-3xl: clamp(2.35rem, 2rem + 1.5vw, 3rem);
+  --text-4xl: clamp(2.95rem, 2.45rem + 2.2vw, 3.85rem);
+  --text-5xl: clamp(3.5rem, 2.85rem + 3.2vw, 4.85rem);
+  --text-hero: clamp(2.35rem, 1.85rem + 2.4vw, 4.25rem);
+
+  /* Espaciado macro y micro */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Doppelrand Radii (Nested Architecture) */
+  --radius-outer-lg: 2rem;
+  --radius-inner-lg: calc(2rem - 0.5rem);
+  --radius-outer-md: 1.5rem;
+  --radius-inner-md: calc(1.5rem - 0.375rem);
+  --radius-outer-sm: 1rem;
+  --radius-inner-sm: calc(1rem - 0.25rem);
+  --radius-pill: 9999px;
+
+  /* Sombras etéreas multicapa (Zero sombras duras) */
+  --shadow-ambient: 0 4px 20px -2px rgba(74, 59, 50, 0.05);
+  --shadow-card: 0 10px 30px -4px rgba(74, 59, 50, 0.07), 0 2px 6px -1px rgba(74, 59, 50, 0.03);
+  --shadow-floating: 0 20px 40px -8px rgba(74, 59, 50, 0.12), 0 4px 12px -2px rgba(74, 59, 50, 0.04);
+  --shadow-inner-glow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+  --shadow-glow-sunset: 0 8px 24px -4px rgba(242, 140, 40, 0.35);
+
+  /* Transiciones físicas tipo resorte (Cubic-Bezier) */
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --transition-fast: 200ms var(--ease-spring);
+  --transition-normal: 350ms var(--ease-spring);
+  --transition-slow: 650ms var(--ease-spring);
+
+  /* Contenedores y márgenes */
+  --max-width-content: 1240px;
+  --max-width-narrow: 840px;
+  --nav-height: 64px;
+}

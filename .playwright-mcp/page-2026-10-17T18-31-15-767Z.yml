@@ -1,0 +1,145 @@
+- generic [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - button "Main menu" [ref=e6] [cursor=pointer]
+        - link "Google" [ref=e11] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e15]:
+        - generic:
+          - button "Skip to main content" [ref=e16]
+          - button "Accessibility feedback" [ref=e19]
+        - navigation [ref=e23]:
+          - link "Explore" [ref=e26]
+          - link "Flights" [ref=e34]
+          - link "Hotels" [ref=e42]
+          - link "Holiday rentals" [ref=e53]
+      - generic [ref=e65]:
+        - button "Google apps" [ref=e69] [cursor=pointer]
+        - link "Sign in" [ref=e73] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=searchandassistant&passive=1209600&continue=https%3A%2F%2Fwww.google.com%2Ftravel%2Fsearch%3Fq%3Del%2520ventanal%2520al%2520cielo%26g2lb%3D4965990%252C72471280%252C72573224%252C72647020%252C72686036%252C72803964%252C72882230%252C73064764%252C121529350%252C121608706%252C121738283%252C121921501%252C121951222%252C122035345%252C122078727%252C122093076%252C122097177%26hl%3Den-CO%26gl%3Dco%26cs%3D1%26ssta%3D1%26ts%3DCAEaRwopEicyJTB4OGUzYTE3MDAyMjgyMzFlZDoweDFjYmE1MmFiNjNmNzQwYzcSGhIUCgcI6g8QChgdEgcI6g8QChgeGAEyAhAA%26qs%3DCAEyE0Nnb0l4NEhkbjdiVmxOMGNFQUU4AkIJCcdA92OrUrocQgkJx0D3Y6tSuhw%26ap%3DugEHcmV2aWV3cw%26ictx%3D111%26ved%3D0CAAQ5JsGahcKEwigls_i18GXAxUAAAAAHQAAAAAQBQ%26utm_source%3Dsign_in_ogb&followup=https%3A%2F%2Fwww.google.com%2Ftravel%2Fsearch%3Fq%3Del%2520ventanal%2520al%2520cielo%26g2lb%3D4965990%252C72471280%252C72573224%252C72647020%252C72686036%252C72803964%252C72882230%252C73064764%252C121529350%252C121608706%252C121738283%252C121921501%252C121951222%252C122035345%252C122078727%252C122093076%252C122097177%26hl%3Den-CO%26gl%3Dco%26cs%3D1%26ssta%3D1%26ts%3DCAEaRwopEicyJTB4OGUzYTE3MDAyMjgyMzFlZDoweDFjYmE1MmFiNjNmNzQwYzcSGhIUCgcI6g8QChgdEgcI6g8QChgeGAEyAhAA%26qs%3DCAEyE0Nnb0l4NEhkbjdiVmxOMGNFQUU4AkIJCcdA92OrUrocQgkJx0D3Y6tSuhw%26ap%3DugEHcmV2aWV3cw%26ictx%3D111%26ved%3D0CAAQ5JsGahcKEwigls_i18GXAxUAAAAAHQAAAAAQBQ%26utm_source%3Dsign_in_ogb&hl=en-CO&ec=GAZAlQM
+  - generic [ref=e105]:
+    - generic [ref=e106]:
+      - heading "Ventanal al cielo" [level=1] [ref=e110]
+      - generic [ref=e112]:
+        - generic:
+          - button "Back to list of all results"
+        - link "Open Ventanal al cielo in a new tab." [ref=e113] [cursor=pointer]:
+          - /url: /travel/hotels/entity/CgoIx4Hdn7bVlN0cEAE?q=el%20ventanal%20al%20cielo&g2lb=4965990%2C72471280%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C121529350%2C121608706%2C121738283%2C121921501%2C121951222%2C122035345%2C122078727%2C122093076%2C122097177&hl=en-CO&gl=co&cs=1&ssta=1&ts=CAEaSQopEicyJTB4OGUzYTE3MDAyMjgyMzFlZDoweDFjYmE1MmFiNjNmNzQwYzcSHBIUCgcI6g8QChgdEgcI6g8QChgeGAEyBAgAEAA&qs=CAE4AkIJCcdA92OrUrocQgkJx0D3Y6tSuhw&ictx=111&ved=2ahUKEwjrq_Lh18GXAxU2MRwAHST0F3kQvukIegQIAxAC
+          - generic [ref=e114]:
+            - button "Open Ventanal al cielo in a new tab." [ref=e115]
+            - tooltip [aria-hidden] [ref=e118]: Open Ventanal al cielo in a new tab.
+        - button "Close" [ref=e122]
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - tablist [ref=e138]:
+          - tab "Overview" [ref=e139] [cursor=pointer]
+          - tab "Prices" [ref=e141] [cursor=pointer]
+          - tab "Reviews" [active] [selected] [ref=e143] [cursor=pointer]
+          - tab "Photos" [ref=e146] [cursor=pointer]
+          - tab "About" [ref=e148] [cursor=pointer]
+        - generic [ref=e151]:
+          - text: · · · · · · · · · · · · · ·
+          - tabpanel [ref=e152]:
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - generic [ref=e161]:
+                  - heading "Google review summary" [level=2] [ref=e162]
+                  - button "More info" [ref=e164] [cursor=pointer]
+                - generic [ref=e169]:
+                  - generic "5 out of 5 stars from 4 reviews" [ref=e170]:
+                    - generic [aria-hidden] [ref=e171]: "5.0"
+                    - generic [ref=e173]: 4 reviews
+                  - generic [ref=e208]:
+                    - generic "5-star reviews 100 percent." [ref=e209]:
+                      - generic [aria-hidden] [ref=e210]: 5 star
+                    - generic "4-star reviews 0 percent." [ref=e214]:
+                      - generic [aria-hidden] [ref=e215]: 4 star
+                    - generic "3-star reviews 0 percent." [ref=e219]:
+                      - generic [aria-hidden] [ref=e220]: 3 star
+                    - generic "2-star reviews 0 percent." [ref=e224]:
+                      - generic [aria-hidden] [ref=e225]: 2 star
+                    - generic "1-star reviews 0 percent." [ref=e229]:
+                      - generic [aria-hidden] [ref=e230]: 1 star
+              - generic [ref=e235]:
+                - heading [level=2] [ref=e236]:
+                  - text: Reviews
+                  - button "Write a review" [ref=e238]
+                - textbox "Review search input" [ref=e249]:
+                  - /placeholder: Search reviews
+                - listbox "Review Sort Options" [ref=e253] [cursor=pointer]:
+                  - option "Most helpful" [selected] [ref=e254]
+                  - generic: Most recent
+                  - generic: Highest score
+                  - generic: Lowest score
+              - generic [ref=e265]:
+                - generic [ref=e266]:
+                  - generic [ref=e267]:
+                    - generic [ref=e268]:
+                      - link [ref=e269] [cursor=pointer]:
+                        - /url: https://www.google.com/maps/contrib/111059517137843914362?hl=en-GB
+                      - generic [ref=e271]:
+                        - link "karolina peralta lozano" [ref=e272] [cursor=pointer]:
+                          - /url: https://www.google.com/maps/contrib/111059517137843914362?hl=en-GB
+                        - generic [ref=e273]:
+                          - text: 3 months ago on
+                          - generic [ref=e274]: Google
+                    - generic [ref=e275]: 5/5
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: Holiday ❘ Couple
+                    - generic [ref=e278]:
+                      - generic [ref=e283]:
+                        - text: (Translated by Google) Excellent atmosphere for people seeking tranquility and fresh air, excellent service and delicious food!! …
+                        - button "Read more" [ref=e284] [cursor=pointer]
+                      - button "More info" [ref=e286] [cursor=pointer]
+                - generic [ref=e291]:
+                  - generic [ref=e292]:
+                    - generic [ref=e293]:
+                      - link [ref=e294] [cursor=pointer]:
+                        - /url: https://www.google.com/maps/contrib/113205102603156819749?hl=en-GB
+                      - generic [ref=e296]:
+                        - link "Jose Manuel Ozuna Lopez" [ref=e297] [cursor=pointer]:
+                          - /url: https://www.google.com/maps/contrib/113205102603156819749?hl=en-GB
+                        - generic [ref=e298]:
+                          - text: 4 months ago on
+                          - generic [ref=e299]: Google
+                    - generic [ref=e300]: 5/5
+                  - generic [ref=e301]:
+                    - generic [ref=e302]: Holiday
+                    - generic [ref=e303]:
+                      - generic [ref=e308]:
+                        - text: (Translated by Google) A great place to relax and forget about the city. Surrounded by beautiful nature. …
+                        - button "Read more" [ref=e309] [cursor=pointer]
+                      - button "More info" [ref=e311] [cursor=pointer]
+                - generic [ref=e316]:
+                  - generic [ref=e317]:
+                    - generic [ref=e318]:
+                      - link [ref=e319] [cursor=pointer]:
+                        - /url: https://www.google.com/maps/contrib/105248607744325805119?hl=en-GB
+                      - generic [ref=e321]:
+                        - link "elmer yessi Villa renteria" [ref=e322] [cursor=pointer]:
+                          - /url: https://www.google.com/maps/contrib/105248607744325805119?hl=en-GB
+                        - generic [ref=e323]:
+                          - text: 6 months ago on
+                          - generic [ref=e324]: Google
+                    - generic [ref=e325]: 5/5
+                  - generic [ref=e327]:
+                    - generic [ref=e332]:
+                      - text: (Translated by Google) Excellent place, very quiet, very good service(Original) …
+                      - button "Read more" [ref=e333] [cursor=pointer]
+                    - button "More info" [ref=e335] [cursor=pointer]
+                - generic [ref=e340]:
+                  - generic [ref=e341]:
+                    - generic [ref=e342]:
+                      - link [ref=e343] [cursor=pointer]:
+                        - /url: https://www.google.com/maps/contrib/118319656060094654302?hl=en-GB
+                      - generic [ref=e345]:
+                        - link "Jon Ceballos" [ref=e346] [cursor=pointer]:
+                          - /url: https://www.google.com/maps/contrib/118319656060094654302?hl=en-GB
+                        - generic [ref=e347]:
+                          - text: 5 months ago on
+                          - generic [ref=e348]: Google
+                    - generic [ref=e349]: 5/5
+                  - button "More info" [ref=e354] [cursor=pointer]
+      - generic: Ventanal al cielo
+  - generic [ref=e394]: Page loaded.

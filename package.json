@@ -1,0 +1,14 @@
+{
+  "name": "el-ventanal-al-cielo",
+  "version": "1.0.0",
+  "description": "Sitio web comercial oficial de El Ventanal al Cielo - Cabañas y turismo de naturaleza en La Buitrera de Palmira",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
