@@ -22,8 +22,22 @@ export const siteConfig = {
     name: "El Ventanal al Cielo",
     legalNotice: "Alojamiento y refugio de naturaleza en montaña",
     slogan: "Tu refugio entre las montañas y el cielo.",
-    subtitle: "Cabañas privadas en lo alto de La Buitrera de Palmira. Jacuzzi caliente, malla catamarán, fogata privada y desayuno campestre para dos.",
-    locationBadge: "La Buitrera de Palmira · Valle del Cauca",
+    subtitle: "Glamping ecológico a 1.900 m s. n. m. en La Buitrera de Palmira. Cabañas privadas, agua 100% pura de nacedero propio, dos lagos de truchas arcoíris, alimentación orgánica de nuestra huerta y regeneración activa de bosque andino.",
+    locationBadge: "Glamping Ecológico a 1.900 m s. n. m. · La Buitrera de Palmira",
+    altitude: "1.900 m s. n. m.",
+    altitudeNumber: 1900,
+    altitudeDescription: "Situados a 1.900 metros sobre el nivel del mar en la cordillera andina de La Buitrera de Palmira.",
+    // Compromisos y Pilares Ecológicos
+    ecoGlamping: {
+      isEco: true,
+      tagline: "Glamping Ecológico & Reserva Natural",
+      altitude: "1.900 m s. n. m.",
+      pureWater: "Agua 100% limpia, viva y pura de nacedero natural propio de montaña sin químicos.",
+      troutLakes: "Dos lagos ecológicos de agua viva con alevinos y truchas arcoíris.",
+      organicFood: "Alimentación 100% orgánica cosechada en nuestra propia huerta, libre de agroquímicos y pesticidas.",
+      pollinators: "Cuidado y protección activa de polinizadores: abejas nativas meliponas, colibríes y mariposas.",
+      forestRegeneration: "Proceso activo de regeneración de bosque andino mediante la siembra continua de árboles nativos."
+    },
     instagramUrl: "https://www.instagram.com/el_ventanal_al_cielo/",
     instagramUser: "@el_ventanal_al_cielo",
     tiktokUrl: "https://www.tiktok.com/@el.ventanal.al.ci/video/7656288507115097361",
@@ -40,6 +54,14 @@ export const siteConfig = {
     // Registro Nacional de Turismo y Calificaciones Oficiales
     rntNumber: "226780",
     rntVerificationUrl: "https://rnt.confecamaras.co/",
+    // Reconocimiento Oficial de Calidad Turística (Mayo 2026)
+    qualityCertification: {
+      title: "Prestador de Servicios Turísticos Reconocido por aplicar Buenas Prácticas",
+      program: "Calidad Turística Colombia",
+      date: "Mayo 2026",
+      backing: "Ministerio de Comercio, Industria y Turismo · FONTUR · Gobernación del Valle del Cauca (Secretaría de Turismo)",
+      image: "/images/reconocimiento-calidad-turistica.jpg"
+    },
     googleReviewsUrl: "https://www.google.com/travel/search?q=el%20ventanal%20al%20cielo&g2lb=4965990%2C72471280%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C121529350%2C121608706%2C121738283%2C121921501%2C121951222%2C122035345%2C122078727%2C122093076%2C122097177&hl=en-CO&gl=co&cs=1&ssta=1&ts=CAEaRwopEicyJTB4OGUzYTE3MDAyMjgyMzFlZDoweDFjYmE1MmFiNjNmNzQwYzcSGhIUCgcI6g8QChgdEgcI6g8QChgeGAEyAhAA&qs=CAEyE0Nnb0l4NEhkbjdiVmxOMGNFQUU4AkIJCcdA92OrUrocQgkJx0D3Y6tSuhw&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjYw4XWyL-XAxUAAAAAHQAAAAAQCQ",
     rating: {
       score: 5.0,
@@ -360,36 +382,36 @@ export const siteConfig = {
 
   experiences: [
     {
-      title: "Jacuzzi con Agua Caliente",
-      category: "Bienestar",
-      image: "/images/Momentos memorables/Jacuzzi con agua caliente.jpg",
-      description: "Disfruta de un baño caliente al aire libre mientras contemplas la inmensidad de las montañas andinas y la bruma del atardecer.",
-      status: "Servicio incluido en tu cabaña",
-      highlight: "Agua caliente"
-    },
-    {
-      title: "Atardeceres y Vistas Panorámicas",
-      category: "Contemplación",
-      image: "/images/Momentos memorables/Atardeceres y vistas panorámicas.jpg",
-      description: "La orientación hacia el valle ofrece puestas de sol memorables, donde el cielo se tiñe de tonalidades cálidas sobre las cumbres de La Buitrera.",
-      status: "Característica natural del lugar",
-      highlight: "Puestas de sol"
-    },
-    {
-      title: "Zona de Fogata Privada & Masmelos",
-      category: "Noche de Montaña",
-      image: "/images/Momentos memorables/Fogata privada y  Masmelos.jpg",
-      description: "Fuego encendido en la terraza para abrigar la noche fresca, acompañado de masmelos y dos copas de vino de cortesía.",
-      status: "Servicio incluido",
-      highlight: "Fuego & Masmelos"
-    },
-    {
-      title: "Avistamiento y Contacto Natural",
-      category: "Naturaleza",
+      title: "Huerta 100% Orgánica & Polinizadores",
+      category: "Sostenibilidad & Vida",
       image: "/images/Momentos memorables/Avistamiento y contacto natural.jpg",
-      description: "La riqueza de flora y fauna en Arenillo Alto te acompaña en cada amanecer: colibríes de múltiples especies, orquídeas nativas y el aire más puro del piedemonte vallecaucano.",
-      status: "Espacios de desconexión",
-      highlight: "Biodiversidad"
+      description: "Alimentación 100% limpia sin químicos ni pesticidas. Cultivamos nuestra propia huerta orgánica para ofrecer alimentos puros a nuestros huéspedes y proteger activamente a los polinizadores (abejas nativas meliponas, colibríes y mariposas).",
+      status: "Huerta propia sin agroquímicos",
+      highlight: "100% Orgánico"
+    },
+    {
+      title: "Nacedero de Agua Pura & Lagos de Truchas",
+      category: "Reserva Hídrica a 1.900 m s. n. m.",
+      image: "/images/registrovisual/naturalez3.jpg",
+      description: "Nuestra agua proviene directamente de un nacedero propio de montaña, 100% limpia, viva y cristalina. Abastece nuestras instalaciones y dos lagos naturales habitados por alevinos y truchas arcoíris.",
+      status: "Agua limpia de nacedero",
+      highlight: "2 Lagos de Truchas"
+    },
+    {
+      title: "Regeneración de Bosque mediante Siembra de Árboles",
+      category: "Conservación Activa",
+      image: "/images/Filosofía de descanso/Naturaleza en estado puro.jpg",
+      description: "Estamos en un proceso permanente de regeneración de bosque andino a través de la siembra continua de árboles nativos, recuperando la cobertura vegetal y protegiendo el ecosistema de niebla.",
+      status: "Siembra activa de árboles",
+      highlight: "Regeneración Forestal"
+    },
+    {
+      title: "Jacuzzi con Agua Caliente & Vista al Cielo",
+      category: "Bienestar en la Altura",
+      image: "/images/Momentos memorables/Jacuzzi con agua caliente.jpg",
+      description: "Disfruta de un baño caliente al aire libre mientras contemplas la inmensidad de las montañas andinas, los atardeceres dorados y el cielo estrellado a 1.900 metros de altura.",
+      status: "Servicio insignia incluido",
+      highlight: "Agua Caliente"
     }
   ],
 
@@ -423,9 +445,9 @@ export const siteConfig = {
     },
     {
       id: "gal-4",
-      title: "Momentos en la montaña: quebrada, parapente y guacamaya",
-      category: "momentos",
-      categoryLabel: "Momentos",
+      title: "Fauna silvestre de montaña: quebrada y guacamaya",
+      category: "fauna",
+      categoryLabel: "Fauna & Animales",
       src: "/images/registrovisual/momento2.jpg",
       aspect: "landscape",
       alt: "Collage de vivencias en la montaña con quebrada de agua pura, parapente sobre el valle y fauna silvestre"
@@ -450,9 +472,9 @@ export const siteConfig = {
     },
     {
       id: "gal-7",
-      title: "Paseo campestre, mirador y animales de granja",
-      category: "momentos",
-      categoryLabel: "Momentos",
+      title: "Animales en pradera natural, mirador y senderos",
+      category: "fauna",
+      categoryLabel: "Fauna & Animales",
       src: "/images/registrovisual/momentos.jpg",
       aspect: "portrait",
       alt: "Collage con caminante en mirador, gansos en pradera y vistas panorámicas a las montañas"
@@ -460,8 +482,8 @@ export const siteConfig = {
     {
       id: "gal-8",
       title: "Loro silvestre en la vegetación de la cordillera",
-      category: "naturaleza",
-      categoryLabel: "Naturaleza",
+      category: "fauna",
+      categoryLabel: "Fauna & Animales",
       src: "/images/registrovisual/naturaleza.jpg",
       aspect: "landscape",
       alt: "Perico silvestre de plumaje verde y frente roja entre las ramas de árboles nativos"
@@ -477,9 +499,9 @@ export const siteConfig = {
     },
     {
       id: "gal-10",
-      title: "Patos en el estanque de agua pura de manantial",
-      category: "naturaleza",
-      categoryLabel: "Naturaleza",
+      title: "Aves acuáticas en el estanque de agua pura de nacedero",
+      category: "fauna",
+      categoryLabel: "Fauna & Animales",
       src: "/images/registrovisual/naturalez3.jpg",
       aspect: "portrait",
       alt: "Pata con patitos nadando en estanque natural de agua de manantial de montaña"
@@ -492,6 +514,78 @@ export const siteConfig = {
       src: "/images/registrovisual/experiencias.jpg",
       aspect: "portrait",
       alt: "Mesa servida con desayuno campestre tradicional: arepa en fogón, queso, chocolate y huevos"
+    },
+    {
+      id: "gal-12",
+      title: "Copetón andino anidando en la reserva",
+      category: "fauna naturaleza",
+      categoryLabel: "Fauna & Animales",
+      src: "/images/registrovisual/animal.jpeg",
+      aspect: "portrait",
+      alt: "Copetón andino (Zonotrichia capensis) con material vegetal para nido posado en poste rústico"
+    },
+    {
+      id: "gal-13",
+      title: "Barranquero coronado (Momotus) en el bosque andino",
+      category: "fauna naturaleza",
+      categoryLabel: "Fauna & Animales",
+      src: "/images/registrovisual/animal1.jpeg",
+      aspect: "portrait",
+      alt: "Barranquero andino coronado (Momotus aequatorialis) con su corona turquesa y cola de raqueta en el bosque nativo"
+    },
+    {
+      id: "gal-14",
+      title: "Barranquero andino en pleno vuelo sobre el dosel",
+      category: "fauna naturaleza",
+      categoryLabel: "Fauna & Animales",
+      src: "/images/registrovisual/animal2.jpeg",
+      aspect: "landscape",
+      alt: "Barranquero andino desplegando sus alas celestes y turquesas en pleno vuelo en el bosque de niebla"
+    },
+    {
+      id: "gal-15",
+      title: "Yaguarundí silvestre registrado por cámara trampa",
+      category: "fauna naturaleza",
+      categoryLabel: "Fauna & Animales",
+      src: "/images/registrovisual/animal3.jpeg",
+      aspect: "landscape",
+      alt: "Yaguarundí silvestre (Herpailurus yagouaroundi) registrado por cámara trampa en el bosque andino a 1.900 msnm"
+    },
+    {
+      id: "gal-16",
+      title: "Caracara andino (Carancho) en la cordillera",
+      category: "fauna naturaleza",
+      categoryLabel: "Fauna & Animales",
+      src: "/images/registrovisual/animal4.jpg",
+      aspect: "portrait",
+      alt: "Caracara andino (Caracara plancus) ave rapaz posada sobre estaca de madera mirando hacia la cordillera"
+    },
+    {
+      id: "gal-17",
+      title: "Floración y flora nativa de la huerta orgánica",
+      category: "naturaleza experiencias",
+      categoryLabel: "Naturaleza",
+      src: "/images/registrovisual/DSC_0635.jpg.jpeg",
+      aspect: "portrait",
+      alt: "Ramas en floración rosada en la huerta orgánica y reserva natural de montaña"
+    },
+    {
+      id: "gal-18",
+      title: "Senderismo ecológico y avistamiento de aves en grupo",
+      category: "experiencias momentos fauna",
+      categoryLabel: "Experiencias",
+      src: "/images/registrovisual/experiencia.jpg",
+      aspect: "portrait",
+      alt: "Grupo de caminantes y observadores de aves con binoculares en el bosque nativo de La Buitrera"
+    },
+    {
+      id: "gal-19",
+      title: "Mural artístico de biodiversidad y aves de La Buitrera",
+      category: "momentos experiencias",
+      categoryLabel: "Momentos",
+      src: "/images/registrovisual/naturaleza3.jpeg",
+      aspect: "landscape",
+      alt: "Artista pintando mural ecológico con aves nativas como el caracara y el buitre en El Ventanal al Cielo"
     }
   ],
 
@@ -539,7 +633,7 @@ export const siteConfig = {
     {
       id: "faq-9",
       question: "¿Cómo llego al alojamiento y qué vehículo se recomienda?",
-      answer: "El alojamiento está ubicado en La Buitrera de Palmira, sector Arenillo Alto, vía al Chalet. Al ser una vía de ladera montañosa, se recomienda vehículo con buena altura al suelo o consultar previamente el estado de la vía según las condiciones climáticas del día."
+      answer: "El alojamiento está ubicado en La Buitrera de Palmira, sector Arenillo Alto, vía al Chalet a 1.900 m s. n. m. Al ser una vía de ladera montañosa, se recomienda vehículo con buena altura al suelo o consultar previamente el estado de la vía según las condiciones climáticas del día."
     },
     {
       id: "faq-10",
@@ -549,7 +643,17 @@ export const siteConfig = {
     {
       id: "faq-11",
       question: "¿Tienen servicio de restaurante y qué opciones de almuerzos o cenas ofrecen?",
-      answer: "¡Sí! Contamos con servicio de alimentación campestre: Almuerzos completos por $40.000 COP (trucha a la plancha, chuletón de cerdo o carne de res; incluyen sopa, arroz, ensalada, tostadas de plátano y bebida), Cenas por $33.000 - $35.000 COP (costillas BBQ $33k, filete de pollo $33k o chuletón de cerdo $35k; incluyen arroz, chips de plátano, ensalada y bebida), además de empanadas (4 por $12.000) y aguapanela o chocolate con queso ($15.000). El desayuno campestre tradicional ya viene incluido en los planes de hospedaje nocturno."
+      answer: "¡Sí! Contamos con servicio de alimentación campestre 100% orgánica cosechada en nuestra propia huerta: Almuerzos completos por $40.000 COP (trucha a la plancha criada en nuestros lagos de agua pura, chuletón de cerdo o carne de res; incluyen sopa, arroz, ensalada, tostadas de plátano y bebida), Cenas por $33.000 - $35.000 COP (costillas BBQ $33k, filete de pollo $33k o chuletón de cerdo $35k; incluyen arroz, chips de plátano, ensalada y bebida), además de empanadas (4 por $12.000) y aguapanela o chocolate con queso ($15.000). El desayuno campestre tradicional ya viene incluido en los planes de hospedaje nocturno."
+    },
+    {
+      id: "faq-12",
+      question: "¿Por qué El Ventanal al Cielo es un glamping ecológico y cómo es su alimentación?",
+      answer: "Somos un glamping ecológico y reserva de montaña a 1.900 m s. n. m.: 1) Toda nuestra alimentación es 100% orgánica, cosechada en nuestra propia huerta sin ningún tipo de agroquímicos ni pesticidas; 2) Protegemos activamente a los polinizadores (abejas nativas meliponas, colibríes y mariposas); 3) Llevamos a cabo un proceso permanente de regeneración de bosque andino mediante la siembra de árboles nativos; 4) Nuestra agua proviene de un nacedero propio 100% pura y limpia; 5) Contamos con dos lagos ecológicos con alevinos y truchas arcoíris."
+    },
+    {
+      id: "faq-13",
+      question: "¿De dónde proviene el agua y cómo son los lagos a 1.900 m s. n. m.?",
+      answer: "Nuestra agua nace en la montaña (nacedero natural propio a 1.900 metros de altura). Es agua 100% limpia, viva y pura de reserva natural, sin químicos invasivos, la cual abastece nuestras cabañas, jacuzzis, piscina natural y nutre dos hermosos lagos ecológicos donde habitan alevinos y truchas arcoíris en un entorno biológico protegido."
     }
   ],
 

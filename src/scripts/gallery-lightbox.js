@@ -83,7 +83,8 @@ export class GalleryLightbox {
         const items = document.querySelectorAll('.gallery-item');
 
         items.forEach(item => {
-          if (cat === 'all' || item.dataset.category === cat) {
+          const itemCat = item.dataset.category || '';
+          if (cat === 'all' || itemCat.split(' ').includes(cat) || itemCat === cat) {
             item.style.display = 'block';
           } else {
             item.style.display = 'none';
@@ -93,7 +94,10 @@ export class GalleryLightbox {
         if (cat === 'all') {
           this.currentFilteredItems = [...siteConfig.galleryItems];
         } else {
-          this.currentFilteredItems = siteConfig.galleryItems.filter(i => i.category === cat);
+          this.currentFilteredItems = siteConfig.galleryItems.filter(i => {
+            const itemCat = i.category || '';
+            return itemCat.split(' ').includes(cat) || itemCat === cat;
+          });
         }
       });
     });
