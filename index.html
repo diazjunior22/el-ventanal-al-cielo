@@ -2,14 +2,16 @@
 <html lang="es-CO">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
   <title>El Ventanal al Cielo | Glamping Ecológico a 1.900 m s. n. m. en La Buitrera de Palmira</title>
   
   <meta name="description" content="Glamping ecológico a 1.900 m sobre el mar en La Buitrera de Palmira, Valle del Cauca. Cabañas privadas con jacuzzi caliente, agua 100% limpia de nacedero propio, dos lagos de truchas arcoíris, alimentación orgánica de huerta propia para polinizadores y regeneración activa de bosque. RNT 226780.">
   <meta name="keywords" content="El Ventanal al Cielo, glamping ecológico Palmira, glamping 1900 msnm, cabañas La Buitrera, huerta orgánica polinizadores, truchas arcoiris Palmira, nacedero agua pura, RNT 226780, ecoturismo Valle del Cauca">
   <meta name="author" content="El Ventanal al Cielo">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#FCF8F2">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCF8F2">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#120E0C">
+  <meta name="color-scheme" content="light dark">
 
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
@@ -2538,6 +2540,37 @@
       </svg>
     </a>
   </aside>
+
+  <!-- =========================================================================
+       BARRA INFERIOR FIJA NATIVA EN MÓVIL (STICKY CONVERSION BAR)
+       ========================================================================= -->
+  <nav class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Acceso directo de reserva móvil">
+    <div class="mobile-sticky-bar-inner">
+      <div class="mobile-sticky-price">
+        <span class="mobile-sticky-label">Desde</span>
+        <div class="mobile-sticky-val-row">
+          <span class="mobile-sticky-amount">$120.000</span>
+          <span class="mobile-sticky-curr">COP</span>
+        </div>
+        <span class="mobile-sticky-unit">pareja / noche o pasadía</span>
+      </div>
+      <div class="mobile-sticky-actions">
+        <a href="https://wa.me/573183831095?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20El%20Ventanal%20al%20Cielo" 
+           class="btn-sticky-wa" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           aria-label="Contactar por WhatsApp Oficial">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.18-.544-1.898-.79-3.119-2.73-3.214-2.856-.095-.127-.77-1.026-.77-1.956 0-.931.488-1.387.662-1.576.174-.188.38-.236.507-.236.126 0 .253.002.364.007.118.006.275-.045.43.328.16.386.544 1.328.592 1.425.048.097.08.21.016.337-.064.127-.096.206-.19.317-.096.111-.202.248-.288.334-.096.095-.196.198-.084.39.111.191.494.814 1.06 1.318.729.648 1.343.85 1.534.945.19.095.302.079.414-.048.112-.127.476-.556.603-.746.127-.19.254-.159.429-.095.174.064 1.11.523 1.3.618.19.095.317.143.365.222.047.079.047.46-.097.865z"/>
+          </svg>
+        </a>
+        <button type="button" class="btn-luxury btn-primary btn-sticky-book" data-open-booking>
+          <span>Reservar</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
 
   <!-- Script Principal de la Aplicación -->
   <script type="module" src="/src/scripts/main.js"></script>

@@ -219,11 +219,11 @@
    ========================================================================== */
 .site-header {
   position: fixed;
-  top: 0.75rem;
+  top: calc(0.75rem + env(safe-area-inset-top, 0px));
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 0 1rem;
+  padding: 0 calc(1rem + env(safe-area-inset-right, 0px)) 0 calc(1rem + env(safe-area-inset-left, 0px));
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -453,13 +453,15 @@
   height: 100%;
   background: var(--bg-primary);
   box-shadow: var(--shadow-floating);
-  padding: 2rem 1.5rem;
+  padding: calc(1.75rem + env(safe-area-inset-top, 0px)) 1.5rem calc(1.75rem + env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
   transition: transform var(--transition-normal);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-drawer.open .mobile-drawer-content {
@@ -591,6 +593,56 @@
   padding: 2rem;
   overflow-y: auto;
   line-height: 1.7;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Experiencia de hoja nativa (Bottom Sheet) en teléfonos móviles */
+@media (max-width: 640px) {
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-container {
+    max-width: 100% !important;
+    max-height: 88dvh;
+    border-radius: 24px 24px 0 0 !important;
+    border-bottom: none !important;
+    margin: 0;
+    transform: translateY(100%) !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Manija táctil superior tipo iOS Bottom Sheet */
+  .modal-container::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: rgba(74, 59, 50, 0.25);
+    border-radius: 999px;
+    margin: 10px auto 4px;
+    flex-shrink: 0;
+  }
+
+  .modal-overlay.active .modal-container {
+    transform: translateY(0) !important;
+  }
+
+  .modal-header {
+    padding: 0.75rem 1.25rem 0.75rem;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem 1.25rem calc(2rem + env(safe-area-inset-bottom, 0px)) !important;
+    max-height: calc(88dvh - 75px);
+  }
 }
 
 /* ==========================================================================
@@ -919,4 +971,120 @@
 
 .btn-floating-whatsapp:active {
   transform: scale(0.95);
+}
+
+/* ==========================================================================
+   10. MOBILE STICKY CONVERSION BAR (NATIVE BOTTOM BAR)
+   ========================================================================== */
+.mobile-sticky-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background: rgba(252, 248, 242, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(74, 59, 50, 0.12);
+    box-shadow: 0 -4px 24px rgba(74, 59, 50, 0.08);
+    padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+    animation: slideUpSticky 0.4s var(--ease-spring);
+  }
+
+  @keyframes slideUpSticky {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .mobile-sticky-bar-inner {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem;
+  }
+
+  .mobile-sticky-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .mobile-sticky-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .mobile-sticky-val-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+
+  .mobile-sticky-amount {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--c-earth-brown);
+    letter-spacing: -0.02em;
+  }
+
+  .mobile-sticky-curr {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--c-orange-sunset);
+  }
+
+  .mobile-sticky-unit {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+  }
+
+  .mobile-sticky-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-sticky-wa {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: #25D366;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .btn-sticky-book {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+
+  /* En móvil se oculta el botón flotante independiente para no estorbar el contenido */
+  .floating-whatsapp-wrap {
+    display: none;
+  }
+
+  /* Espaciador inferior en el footer para evitar que la barra fija tape el copyright */
+  .site-footer {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px)) !important;
+  }
 }

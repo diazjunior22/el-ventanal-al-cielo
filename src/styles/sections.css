@@ -11,7 +11,8 @@
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,7 +159,8 @@
 
 @media (max-width: 640px) {
   .hero-section {
-    min-height: 100dvh;
+    min-height: 100vh;
+    min-height: 100svh;
     padding-top: calc(var(--nav-height) + 2rem);
     padding-bottom: 3rem;
     justify-content: center;
@@ -398,6 +400,18 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: auto;
+}
+
+@media (max-width: 640px) {
+  .cabin-card-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cabin-card-actions .btn-luxury {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Master Featured Cabin Architecture - Plan Pareja */
@@ -920,6 +934,34 @@
   margin-bottom: 2.5rem;
 }
 
+@media (max-width: 640px) {
+  .gallery-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    padding: 0.35rem 1rem 0.65rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: 1.5rem;
+    touch-action: pan-x pan-y;
+  }
+
+  .gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btn-filter {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    white-space: nowrap;
+    padding: 0.45rem 1rem;
+  }
+}
+
 .btn-filter {
   padding: 0.5rem 1.15rem;
   border-radius: var(--radius-pill);
@@ -929,18 +971,32 @@
   color: var(--c-earth-brown);
   border: 1px solid var(--border-subtle);
   transition: all var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(74, 59, 50, 0.04);
+  cursor: pointer;
 }
 
 .btn-filter.active, .btn-filter:hover {
   background: var(--c-orange-sunset);
   color: #FFFFFF;
   border-color: var(--c-orange-sunset);
+  box-shadow: 0 4px 12px rgba(242, 140, 40, 0.25);
 }
 
 .gallery-masonry {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .gallery-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .gallery-item {
+    border-radius: var(--radius-inner-md);
+  }
 }
 
 .gallery-item {
@@ -1685,7 +1741,8 @@
   display: flex;
   align-items: baseline;
   gap: 0.4rem;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .menu-item-bullet {
@@ -2489,6 +2546,31 @@
   gap: 0.65rem;
   margin: 2rem auto 0;
   max-width: 960px;
+}
+
+@media (max-width: 640px) {
+  .eco-pills-strip {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    padding: 0.35rem 1rem 0.65rem;
+    margin: 1.5rem -1rem 0;
+    touch-action: pan-x pan-y;
+  }
+
+  .eco-pills-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .eco-pill {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
 }
 
 .eco-pill {

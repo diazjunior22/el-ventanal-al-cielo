@@ -20,6 +20,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent; /* Elimina destello gris/azul en móviles */
+  -webkit-text-size-adjust: 100%; /* Previene inflación de tipografía al rotar pantalla */
 }
 
 section[id] {
@@ -97,19 +98,31 @@ a {
   text-decoration: none;
 }
 
-button {
+/* Controles interactivos: sin demora de 300ms, sin selección accidental de texto en long-press */
+button, a, [role="button"], .tab, .chip, .drag-handle, .btn-luxury, .btn-filter, .faq-trigger {
   font-family: inherit;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+button {
   border: none;
   background: none;
   cursor: pointer;
-  touch-action: manipulation; /* Elimina retraso táctil de 300ms */
-  user-select: none;
 }
 
-/* Prevenir zoom involuntario en iOS: font-size >= 16px */
+/* Respuesta táctil inmediata al pulsar (sin esperar a soltar el dedo) */
+button:active, .btn-luxury:active, .btn-filter:active, .btn-floating-whatsapp:active, .btn-sticky-book:active, .btn-sticky-wa:active {
+  transform: scale(0.97);
+  transition: transform 100ms var(--ease-spring);
+}
+
+/* Prevenir auto-zoom involuntario en iOS Safari: font-size >= 16px estricto */
 input, textarea, select {
   font-family: inherit;
-  font-size: 1rem; /* 16px exactos */
+  font-size: 16px !important;
   color: var(--text-main);
 }
 
