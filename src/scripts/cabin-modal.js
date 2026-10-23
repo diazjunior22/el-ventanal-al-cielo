@@ -24,8 +24,11 @@ export class CabinModal {
         <div class="doppelrand-core" style="padding: 0; overflow: hidden;">
           <div class="modal-header">
             <div>
-              <span class="eyebrow-tag eyebrow-tag-sunset" id="cabin-modal-badge">Detalle de Alojamiento</span>
-              <h2 class="modal-title font-serif" id="cabin-modal-title" style="margin-top: 0.25rem;">Cabaña</h2>
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem;">
+                <span class="eyebrow-tag eyebrow-tag-sunset" id="cabin-modal-badge">Detalle de Alojamiento</span>
+                <span id="cabin-modal-inventory" class="badge-inventory-limit" style="display: none;"></span>
+              </div>
+              <h2 class="modal-title font-serif" id="cabin-modal-title">Cabaña</h2>
             </div>
             <button type="button" class="modal-close-btn" id="btn-close-cabin-modal" aria-label="Cerrar detalle de cabaña">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -64,6 +67,15 @@ export class CabinModal {
     this.modalEl.querySelector('#cabin-modal-title').textContent = cabin.name;
     this.modalEl.querySelector('#cabin-modal-badge').textContent = cabin.tag;
 
+    const invBadgeEl = this.modalEl.querySelector('#cabin-modal-inventory');
+    if (invBadgeEl && cabin.inventoryBadge) {
+      invBadgeEl.textContent = cabin.inventoryBadge;
+      invBadgeEl.className = cabin.id === 'cabana-familiar-plan-familiar' ? 'badge-inventory-shared' : 'badge-inventory-limit';
+      invBadgeEl.style.display = 'inline-flex';
+    } else if (invBadgeEl) {
+      invBadgeEl.style.display = 'none';
+    }
+
     const galleryThumbnails = cabin.gallery.map((imgUrl, idx) => `
       <button type="button" class="cabin-thumb-btn ${idx === 0 ? 'active' : ''}" data-main-img="${imgUrl}" style="border: 2px solid ${idx === 0 ? 'var(--c-orange-sunset)' : 'transparent'}; border-radius: var(--radius-inner-sm); overflow: hidden; padding: 0; width: 80px; height: 56px; cursor: pointer; flex-shrink: 0;">
         <img src="${imgUrl}" alt="Vista miniatura ${idx + 1}" style="width: 100%; height: 100%; object-fit: cover;">
@@ -84,6 +96,12 @@ export class CabinModal {
       </li>
     `).join('');
 
+    const sharedNoticeHtml = cabin.id === 'cabana-familiar-plan-familiar' ? `
+      <div style="background: rgba(138, 75, 175, 0.07); border-left: 3px solid #7B1FA2; padding: 0.75rem 1rem; border-radius: var(--radius-inner-sm); font-size: var(--text-xs); color: #5B137A; line-height: 1.55; margin-top: 0.65rem;">
+        <strong>ℹ️ Nota de cupo compartido:</strong> Esta modalidad familiar se acondiciona sobre una de nuestras 3 Cabañas VIP. Su disponibilidad en el calendario depende de contar con al menos una cabaña VIP libre para tu fecha.
+      </div>
+    ` : '';
+
     this.modalEl.querySelector('#cabin-modal-body').innerHTML = `
       <div style="display: flex; flex-direction: column; gap: 1.5rem;">
         <!-- Imagen Principal de la Cabaña -->
@@ -99,7 +117,8 @@ export class CabinModal {
         <!-- Descripción -->
         <div>
           <h3 class="font-serif" style="font-size: var(--text-xl); margin-bottom: 0.5rem; color: var(--c-earth-brown);">Sobre este espacio</h3>
-          <p style="font-size: var(--text-base); line-height: 1.7;">${cabin.longDescription}</p>
+          <p style="font-size: var(--text-base); line-height: 1.7; margin-bottom: 0;">${cabin.longDescription}</p>
+          ${sharedNoticeHtml}
         </div>
 
         <!-- Características y Especificaciones -->

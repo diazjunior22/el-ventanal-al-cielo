@@ -85,10 +85,12 @@
     <nav class="nav-island" aria-label="Navegación principal">
       <!-- Marca y Logotipo Oficial -->
       <a href="#inicio" class="nav-brand" aria-label="El Ventanal al Cielo - Inicio">
-        <img src="/images/logo.jpg" alt="Logotipo Oficial El Ventanal al Cielo" class="nav-logo-img" width="42" height="42">
+        <div class="nav-brand-icon-wrap">
+          <img src="/images/logo-icon.png" alt="Logotipo Oficial El Ventanal al Cielo" class="nav-logo-img" width="38" height="38">
+        </div>
         <div class="brand-text">
           <span class="brand-title">El Ventanal al Cielo</span>
-          <span class="brand-sub">La Buitrera · Palmira</span>
+          <span class="brand-sub">LA BUITRERA · PALMIRA</span>
         </div>
       </a>
 
@@ -99,6 +101,8 @@
         <li><a href="#pasadias" class="nav-link">Pasadías</a></li>
         <li><a href="#gastronomia" class="nav-link">Gastronomía</a></li>
         <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+        <li><a href="#biodiversidad" class="nav-link">Fauna CVC</a></li>
+        <li><a href="#aves" class="nav-link">Aves</a></li>
         <li><a href="#galeria" class="nav-link">Galería</a></li>
         <li><a href="#resenas" class="nav-link">Reseñas</a></li>
         <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
@@ -106,8 +110,15 @@
 
       <!-- Acciones de Navegación -->
       <div class="nav-actions">
-        <button type="button" class="btn-luxury btn-primary nav-cta-btn" data-open-booking aria-haspopup="dialog">
+        <button type="button" class="btn-luxury btn-primary nav-cta-btn nav-cta-desktop" data-open-booking aria-haspopup="dialog">
           <span>Consultar fechas</span>
+          <span class="btn-icon-wrapper" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </span>
+        </button>
+
+        <button type="button" class="btn-luxury btn-primary nav-cta-btn nav-cta-mobile" data-open-booking aria-haspopup="dialog" aria-label="Consultar fechas">
+          <span>Fechas</span>
         </button>
 
         <!-- Botón Hamburguesa Móvil -->
@@ -127,10 +138,12 @@
       <div>
         <div class="mobile-drawer-header">
           <div class="mobile-brand">
-            <img src="/images/logo.jpg" alt="Logotipo El Ventanal al Cielo" class="nav-logo-img" width="38" height="38">
+            <div class="nav-brand-icon-wrap">
+              <img src="/images/logo-icon.png" alt="Logotipo El Ventanal al Cielo" class="nav-logo-img" width="38" height="38">
+            </div>
             <div class="brand-text">
               <span class="brand-title">El Ventanal al Cielo</span>
-              <span class="brand-sub">La Buitrera · Palmira</span>
+              <span class="brand-sub">LA BUITRERA · PALMIRA</span>
             </div>
           </div>
           <button type="button" class="modal-close-btn" id="btn-close-drawer" aria-label="Cerrar menú">
@@ -144,6 +157,8 @@
           <li><a href="#pasadias">Pasadías</a></li>
           <li><a href="#gastronomia">Gastronomía & Carta</a></li>
           <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#biodiversidad">Biodiversidad & Fauna CVC 🐾</a></li>
+          <li><a href="#aves">Aves de La Buitrera 🪶</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#resenas">Reseñas & RNT</a></li>
           <li><a href="#ubicacion">Ubicación</a></li>
@@ -172,36 +187,39 @@
       <div class="hero-background-wrap">
         <img src="/images/hero.jpg" alt="Fogata nocturna en la terraza de El Ventanal al Cielo con vista panorámica a las luces del Valle del Cauca y cielo estrellado" class="hero-bg-img" width="1920" height="1080" fetchpriority="high">
         <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-text-scrim" aria-hidden="true"></div>
       </div>
 
       <div class="container hero-container">
         <!-- Contenido Editorial Principal Alineado a la Izquierda -->
         <div class="hero-content">
+          <!-- 9. Etiqueta de Ubicación -->
           <div class="hero-eyebrow">
             <span class="hero-location-badge">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>Glamping Ecológico a 1.900 m s. n. m. · La Buitrera de Palmira</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>LA BUITRERA DE PALMIRA · VALLE DEL CAUCA</span>
             </span>
           </div>
 
+          <!-- 10 & 11. Titular Editorial -->
           <h1 class="hero-title">
-            Tu refugio ecológico entre las <em>montañas</em>.
+            Tu refugio ecológico<br>entre las <em>montañas.</em>
           </h1>
 
+          <!-- 12. Descripción Concisa -->
           <p class="hero-subtitle">
-            Glamping ecológico a 1.900 m sobre el nivel del mar en La Buitrera de Palmira. Cabañas privadas con jacuzzi de agua caliente, agua 100% pura y limpia de nacedero propio, dos lagos con alevinos y truchas arcoíris, alimentación 100% orgánica de nuestra huerta sin químicos para el cuidado de polinizadores y regeneración activa del bosque mediante la siembra de árboles.
+            Glamping ecológico a 1.900 m sobre el nivel del mar, donde la naturaleza, el confort y la tranquilidad se encuentran para crear momentos inolvidables en pareja.
           </p>
 
+          <!-- 13. Botones de Acción -->
           <div class="hero-cta-group">
-            <button type="button" class="btn-luxury btn-primary" data-open-booking>
+            <button type="button" class="btn-luxury btn-primary hero-btn-main" data-open-booking>
               <span>Consultar disponibilidad</span>
               <span class="btn-icon-wrapper" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </span>
             </button>
 
-            <a href="#cabanas" class="btn-luxury btn-ghost-light">
+            <a href="#cabanas" class="btn-luxury btn-ghost-hero hero-btn-sec">
               <span>Explorar cabañas</span>
               <span class="btn-icon-wrapper" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -209,24 +227,52 @@
             </a>
           </div>
 
-          <!-- Micro-insignias de Confianza Verificada & Reconocimiento Oficial -->
-          <div class="hero-trust-bar" style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-            <a href="#resenas" class="hero-trust-chip" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.22); border-radius: var(--radius-pill); padding: 0.35rem 0.85rem; font-size: var(--text-xs); color: #FFFFFF; text-decoration: none; transition: transform var(--transition-fast), background var(--transition-fast);">
-              <span style="color: #FFB800; font-size: 0.85rem; letter-spacing: 1px;">★★★★★</span>
-              <strong style="font-weight: 700;">5.0 en Google Reviews</strong>
-              <span style="opacity: 0.6;">·</span>
-              <span style="opacity: 0.95;">RNT 226780 Oficial</span>
-            </a>
+          <!-- 14, 15, 17, 18. Tarjeta de Confianza Dual Minimalista -->
+          <div class="hero-trust-card" aria-label="Reconocimiento oficial y reseñas verificadas">
+            <div class="hero-trust-sello-col">
+              <div class="trust-sello-box">
+                <img src="/images/sello-calidad-turistica.png" alt="Sello Oficial de Calidad Turística Colombia" class="trust-sello-img" width="44" height="44" loading="lazy">
+              </div>
+              <div class="trust-sello-info">
+                <span class="trust-sello-title">CALIDAD TURÍSTICA</span>
+                <span class="trust-sello-country">COLOMBIA</span>
+                <span class="trust-sello-vigencia">MAYO 2026</span>
+              </div>
+            </div>
 
-            <a href="#resenas" class="hero-trust-chip" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(242, 140, 40, 0.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 215, 0, 0.4); border-radius: var(--radius-pill); padding: 0.35rem 0.85rem; font-size: var(--text-xs); color: #FFFFFF; text-decoration: none; transition: transform var(--transition-fast), background var(--transition-fast);">
-              <span style="font-size: 0.85rem;">🏅</span>
-              <strong style="font-weight: 700; color: #FFE082;">Buenas Prácticas Calidad Turística</strong>
-              <span style="opacity: 0.7;">·</span>
-              <span style="opacity: 0.95;">Mayo 2026</span>
-            </a>
+            <div class="hero-trust-divider" aria-hidden="true"></div>
+
+            <div class="hero-trust-reviews-col">
+              <div class="trust-stars-row" aria-label="Calificación 5 de 5 estrellas">
+                <span class="trust-star">★</span>
+                <span class="trust-star">★</span>
+                <span class="trust-star">★</span>
+                <span class="trust-star">★</span>
+                <span class="trust-star">★</span>
+              </div>
+              <span class="trust-rating-title">5.0 en Google Reviews</span>
+              <div class="trust-rnt-row">
+                <span class="trust-rnt-text">RNT 226780 Oficial</span>
+                <svg class="trust-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- 20. Indicador de Scroll -->
+      <a href="#experiencia" class="hero-scroll-indicator" aria-label="Desplazarse a la experiencia">
+        <div class="scroll-mouse-pill" aria-hidden="true">
+          <div class="scroll-mouse-wheel"></div>
+        </div>
+        <span class="scroll-label">Descubre la experiencia</span>
+        <svg class="scroll-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
     </section>
 
     <!-- 2. SECCIÓN EMOCIONAL -->
@@ -356,7 +402,10 @@
             <div class="cabin-info-column">
               <div>
                 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem;">
-                  <span class="eyebrow-tag eyebrow-tag-sunset">Plan Todo Incluido</span>
+                  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
+                    <span class="eyebrow-tag eyebrow-tag-sunset">Plan Todo Incluido</span>
+                    <span class="badge-inventory-limit">💎 Solo 3 cabañas VIP en la reserva</span>
+                  </div>
                   <span class="badge-confirmed">Seguro médico incluido</span>
                 </div>
                 <h3 class="font-serif" style="font-size: clamp(1.75rem, 2.5vw, 2.25rem); color: var(--c-earth-brown); margin-bottom: 0.25rem;">
@@ -523,7 +572,10 @@
             <div class="cabin-info-column">
               <div>
                 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem;">
-                  <span class="eyebrow-tag eyebrow-tag-sunset">Plan Pareja · Sencilla</span>
+                  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
+                    <span class="eyebrow-tag eyebrow-tag-sunset">Plan Pareja · Sencilla</span>
+                    <span class="badge-inventory-limit">🛖 Solo 2 unidades disponibles</span>
+                  </div>
                   <span class="badge-confirmed">Seguro médico incluido</span>
                 </div>
                 <h3 class="font-serif" style="font-size: clamp(1.75rem, 2.5vw, 2.25rem); color: var(--c-earth-brown); margin-bottom: 0.25rem;">
@@ -667,7 +719,10 @@
             <div class="cabin-info-column">
               <div>
                 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem;">
-                  <span class="eyebrow-tag eyebrow-tag-sunset">Plan Familiar · 4 Personas</span>
+                  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
+                    <span class="eyebrow-tag eyebrow-tag-sunset">Plan Familiar · 4 Personas</span>
+                    <span class="badge-inventory-shared">✨ Modalidad en Cabaña VIP (cupo compartido)</span>
+                  </div>
                   <span class="badge-confirmed">Seguro médico incluido</span>
                 </div>
                 <h3 class="font-serif" style="font-size: clamp(1.75rem, 2.5vw, 2.25rem); color: var(--c-earth-brown); margin-bottom: 0.25rem;">
@@ -678,6 +733,9 @@
                 </p>
                 <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-main);">
                   El refugio perfecto para compartir y reconectar en familia o grupo de 4 personas. Cabaña privada con jacuzzi de agua caliente bajo el cielo andino, amplia malla catamarán suspendida hacia el firmamento, fogata privada nocturna con masmelos, copas de vino, televisión, WiFi, desayuno campestre tradicional incluido para 4 personas y baño privado con ducha.
+                </p>
+                <p style="font-size: 0.78rem; color: #7B1FA2; margin-top: 0.35rem; font-weight: 500; background: rgba(138, 75, 175, 0.06); padding: 0.4rem 0.65rem; border-radius: 6px; border-left: 3px solid #7B1FA2;">
+                  ℹ️ <em>Nota de exclusividad: La opción familiar se acondiciona sobre una de nuestras 3 Cabañas VIP, por lo que su disponibilidad depende de contar con al menos una cabaña VIP libre para tu fecha.</em>
                 </p>
               </div>
 
@@ -1357,7 +1415,609 @@
       </div>
     </section>
 
-    <!-- 5. GALERÍA FOTOGRÁFICA EDITORIAL -->
+    <!-- =========================================================================
+         5. HITO ECOLÓGICO & BIODIVERSIDAD: AVISTAMIENTO DE YAGUARUNDÍ (CVC)
+         ========================================================================= -->
+    <section id="biodiversidad" class="section-wildlife-spotlight" aria-labelledby="wildlife-heading">
+      <div class="wildlife-glow-backdrop" aria-hidden="true"></div>
+      
+      <div class="container">
+        <div class="wildlife-spotlight-shell doppelrand-shell-dark">
+          <div class="wildlife-spotlight-core">
+            
+            <!-- Columna 1: Registro Visual y Telemetría de Cámara Trampa -->
+            <div class="wildlife-visual-col">
+              <div class="wildlife-telemetry-frame" 
+                   data-open-gallery-id="gal-15" 
+                   tabindex="0" 
+                   role="button" 
+                   aria-label="Ampliar fotografía oficial de fototrampeo: Yaguarundí silvestre en El Ventanal al Cielo">
+                
+                <img src="/images/registrovisual/animal3.jpeg" 
+                     alt="Yaguarundí silvestre (Herpailurus yagouaroundi) captado por cámara trampa en el bosque andino a 1.900 msnm en El Ventanal al Cielo" 
+                     class="wildlife-telemetry-img" 
+                     loading="lazy" 
+                     width="960" 
+                     height="600">
+                
+                <!-- HUD de Grabación Científica y Telemetría -->
+                <div class="wildlife-hud-overlay">
+                  <div class="wildlife-hud-top">
+                    <span class="wildlife-rec-badge">
+                      <span class="wildlife-rec-dot" aria-hidden="true"></span>
+                      <span>Registro Cámara Trampa</span>
+                    </span>
+                    <span class="wildlife-hud-meta-pill">
+                      <span>23°C / 73°F · 1.900 m s. n. m.</span>
+                    </span>
+                  </div>
+
+                  <div class="wildlife-hud-bottom">
+                    <div class="wildlife-hud-species-row">
+                      <span class="wildlife-species-tag">Herpailurus yagouaroundi (Yaguarundí)</span>
+                      <span class="wildlife-hud-cvc-pill">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Protegido por CVC</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Indicador de Zoom al interactuar -->
+                <div class="wildlife-zoom-indicator">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>Ver registro en alta resolución</span>
+                </div>
+              </div>
+
+              <!-- Pie de foto técnico -->
+              <p style="font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 0.65rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                <span>Foto auténtica capturada por sensor de movimiento en nuestra ladera de bosque andino.</span>
+                <span style="color: var(--c-solar-gold); font-weight: 600;">Sector Arenillo Alto · Palmira</span>
+              </p>
+            </div>
+
+            <!-- Columna 2: Historia Editorial & Validación Ecológica CVC -->
+            <div class="wildlife-story-column">
+              <div class="wildlife-cvc-pill-lead">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Monitoreo & Fauna Silvestre CVC</span>
+              </div>
+
+              <h2 id="wildlife-heading" class="wildlife-heading">
+                Captamos un <em>Yaguarundí</em>: el bosque andino está vivo y protegido.
+              </h2>
+
+              <p class="wildlife-lead-text">
+                Nuestras cámaras trampa a <strong>1.900 metros de altura</strong> registraron la visita libre de un <strong>Yaguarundí</strong> (<em>Herpailurus yagouaroundi</em>), un felino silvestre nativo y sigiloso vigilado por la <strong>CVC (Corporación Autónoma Regional del Valle del Cauca)</strong>.
+              </p>
+
+              <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.85); line-height: 1.65; margin: 0;">
+                Los felinos silvestres solo habitan donde el ecosistema mantiene su pureza intacta. Este avistamiento confirma que nuestro proceso de <strong>regeneración forestal</strong>, los <strong>nacederos de agua pura</strong> y la <strong>huerta 100% orgánica sin químicos</strong> han consolidado un corredor biológico real donde la fauna silvestre camina segura y sin amenazas.
+              </p>
+
+              <!-- Cuadrícula de 4 Pilares de Biodiversidad -->
+              <div class="wildlife-proof-grid">
+                <div class="wildlife-proof-card">
+                  <span class="wildlife-proof-icon" aria-hidden="true">🐆</span>
+                  <div>
+                    <h3 class="wildlife-proof-title">Especie Protegida</h3>
+                    <p class="wildlife-proof-desc">Felino neotropical autóctono monitoreado bajo directrices de la CVC en el Valle del Cauca.</p>
+                  </div>
+                </div>
+
+                <div class="wildlife-proof-card">
+                  <span class="wildlife-proof-icon" aria-hidden="true">📸</span>
+                  <div>
+                    <h3 class="wildlife-proof-title">Fototrampeo No Invasivo</h3>
+                    <p class="wildlife-proof-desc">Registro por sensor infrarrojo sin perturbar el comportamiento ni los hábitos de la fauna.</p>
+                  </div>
+                </div>
+
+                <div class="wildlife-proof-card">
+                  <span class="wildlife-proof-icon" aria-hidden="true">🌳</span>
+                  <div>
+                    <h3 class="wildlife-proof-title">Corredor Biológico</h3>
+                    <p class="wildlife-proof-desc">Conexión con el bosque de niebla andino para paso de mamíferos, aves y polinizadores.</p>
+                  </div>
+                </div>
+
+                <div class="wildlife-proof-card">
+                  <span class="wildlife-proof-icon" aria-hidden="true">💧</span>
+                  <div>
+                    <h3 class="wildlife-proof-title">Hábitat 100% Limpio</h3>
+                    <p class="wildlife-proof-desc">Agua pura de nacedero y cero agroquímicos garantizan alimento sano para la vida silvestre.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Acciones de Exploración y Contacto -->
+              <div class="wildlife-actions-row">
+                <button type="button" 
+                        class="btn-luxury btn-primary" 
+                        data-open-gallery-id="gal-15"
+                        aria-label="Abrir visor en alta resolución de la foto del Yaguarundí">
+                  <span>Ver foto en detalle</span>
+                  <span class="btn-icon-wrapper" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </span>
+                </button>
+
+                <a href="https://wa.me/573183831095?text=Hola%2C%20vi%20en%20su%20p%C3%A1gina%20el%20avistamiento%20del%20Yaguarund%C3%AD%20y%20el%20cuidado%20ambiental%20con%20la%20CVC.%20Me%20interesa%20visitar%20su%20glamping%20ecol%C3%B3gico%20y%20conocer%20m%C3%A1s%20sobre%20la%20experiencia%20de%20naturaleza." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-luxury btn-whatsapp">
+                  <span>Consultar por WhatsApp</span>
+                  <span class="btn-icon-wrapper" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5.1. SANTUARIO & AVES DE LA BUITRERA: REGISTRO ORNITOLÓGICO ANDINO
+         ========================================================================= -->
+    <section id="aves" class="section-birds" aria-labelledby="birds-heading">
+      <div class="birds-atmosphere-backdrop" aria-hidden="true"></div>
+
+      <div class="container">
+        <!-- Encabezado Editorial de Sección -->
+        <header class="birds-editorial-header">
+          <div class="birds-eyebrow-wrap">
+            <span class="eyebrow-tag eyebrow-tag-sunset">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                <line x1="16" y1="8" x2="2" y2="22"></line>
+                <line x1="17.5" y1="15" x2="9" y2="15"></line>
+              </svg>
+              <span>Santuario de Aves Andinas · 1.900 m s. n. m.</span>
+            </span>
+            <span class="birds-counter-pill">
+              <span class="birds-live-indicator" aria-hidden="true"></span>
+              <span>4 especies destacadas · Registro fotográfico oficial</span>
+            </span>
+          </div>
+
+          <h2 id="birds-heading" class="birds-title font-serif">
+            Aves libres de <em>La Buitrera</em>
+          </h2>
+
+          <p class="birds-lead-desc">
+            Ubicados en la vertiente andina a 1.900 metros de altitud, El Ventanal al Cielo conforma un corredor natural privilegiado. El agua viva de nacedero puro, nuestra huerta 100% orgánica sin agroquímicos y la siembra activa de árboles nativos brindan a las aves refugio libre, alimento sano y espacios protegidos de anidación.
+          </p>
+
+          <!-- 4 Pilares de Avistamiento / Birdwatching -->
+          <div class="birds-highlights-strip">
+            <div class="birds-highlight-pill">
+              <span class="birds-pill-icon" aria-hidden="true">🪶</span>
+              <div>
+                <strong>100% Vida en Libertad</strong>
+                <span>Sin jaulas; aves en su hábitat natural</span>
+              </div>
+            </div>
+            <div class="birds-highlight-pill">
+              <span class="birds-pill-icon" aria-hidden="true">🔭</span>
+              <div>
+                <strong>Birdwatching & Foto</strong>
+                <span>Observación respetuosa al amanecer</span>
+              </div>
+            </div>
+            <div class="birds-highlight-pill">
+              <span class="birds-pill-icon" aria-hidden="true">💧</span>
+              <div>
+                <strong>Agua Viva de Nacedero</strong>
+                <span>Alimento orgánico y pureza mineral</span>
+              </div>
+            </div>
+            <div class="birds-highlight-pill">
+              <span class="birds-pill-icon" aria-hidden="true">🌲</span>
+              <div>
+                <strong>Bosque en Siembra</strong>
+                <span>Siembra continua de árboles nativos</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Barra de Controles y Desplazamiento del Carrusel -->
+        <div class="birds-slider-controls-bar">
+          <div class="birds-slider-info">
+            <span class="birds-slider-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <span>Desplazamiento horizontal</span>
+            </span>
+            <span class="birds-slider-text">Usa los botones o desliza para ver todas las aves</span>
+          </div>
+
+          <div class="birds-nav-buttons-group">
+            <button type="button" 
+                    class="btn-slider-arrow btn-birds-prev" 
+                    id="btn-birds-prev" 
+                    aria-label="Ver especie anterior" 
+                    title="Anterior">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" 
+                    class="btn-slider-arrow btn-birds-next" 
+                    id="btn-birds-next" 
+                    aria-label="Ver siguiente especie" 
+                    title="Siguiente">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Contenedor del Carrusel con Botones Flotantes para PC -->
+        <div class="birds-carousel-wrapper">
+          <button type="button" 
+                  class="btn-floating-slider-arrow btn-floating-prev btn-birds-prev" 
+                  aria-label="Desplazar aves hacia la izquierda"
+                  title="Anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <!-- Galería Desplazable de Aves -->
+          <div class="birds-grid birds-carousel-track" id="birds-gallery-grid">
+          
+          <!-- Ave 1: Copetón Andino / Zonotrichia capensis -->
+          <article class="bird-card doppelrand-shell-dark" data-bird-id="gal-ave-1">
+            <div class="bird-card-inner">
+              <div class="bird-media-frame" 
+                   data-open-gallery-id="gal-ave-1" 
+                   tabindex="0" 
+                   role="button" 
+                   aria-label="Ampliar fotografía: Copetón Andino (Zonotrichia capensis) recolectando material para nido">
+                <img src="/images/aves/animal.jpeg" 
+                     alt="Copetón andino (Zonotrichia capensis) posado en poste rústico con fibras vegetales en su pico para la construcción de su nido en El Ventanal al Cielo" 
+                     class="bird-media-img" 
+                     loading="lazy" 
+                     width="600" 
+                     height="800">
+                
+                <div class="bird-media-overlay">
+                  <div class="bird-overlay-top">
+                    <span class="bird-badge-status">
+                      <span class="bird-badge-dot" aria-hidden="true"></span>
+                      <span>Residente Andino</span>
+                    </span>
+                    <span class="bird-badge-alt">1.900 m s. n. m.</span>
+                  </div>
+                  <div class="bird-overlay-bottom">
+                    <span class="bird-zoom-hint">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                      <span>Ver en alta resolución</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bird-content">
+                <div class="bird-taxonomy-row">
+                  <span class="bird-family-tag">Familia Passerellidae · Passeriformes</span>
+                  <span class="bird-state-tag">Anidando</span>
+                </div>
+
+                <h3 class="bird-common-name">
+                  Copetón Andino <span class="bird-alias">/ Chingolo</span>
+                </h3>
+                <p class="bird-scientific-name">
+                  <em>Zonotrichia capensis</em>
+                </p>
+
+                <!-- Dossier de Identificación Visual Rápida -->
+                <div class="bird-feature-box">
+                  <h4 class="bird-feature-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <span>Identificación visual en campo</span>
+                  </h4>
+                  <p class="bird-feature-text">
+                    Se reconoce fácilmente por su <strong>cabeza con rayas negras y grises</strong>, un distintivo <strong>collar rojizo o canela</strong> a los lados del cuello, y tonos grises y cafés en el cuerpo.
+                  </p>
+                </div>
+
+                <p class="bird-behavior-text">
+                  El ave cantora más fiel de los amaneceres andinos. Frecuenta los cercados de madera y la huerta de la reserva. En esta fotografía fue captado recolectando fibras naturales para tejer su nido a 1.900 msnm.
+                </p>
+
+                <div class="bird-card-footer">
+                  <span class="bird-credit-text">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>Registro El Ventanal</span>
+                  </span>
+                  <button type="button" 
+                          class="btn-bird-zoom" 
+                          data-open-gallery-id="gal-ave-1" 
+                          aria-label="Abrir foto en alta resolución de Copetón Andino">
+                    <span>Ampliar</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ave 2: Barranquero Andino / Momotus aequatorialis -->
+          <article class="bird-card doppelrand-shell-dark" data-bird-id="gal-ave-2">
+            <div class="bird-card-inner">
+              <div class="bird-media-frame" 
+                   data-open-gallery-id="gal-ave-2" 
+                   tabindex="0" 
+                   role="button" 
+                   aria-label="Ampliar fotografía: Barranquero Andino (Momotus aequatorialis) posado">
+                <img src="/images/aves/animal1.jpeg" 
+                     alt="Barranquero andino (Momotus aequatorialis) con su corona azul turquesa, antifaz negro y cola de péndulo en el bosque de La Buitrera" 
+                     class="bird-media-img" 
+                     loading="lazy" 
+                     width="600" 
+                     height="800">
+                
+                <div class="bird-media-overlay">
+                  <div class="bird-overlay-top">
+                    <span class="bird-badge-status status-turq">
+                      <span class="bird-badge-dot" aria-hidden="true"></span>
+                      <span>Corona Turquesa</span>
+                    </span>
+                    <span class="bird-badge-alt">Bosque Andino</span>
+                  </div>
+                  <div class="bird-overlay-bottom">
+                    <span class="bird-zoom-hint">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                      <span>Ver en alta resolución</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bird-content">
+                <div class="bird-taxonomy-row">
+                  <span class="bird-family-tag">Familia Momotidae · Coraciiformes</span>
+                  <span class="bird-state-tag state-highlight">Emblemática</span>
+                </div>
+
+                <h3 class="bird-common-name">
+                  Barranquero Andino <span class="bird-alias">/ Soledad</span>
+                </h3>
+                <p class="bird-scientific-name">
+                  <em>Momotus aequatorialis</em>
+                </p>
+
+                <!-- Dossier de Identificación Visual Rápida -->
+                <div class="bird-feature-box">
+                  <h4 class="bird-feature-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <span>Identificación visual en campo</span>
+                  </h4>
+                  <p class="bird-feature-text">
+                    Se distingue por su <strong>antifaz negro</strong>, <strong>ceja o corona azul brillante</strong>, cuerpo verde, <strong>pico fuerte</strong> y su característica <strong>cola en forma de raqueta o péndulo</strong>.
+                  </p>
+                </div>
+
+                <p class="bird-behavior-text">
+                  Habita los bosques andinos, bordes de montaña y zonas arboladas de altitud media y alta. Permanece posado con quietud mientras balancea su cola como péndulo, siendo una joya ornitológica de La Buitrera.
+                </p>
+
+                <div class="bird-card-footer">
+                  <span class="bird-credit-text">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>Foto: Daniel Marín</span>
+                  </span>
+                  <button type="button" 
+                          class="btn-bird-zoom" 
+                          data-open-gallery-id="gal-ave-2" 
+                          aria-label="Abrir foto en alta resolución de Barranquero Andino">
+                    <span>Ampliar</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ave 3: Barranquero en Despliegue Alar / Momotidae en Vuelo -->
+          <article class="bird-card doppelrand-shell-dark" data-bird-id="gal-ave-3">
+            <div class="bird-card-inner">
+              <div class="bird-media-frame" 
+                   data-open-gallery-id="gal-ave-3" 
+                   tabindex="0" 
+                   role="button" 
+                   aria-label="Ampliar fotografía: Barranquero Andino desplegando sus alas celestes y turquesas en vuelo">
+                <img src="/images/aves/animal2.jpeg" 
+                     alt="Barranquero andino desplegando alas turquesa y azul cobalto en pleno vuelo sobre el follaje nativo en La Buitrera" 
+                     class="bird-media-img" 
+                     loading="lazy" 
+                     width="600" 
+                     height="800">
+                
+                <div class="bird-media-overlay">
+                  <div class="bird-overlay-top">
+                    <span class="bird-badge-status status-blue">
+                      <span class="bird-badge-dot" aria-hidden="true"></span>
+                      <span>Despliegue Alar</span>
+                    </span>
+                    <span class="bird-badge-alt">Vuelo en Dosel</span>
+                  </div>
+                  <div class="bird-overlay-bottom">
+                    <span class="bird-zoom-hint">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                      <span>Ver en alta resolución</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bird-content">
+                <div class="bird-taxonomy-row">
+                  <span class="bird-family-tag">Familia Momotidae · Bosque Andino</span>
+                  <span class="bird-state-tag state-flight">En Vuelo</span>
+                </div>
+
+                <h3 class="bird-common-name">
+                  Barranquero <span class="bird-alias">(Despliegue Alar)</span>
+                </h3>
+                <p class="bird-scientific-name">
+                  <em>Familia Momotidae</em>
+                </p>
+
+                <!-- Dossier de Identificación Visual Rápida -->
+                <div class="bird-feature-box">
+                  <h4 class="bird-feature-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <span>Registro dinámico de plumaje</span>
+                  </h4>
+                  <p class="bird-feature-text">
+                    Destaca su <strong>cuerpo verde</strong>, corona azul brillante y la impresionante gradación <strong>turquesa y azul cerúleo</strong> visible cuando abre sus alas entre la vegetación de montaña.
+                  </p>
+                </div>
+
+                <p class="bird-behavior-text">
+                  Captura de alta velocidad que inmortaliza el despegue en el dosel andino. Esta riqueza de colores refleja la salud del bosque protegido de El Ventanal, libre de ruidos invasivos y pesticidas.
+                </p>
+
+                <div class="bird-card-footer">
+                  <span class="bird-credit-text">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>Foto: Daniel Marín</span>
+                  </span>
+                  <button type="button" 
+                          class="btn-bird-zoom" 
+                          data-open-gallery-id="gal-ave-3" 
+                          aria-label="Abrir foto en alta resolución de Barranquero en Despliegue Alar">
+                    <span>Ampliar</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ave 4: Loro Frentirrojo / Psittacara wagleri -->
+          <article class="bird-card doppelrand-shell-dark" data-bird-id="gal-ave-4">
+            <div class="bird-card-inner">
+              <div class="bird-media-frame" 
+                   data-open-gallery-id="gal-ave-4" 
+                   tabindex="0" 
+                   role="button" 
+                   aria-label="Ampliar fotografía: Loro frentirrojo (Psittacara wagleri) alimentándose de vainas en árbol nativo">
+                <img src="/images/aves/naturaleza.jpg" 
+                     alt="Loro frentirrojo (Psittacara wagleri) con frente roja y plumaje verde alimentándose entre vainas de árbol nativo en El Ventanal al Cielo" 
+                     class="bird-media-img" 
+                     loading="lazy" 
+                     width="600" 
+                     height="800">
+                
+                <div class="bird-media-overlay">
+                  <div class="bird-overlay-top">
+                    <span class="bird-badge-status status-red">
+                      <span class="bird-badge-dot" aria-hidden="true"></span>
+                      <span>Frente Roja</span>
+                    </span>
+                    <span class="bird-badge-alt">Bandadas Libres</span>
+                  </div>
+                  <div class="bird-overlay-bottom">
+                    <span class="bird-zoom-hint">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                      <span>Ver en alta resolución</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bird-content">
+                <div class="bird-taxonomy-row">
+                  <span class="bird-family-tag">Familia Psittacidae · Psittaciformes</span>
+                  <span class="bird-state-tag state-flock">Bandadas</span>
+                </div>
+
+                <h3 class="bird-common-name">
+                  Loro Frentirrojo <span class="bird-alias">/ Perico Cordillerano</span>
+                </h3>
+                <p class="bird-scientific-name">
+                  <em>Psittacara wagleri</em>
+                </p>
+
+                <!-- Dossier de Identificación Visual Rápida -->
+                <div class="bird-feature-box">
+                  <h4 class="bird-feature-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <span>Identificación visual en campo</span>
+                  </h4>
+                  <p class="bird-feature-text">
+                    Plumaje <strong>verde esmeralda brillante</strong> con su distintiva <strong>frente o corona roja escarlata</strong>, pico curvado para semillas y vuelo rápido y enérgico en bandada.
+                  </p>
+                </div>
+
+                <p class="bird-behavior-text">
+                  Suelen moverse en <strong>bandadas ruidosas</strong> al amanecer y al caer la tarde. En la fotografía se le observa en las ramas altas alimentándose libremente de <strong>semillas, frutos y cortezas</strong> de nuestros árboles nativos.
+                </p>
+
+                <div class="bird-card-footer">
+                  <span class="bird-credit-text">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>Registro El Ventanal</span>
+                  </span>
+                  <button type="button" 
+                          class="btn-bird-zoom" 
+                          data-open-gallery-id="gal-ave-4" 
+                          aria-label="Abrir foto en alta resolución de Loro Frentirrojo">
+                    <span>Ampliar</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+          <button type="button" 
+                  class="btn-floating-slider-arrow btn-floating-next btn-birds-next" 
+                  aria-label="Desplazar aves hacia la derecha"
+                  title="Siguiente">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Banner Inferior de Expansión & Participación Comunitaria -->
+        <div class="birds-expansion-banner doppelrand-shell-dark">
+          <div class="birds-expansion-content">
+            <div class="birds-expansion-icon-wrap" aria-hidden="true">
+              <span class="birds-expansion-icon">🌿</span>
+            </div>
+            <div class="birds-expansion-text">
+              <h3 class="birds-expansion-title font-serif">
+                Un catálogo vivo que <em>seguirá creciendo</em>
+              </h3>
+              <p class="birds-expansion-desc">
+                La Buitrera de Palmira alberga decenas de especies adicionales: colibríes ermitaños, tucanes de montaña, tangaras andinas y rapaces como el carancho. En cada temporada documentamos nuevas aves gracias a la regeneración continua del bosque.
+              </p>
+              <p class="birds-expansion-sub">
+                ¿Eres aficionado a la fotografía de aves o al senderismo ecológico? Si capturas una especie durante tu visita a El Ventanal al Cielo, compártela con nosotros para integrarla al registro de avifauna oficial.
+              </p>
+            </div>
+            <div class="birds-expansion-cta">
+              <button type="button" class="btn-luxury btn-primary" data-open-booking>
+                <span>Reservar estadía</span>
+              </button>
+              <a href="https://wa.me/573183831095?text=Hola%2C%20me%20encant%C3%B3%20la%20secci%C3%B3n%20de%20aves%20de%20La%20Buitrera%20en%20su%20p%C3%A1gina.%20Me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20el%20avistamiento%20de%20aves%20y%20las%20fechas%20disponibles." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-luxury btn-whatsapp">
+                <span>Preguntar por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. GALERÍA FOTOGRÁFICA EDITORIAL -->
     <section id="galeria" class="section-gallery" aria-labelledby="gallery-heading">
       <div class="container">
         <header class="editorial-header">
@@ -1529,6 +2189,14 @@
           <!-- 19. Momentos (Mural artístico de aves) -->
           <div class="gallery-item aspect-wide" data-gallery-id="gal-19" data-category="momentos experiencias" tabindex="0" role="button" aria-label="Ampliar foto: Mural artístico de biodiversidad y aves de La Buitrera">
             <img src="/images/registrovisual/naturaleza3.jpeg" alt="Artista pintando mural ecológico con aves nativas como el caracara y el buitre en El Ventanal al Cielo" loading="lazy">
+            <div class="gallery-item-hover">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+
+          <!-- 20. Fauna (Loro frentirrojo en dosel nativo) -->
+          <div class="gallery-item aspect-portrait" data-gallery-id="gal-ave-4" data-category="fauna naturaleza" tabindex="0" role="button" aria-label="Ampliar foto: Loro frentirrojo (Psittacara wagleri) en árbol nativo de montaña">
+            <img src="/images/aves/naturaleza.jpg" alt="Loro frentirrojo (Psittacara wagleri) alimentándose entre ramas de árbol nativo en La Buitrera" loading="lazy">
             <div class="gallery-item-hover">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
             </div>
@@ -1907,8 +2575,8 @@
           <div class="quality-cert-shell">
             <div class="quality-cert-core">
               <!-- Miniatura oficial del Certificado -->
-              <div class="quality-cert-img-wrap" tabindex="0" role="button" aria-label="Ver certificado oficial de Calidad Turística Colombia en tamaño completo" onclick="window.open('/images/reconocimiento-calidad-turistica.jpg', '_blank')">
-                <img src="/images/reconocimiento-calidad-turistica.jpg" alt="Certificado oficial de Fontur, MinCIT y Gobernación del Valle del Cauca reconociendo a El Ventanal al Cielo por aplicar Buenas Prácticas de Calidad Turística hasta Mayo 2026" class="quality-cert-img" loading="lazy">
+              <div class="quality-cert-img-wrap" tabindex="0" role="button" aria-label="Ver certificado oficial de Calidad Turística Colombia en tamaño completo" onclick="window.open('/images/certificado.jpg', '_blank')">
+                <img src="/images/certificado.jpg" alt="Certificado oficial de Fontur, MinCIT y Gobernación del Valle del Cauca reconociendo a El Ventanal al Cielo por aplicar Buenas Prácticas de Calidad Turística hasta Mayo 2026" class="quality-cert-img" loading="lazy">
                 <div class="quality-cert-badge-float">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   <span>Reconocimiento Oficial · Mayo 2026</span>
@@ -1945,7 +2613,7 @@
 
               <!-- Botón de Inspección del Certificado -->
               <div class="quality-cert-actions">
-                <a href="/images/reconocimiento-calidad-turistica.jpg" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-primary" style="justify-content: center; font-size: var(--text-xs); padding: 0.75rem 1.25rem;">
+                <a href="/images/certificado.jpg" target="_blank" rel="noopener noreferrer" class="btn-luxury btn-primary" style="justify-content: center; font-size: var(--text-xs); padding: 0.75rem 1.25rem;">
                   <span>Ver certificado oficial</span>
                   <span class="btn-icon-wrapper" aria-hidden="true">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
@@ -2466,6 +3134,8 @@
             <li><a href="#cabanas">Nuestras cabañas</a></li>
             <li><a href="#pasadias">Pasadías de día</a></li>
             <li><a href="#experiencia">La experiencia</a></li>
+            <li><a href="#biodiversidad">Biodiversidad & Fauna CVC</a></li>
+            <li><a href="#aves">Aves de La Buitrera</a></li>
             <li><a href="#galeria">Galería de fotos</a></li>
             <li><a href="#resenas">Reseñas & Reputación</a></li>
             <li><a href="#ubicacion">Cómo llegar</a></li>

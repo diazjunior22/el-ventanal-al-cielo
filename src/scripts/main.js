@@ -161,4 +161,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => observer.observe(el));
   }
+
+  // 9. Slider de Desplazamiento Horizontal para Aves de La Buitrera (PC y Móvil)
+  const birdsSlider = document.querySelector('#birds-gallery-grid');
+  const prevBirdsBtns = document.querySelectorAll('.btn-birds-prev');
+  const nextBirdsBtns = document.querySelectorAll('.btn-birds-next');
+
+  if (birdsSlider && (prevBirdsBtns.length > 0 || nextBirdsBtns.length > 0)) {
+    const getCardWidth = () => {
+      const card = birdsSlider.querySelector('.bird-card');
+      return card ? card.offsetWidth + 24 : 360;
+    };
+
+    const handleScroll = (direction) => {
+      const scrollAmount = getCardWidth() * direction;
+      birdsSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    };
+
+    prevBirdsBtns.forEach(btn => btn.addEventListener('click', () => handleScroll(-1)));
+    nextBirdsBtns.forEach(btn => btn.addEventListener('click', () => handleScroll(1)));
+
+    const updateNavState = () => {
+      const maxScroll = birdsSlider.scrollWidth - birdsSlider.clientWidth;
+      const atStart = birdsSlider.scrollLeft <= 10;
+      const atEnd = birdsSlider.scrollLeft >= maxScroll - 10;
+
+      prevBirdsBtns.forEach(btn => {
+        btn.disabled = atStart;
+        btn.classList.toggle('disabled', atStart);
+      });
+      nextBirdsBtns.forEach(btn => {
+        btn.disabled = atEnd;
+        btn.classList.toggle('disabled', atEnd);
+      });
+    };
+
+    birdsSlider.addEventListener('scroll', updateNavState, { passive: true });
+    window.addEventListener('resize', updateNavState, { passive: true });
+    setTimeout(updateNavState, 150);
+  }
+
+  // 10. ScrollSpy: Indicador activo en el Navbar en toda la web
+  const navSections = document.querySelectorAll('section[id], main[id]');
+  const desktopNavLinks = document.querySelectorAll('.nav-menu-desktop a[href^="#"]');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a[href^="#"]');
+
+  if ('IntersectionObserver' in window && navSections.length > 0) {
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          if (!currentId) return;
+
+          desktopNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+
+          mobileNavLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -65% 0px',
+      threshold: 0
+    });
+
+    navSections.forEach(section => scrollSpyObserver.observe(section));
+  }
 });
+

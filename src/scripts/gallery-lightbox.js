@@ -102,13 +102,26 @@ export class GalleryLightbox {
       });
     });
 
-    // Conectar clics en items de galería
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const id = item.dataset.galleryId;
+    // Conectar clics en items de galería y triggers personalizados (ej: Spotlight Yaguarundí, Aves de La Buitrera)
+    document.querySelectorAll('.gallery-item, [data-open-gallery-id]').forEach(item => {
+      const handleOpen = () => {
+        const id = item.dataset.galleryId || item.dataset.openGalleryId;
+        if (!id) return;
+        // Asegurar que si el item no está en el filtro actual, se restablezca la lista completa
+        if (!this.currentFilteredItems.some(i => i.id === id)) {
+          this.currentFilteredItems = [...siteConfig.galleryItems];
+        }
         const idx = this.currentFilteredItems.findIndex(i => i.id === id);
         if (idx !== -1) {
           this.open(idx);
+        }
+      };
+
+      item.addEventListener('click', handleOpen);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleOpen();
         }
       });
     });

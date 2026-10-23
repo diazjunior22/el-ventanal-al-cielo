@@ -36,7 +36,19 @@ export const siteConfig = {
       troutLakes: "Dos lagos ecológicos de agua viva con alevinos y truchas arcoíris.",
       organicFood: "Alimentación 100% orgánica cosechada en nuestra propia huerta, libre de agroquímicos y pesticidas.",
       pollinators: "Cuidado y protección activa de polinizadores: abejas nativas meliponas, colibríes y mariposas.",
-      forestRegeneration: "Proceso activo de regeneración de bosque andino mediante la siembra continua de árboles nativos."
+      forestRegeneration: "Proceso activo de regeneración de bosque andino mediante la siembra continua de árboles nativos.",
+      wildlifeMonitoring: {
+        featuredSpecies: "Yaguarundí (Herpailurus yagouaroundi)",
+        commonNames: "Yaguarundí, Gato Moro o León de Montaña Pequeño",
+        captureMethod: "Cámara trampa con sensor térmico e infrarrojo no invasivo",
+        authority: "CVC (Corporación Autónoma Regional del Valle del Cauca)",
+        protectionStatus: "Especie silvestre protegida por la CVC y prioritaria en la biodiversidad del Valle del Cauca",
+        altitude: "1.900 m s. n. m.",
+        location: "La Buitrera de Palmira, Sector Arenillo Alto",
+        image: "/images/registrovisual/animal3.jpeg",
+        galleryId: "gal-15",
+        keyTakeaway: "La presencia documentada de este felino silvestre certifica que la reserva de El Ventanal al Cielo es un corredor biológico activo, saludable y protegido."
+      }
     },
     instagramUrl: "https://www.instagram.com/el_ventanal_al_cielo/",
     instagramUser: "@el_ventanal_al_cielo",
@@ -60,7 +72,7 @@ export const siteConfig = {
       program: "Calidad Turística Colombia",
       date: "Mayo 2026",
       backing: "Ministerio de Comercio, Industria y Turismo · FONTUR · Gobernación del Valle del Cauca (Secretaría de Turismo)",
-      image: "/images/reconocimiento-calidad-turistica.jpg"
+      image: "/images/certificado.jpg"
     },
     googleReviewsUrl: "https://www.google.com/travel/search?q=el%20ventanal%20al%20cielo&g2lb=4965990%2C72471280%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C121529350%2C121608706%2C121738283%2C121921501%2C121951222%2C122035345%2C122078727%2C122093076%2C122097177&hl=en-CO&gl=co&cs=1&ssta=1&ts=CAEaRwopEicyJTB4OGUzYTE3MDAyMjgyMzFlZDoweDFjYmE1MmFiNjNmNzQwYzcSGhIUCgcI6g8QChgdEgcI6g8QChgeGAEyAhAA&qs=CAEyE0Nnb0l4NEhkbjdiVmxOMGNFQUU4AkIJCcdA92OrUrocQgkJx0D3Y6tSuhw&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjYw4XWyL-XAxUAAAAAHQAAAAAQCQ",
     rating: {
@@ -171,9 +183,10 @@ export const siteConfig = {
       name: "Cabaña Privada con Jacuzzi · Plan Pareja",
       isPendingConfirmation: false,
       tag: "Plan Pareja · Luxury con Jacuzzi",
+      inventoryBadge: "💎 Solo 3 cabañas VIP en la reserva",
       type: "Cabaña Privada",
       shortDescription: "Refugio privado exclusivo para dos con jacuzzi de agua caliente, malla catamarán con vista al firmamento, zona de fogata privada, baño privado, piscina natural y desayuno campestre.",
-      longDescription: "Una experiencia completa pensada para celebrar el amor y descansar en medio de la montaña. Incluye jacuzzi privado con agua caliente, malla catamarán suspendida con vista abierta al cielo, fogata privada con masmelos, dos copas de vino de bienvenida, desayuno campestre tradicional, piscina natural de agua pura de manantial, zona de hamacas, TV, WiFi, baño privado con ducha y seguro médico durante toda la estancia.",
+      longDescription: "Una experiencia completa pensada para celebrar el amor y descansar en medio de la montaña. Incluye jacuzzi privado con agua caliente, malla catamarán suspendida con vista abierta al cielo, fogata privada con masmelos, dos copas de vino de bienvenida, desayuno campestre tradicional, piscina natural de agua pura de manantial, zona de hamacas, TV, WiFi, baño privado con ducha y seguro médico durante toda la estancia. Solo contamos con 3 unidades VIP en toda la reserva.",
       image: "/images/cabañass/vip/1.jpeg",
       gallery: [
         "/images/cabañass/vip/1.jpeg",
@@ -218,7 +231,7 @@ export const siteConfig = {
         advanceWeekdayFormatted: "$120.000 (50%)",
         advanceWeekendFormatted: "$140.000 (50%)",
         displayRate: "$240.000 entre semana · $280.000 fines de semana",
-        note: "Tarifas netas por pareja. Requiere un anticipo del 50% vía Nequi (3183831095) para solicitar la reserva."
+        note: "Tarifas netas por pareja. Requiere un anticipo del 50% vía Nequi (3183831095) para solicitar la reserva. Cupo limitado a solo 3 cabañas VIP."
       }
     },
     {
@@ -226,9 +239,10 @@ export const siteConfig = {
       name: "Glamping Palomera 🛖 · Cabaña Sencilla",
       isPendingConfirmation: false,
       tag: "Plan Pareja · Cabaña Sencilla",
+      inventoryBadge: "🛖 Solo 2 unidades disponibles",
       type: "Glamping Cabaña Sencilla",
       shortDescription: "Cabaña sencilla y acogedora en medio de la naturaleza con malla catamarán, zona de fogata con masmelos, piscina natural y desayuno campestre.",
-      longDescription: "Un espacio íntimo y auténtico de desconexión rural. Ideal para parejas que desean vivir la magia del glamping en la montaña con desayuno campestre tradicional, zona de fogata nocturna con masmelos, malla catamarán con vista panorámica, piscina natural de manantial, baño compartido y avistamiento de aves silvestres.",
+      longDescription: "Un espacio íntimo y auténtico de desconexión rural. Ideal para parejas que desean vivir la magia del glamping en la montaña con desayuno campestre tradicional, zona de fogata nocturna con masmelos, malla catamarán con vista panorámica, piscina natural de manantial, baño compartido y avistamiento de aves silvestres. Solo contamos con 2 unidades Palomera en el glamping.",
       image: "/images/cabañass/Palomera/1.jpeg",
       gallery: [
         "/images/cabañass/Palomera/1.jpeg",
@@ -268,7 +282,7 @@ export const siteConfig = {
         advanceWeekdayFormatted: "$60.000 (50%)",
         advanceWeekendFormatted: "$80.000 (50%)",
         displayRate: "$120.000 entre semana · $160.000 fines de semana",
-        note: "Tarifas netas por pareja. Requiere un anticipo del 50% vía Nequi (3183831095) para solicitar la reserva."
+        note: "Tarifas netas por pareja. Requiere un anticipo del 50% vía Nequi (3183831095) para solicitar la reserva. Cupo limitado a solo 2 unidades."
       }
     },
     {
@@ -276,9 +290,10 @@ export const siteConfig = {
       name: "Cabaña Familiar · Plan Familiar (4 personas)",
       isPendingConfirmation: false,
       tag: "👨‍👩‍👧‍👦 Plan Familiar · Para 4 Personas",
+      inventoryBadge: "✨ Modalidad en Cabaña VIP (cupo compartido)",
       type: "Cabaña Familiar",
       shortDescription: "La opción ideal para familias o grupos de 4 personas. Cabaña privada con jacuzzi de agua caliente, malla catamarán suspendida, fogata privada, masmelos, copas de vino, TV, WiFi, desayuno campestre tradicional y baño privado.",
-      longDescription: "Un espacio exclusivo pensado para reconectar y compartir momentos inolvidables en familia en lo alto de la cordillera. Disfruta de jacuzzi privado con agua caliente, amplia malla catamarán suspendida con vista panorámica abierta al cielo, fogata privada nocturna con masmelos, copas de vino de bienvenida, televisión, WiFi de montaña, desayuno campestre tradicional incluido para 4 personas, piscina natural de manantial, zona de hamacas para descanso, baño privado con ducha y seguro médico durante toda la estadía.",
+      longDescription: "Un espacio exclusivo pensado para reconectar y compartir momentos inolvidables en familia en lo alto de la cordillera. Disfruta de jacuzzi privado con agua caliente, amplia malla catamarán suspendida con vista panorámica abierta al cielo, fogata privada nocturna con masmelos, copas de vino de bienvenida, televisión, WiFi de montaña, desayuno campestre tradicional incluido para 4 personas, piscina natural de manantial, zona de hamacas para descanso, baño privado con ducha y seguro médico durante toda la estadía. Nota: Esta opción se acondiciona sobre una de nuestras 3 Cabañas VIP y su disponibilidad está sujeta a que haya cabaña VIP disponible.",
       image: "/images/cabañass/Familiar/1.jpeg",
       gallery: [
         "/images/cabañass/Familiar/1.jpeg",
@@ -586,6 +601,101 @@ export const siteConfig = {
       src: "/images/registrovisual/naturaleza3.jpeg",
       aspect: "landscape",
       alt: "Artista pintando mural ecológico con aves nativas como el caracara y el buitre en El Ventanal al Cielo"
+    },
+    {
+      id: "gal-ave-1",
+      title: "Copetón andino (Zonotrichia capensis) anidando en la reserva",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/animal.jpeg",
+      aspect: "portrait",
+      alt: "Copetón andino (Zonotrichia capensis) con material vegetal para su nido posado en estaca de madera rústica"
+    },
+    {
+      id: "gal-ave-2",
+      title: "Barranquero andino coronado (Momotus aequatorialis) posado en el bosque",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/animal1.jpeg",
+      aspect: "portrait",
+      alt: "Barranquero andino coronado (Momotus aequatorialis) con su corona turquesa, antifaz negro y cola de péndulo. Fotografía: Daniel Marín"
+    },
+    {
+      id: "gal-ave-3",
+      title: "Barranquero andino en pleno despliegue alar sobre el dosel de niebla",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/animal2.jpeg",
+      aspect: "landscape",
+      alt: "Barranquero andino desplegando alas azul cobalto y turquesa en pleno vuelo en el bosque andino. Fotografía: Daniel Marín"
+    },
+    {
+      id: "gal-ave-4",
+      title: "Loro frentirrojo (Psittacara wagleri) alimentándose en árbol nativo",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/naturaleza.jpg",
+      aspect: "portrait",
+      alt: "Loro frentirrojo (Psittacara wagleri) con frente escarlata y plumaje verde esmeralda alimentándose de vainas y semillas en árbol nativo"
+    }
+  ],
+
+  birds: [
+    {
+      id: "gal-ave-1",
+      commonName: "Copetón Andino / Chingolo",
+      scientificName: "Zonotrichia capensis",
+      family: "Passerellidae (Orden Passeriformes)",
+      statusBadge: "Residente Andino · Canto Matutino",
+      habitat: "Bordes de bosque, huerta orgánica y senderos andinos",
+      altitude: "1.900 m s. n. m.",
+      identification: "Se reconoce fácilmente por su cabeza con rayas negras y grises, un distintivo collar rojizo o canela a los lados del cuello, y tonos grises y cafés en el cuerpo.",
+      behavior: "Ave cantora representativa de los Andes colombianos. En la imagen capturada en la reserva se le observa recolectando fibras y ramas secas para construir su nido sobre estacas y setos naturales a 1.900 msnm.",
+      image: "/images/aves/animal.jpeg",
+      credit: "Registro en El Ventanal al Cielo",
+      tags: ["Residente", "Canto Andino", "Anidación"]
+    },
+    {
+      id: "gal-ave-2",
+      commonName: "Barranquero Andino / Soledad",
+      scientificName: "Momotus aequatorialis",
+      family: "Momotidae (Orden Coraciiformes)",
+      statusBadge: "Emblema Andino · Corona Turquesa",
+      habitat: "Bosques andinos, bordes de montaña y zonas arboladas de altitud media y alta",
+      altitude: "1.900 m s. n. m.",
+      identification: "Se distingue por su antifaz negro, ceja o corona azul brillante, cuerpo verde esmeralda, pico fuerte aserrado y su espectacular cola en forma de raqueta o péndulo.",
+      behavior: "Permanece posado con quietud en ramas medias mientras mueve su cola como un péndulo de reloj. Es una de las especies más fotogénicas y fascinantes que conviven en el bosque de La Buitrera.",
+      image: "/images/aves/animal1.jpeg",
+      credit: "Daniel Marín Fotografía",
+      tags: ["Emblemático", "Bosque de Niebla", "Cola Raqueta"]
+    },
+    {
+      id: "gal-ave-3",
+      commonName: "Barranquero en Pleno Vuelo",
+      scientificName: "Familia Momotidae",
+      family: "Momotidae (Despliegue Alar)",
+      statusBadge: "Captura en Movimiento · Belleza Alar",
+      habitat: "Dosel medio y alto del bosque nativo regenerado",
+      altitude: "1.900 m s. n. m.",
+      identification: "Impresionante captura fotográfica en pleno vuelo que expone el contraste entre su dorso verde esmeralda y el encendido abanico azul cobalto y turquesa de sus plumas primarias.",
+      behavior: "El barranquero surca el aire con maniobras ágiles para cazar insectos grandes y frutos silvestres en los árboles nativos sembrados en nuestro plan de regeneración forestal.",
+      image: "/images/aves/animal2.jpeg",
+      credit: "Daniel Marín Fotografía",
+      tags: ["Vuelo Libre", "Alas Turquesa", "Dosel Andino"]
+    },
+    {
+      id: "gal-ave-4",
+      commonName: "Loro Frentirrojo / Perico Cordillerano",
+      scientificName: "Psittacara wagleri",
+      family: "Psittacidae (Orden Psittaciformes)",
+      statusBadge: "Bandadas Libres · Plumaje Vivo",
+      habitat: "Laderas andinas, cañadas arboladas y árboles frutales de montaña",
+      altitude: "1.900 m s. n. m.",
+      identification: "Plumaje verde esmeralda con una marcada mancha frontal carmesí o roja en la frente, pico claro adaptado y cola cuneiforme de vuelo veloz.",
+      behavior: "Suelen moverse en bandadas ruidosas y alegres al amanecer y atardecer sobrevolando la reserva. Se alimentan de semillas, vainas nativas, frutos silvestres y brotes tiernos sin pesticidas.",
+      image: "/images/aves/naturaleza.jpg",
+      credit: "Registro en El Ventanal al Cielo",
+      tags: ["Bandadas", "Frugívoro", "Dosel Alto"]
     }
   ],
 

@@ -252,11 +252,17 @@ export class BookingFlowModal {
 
     const today = new Date().toISOString().split('T')[0];
 
-    const cabinOptions = siteConfig.cabins.map(c => `
-      <option value="${c.id}" ${this.formData.cabinId === c.id ? 'selected' : ''}>
-        ${c.name} (${c.rateInfo.weekdayRateFormatted} / ${c.rateInfo.weekendRateFormatted})
-      </option>
-    `).join('');
+    const cabinOptions = siteConfig.cabins.map(c => {
+      let inventoryTag = '';
+      if (c.id === 'cabana-privada-plan-pareja') inventoryTag = ' · [Solo 3 VIP]';
+      else if (c.id === 'glamping-palomera') inventoryTag = ' · [Solo 2 Palomeras]';
+      else if (c.id === 'cabana-familiar-plan-familiar') inventoryTag = ' · [Modalidad VIP Compartida]';
+      return `
+        <option value="${c.id}" ${this.formData.cabinId === c.id ? 'selected' : ''}>
+          ${c.name}${inventoryTag} (${c.rateInfo.weekdayRateFormatted} / ${c.rateInfo.weekendRateFormatted})
+        </option>
+      `;
+    }).join('');
 
     const dayPassOptions = (siteConfig.dayPasses || []).map(d => `
       <option value="${d.id}" ${this.formData.cabinId === d.id ? 'selected' : ''}>
@@ -269,7 +275,7 @@ export class BookingFlowModal {
         <p style="margin-bottom: 1.35rem; font-size: var(--text-sm); color: var(--text-muted); line-height: 1.6;">
           ${isDayPass
             ? 'Regálate un día de descanso rodeado de naturaleza. Selecciona tu fecha de <strong>lunes a jueves (8am - 4pm)</strong> y consulta directamente en WhatsApp.'
-            : 'Dinos tus fechas y preferencias de descanso. Al enviar el formulario, <strong>se abrirá directamente WhatsApp (+57 318 383 1095)</strong> con los detalles organizados para confirmar tu reserva.'
+            : 'Dinos tus fechas y preferencias de descanso. Al enviar el formulario, <strong>se abrirá directamente WhatsApp (+57 318 383 1095)</strong> con los detalles organizados para validar disponibilidad y confirmar tu reserva de inmediato.'
           }
         </p>
 
@@ -288,7 +294,7 @@ export class BookingFlowModal {
         </div>
 
         <!-- 2. Fechas -->
-        <div id="dates-inputs-row" style="display: grid; grid-template-columns: ${isDayPass ? '1fr' : 'repeat(auto-fit, minmax(200px, 1fr))'}; gap: 1rem; margin-bottom: 1rem;">
+        <div id="dates-inputs-row" style="display: grid; grid-template-columns: ${isDayPass ? '1fr' : 'repeat(auto-fit, minmax(200px, 1fr))'}; gap: 1rem; margin-bottom: 0.75rem;">
           <div class="form-group" style="margin-bottom: 0;">
             <label class="form-label" for="consult-checkin">
               ${isDayPass ? 'Fecha del Pasadía (Lunes a Jueves) <span class="required-star">*</span>' : 'Fecha de llegada (Check-in) <span class="required-star">*</span>'}
@@ -301,6 +307,15 @@ export class BookingFlowModal {
             <label class="form-label" for="consult-checkout">Fecha de salida (Check-out) <span class="required-star">*</span></label>
             <input type="date" id="consult-checkout" class="form-input" min="${this.formData.checkin || today}" value="${this.formData.checkout}">
             <span class="error-message" id="err-consult-checkout">La salida debe ser posterior a la llegada.</span>
+          </div>
+        </div>
+
+        <!-- Aviso de Alta Demanda y Validación de Cupos en Tiempo Real -->
+        <div class="availability-notice-card" style="margin-bottom: 1.15rem;">
+          <span style="font-size: 1.25rem; flex-shrink: 0; line-height: 1;">🛎️</span>
+          <div style="font-size: 0.8rem; line-height: 1.5; color: var(--c-earth-brown);">
+            <strong style="color: #C8690F;">Disponibilidad en tiempo real vía WhatsApp:</strong><br>
+            Somos un refugio ecológico de baja densidad con <strong>solo 5 cabañas en total</strong> (3 VIP con jacuzzi y 2 Glampings Palomera). Al enviar tu consulta, confirmamos la disponibilidad de tu fecha de inmediato en nuestro chat oficial.
           </div>
         </div>
 
@@ -783,7 +798,7 @@ export class BookingFlowModal {
       const checkInTime = costInfo ? costInfo.checkInTime : '3:00 pm';
       const checkOutTime = costInfo ? costInfo.checkOutTime : '1:00 pm';
 
-      msg = `🌄 *Consulta de Reserva - El Ventanal al Cielo*\n`;
+      msg = `🌄 *Consulta de Disponibilidad y Reserva - El Ventanal al Cielo*\n`;
       msg += `📍 La Buitrera de Palmira, Valle del Cauca\n\n`;
       msg += `👤 *Titular:* ${this.formData.contactName}\n`;
       msg += `📱 *WhatsApp:* ${this.formData.contactPhone}\n`;
@@ -807,9 +822,8 @@ export class BookingFlowModal {
       if (this.formData.message) {
         msg += `💬 *Comentario / Solicitud:* ${this.formData.message}\n`;
       }
-      msg += `\n📲 *Pago Nequi:* 3183831095\n`;
-      msg += `📸 *Comprobante:* Adjunto a continuación la captura de pantalla de la transferencia del anticipo para apartar las fechas.\n`;
-      msg += `\n¡Hola! He generado mi consulta de estadía y adjunto mi comprobante de Nequi para apartar las fechas. ¡Muchas gracias!`;
+      msg += `\n📲 *Pago Nequi oficial:* 3183831095\n`;
+      msg += `\n¡Hola! Vengo desde la página web de El Ventanal al Cielo y me gustaría validar disponibilidad para estas fechas. Quedo atento a su confirmación para transferir el anticipo y apartar el cupo. ¡Muchas gracias!`;
     }
 
     const encodedMsg = encodeURIComponent(msg);
@@ -848,7 +862,7 @@ export class BookingFlowModal {
         </div>
 
         <p style="max-width: 520px; margin: 0 auto 1.15rem; font-size: var(--text-base); color: var(--text-main); line-height: 1.55;">
-          ¡Tu mensaje fue preparado y abierto en WhatsApp! Sigue estos <strong>3 sencillos pasos</strong> para bloquear tu fecha en el calendario oficial:
+          ¡Tu mensaje fue preparado y abierto en WhatsApp! Sigue estos <strong>3 sencillos pasos</strong> para validar la disponibilidad y asegurar tu fecha:
         </p>
 
         <!-- Tarjeta Nequi Oficial -->
@@ -885,29 +899,29 @@ export class BookingFlowModal {
           </div>
         </div>
 
-        <!-- 3 Pasos Clave -->
+        <!-- 3 Pasos Clave de Confirmación -->
         <div class="booking-steps-timeline" style="max-width: 520px; margin: 0 auto 1.35rem;">
-          <div class="booking-step-item">
-            <span class="booking-step-num">1</span>
+          <div class="booking-step-item" style="background: rgba(242, 140, 40, 0.06); border-color: rgba(242, 140, 40, 0.25);">
+            <span class="booking-step-num" style="background: var(--c-orange-sunset);">1</span>
             <div>
-              <strong style="color: var(--c-earth-brown); display: block;">Transfiere el 50% por Nequi</strong>
-              <span style="color: var(--text-muted);">Transfiere <strong>${advanceFormatted}</strong> al Nequi <strong>${siteConfig.brand.nequiNumber}</strong>.</span>
+              <strong style="color: var(--c-earth-brown); display: block;">Validación de fecha en WhatsApp</strong>
+              <span style="color: var(--text-muted);">El anfitrión confirmará en el chat que tus fechas elegidas tienen cabaña disponible (cupos limitados a 3 VIP y 2 Palomeras).</span>
             </div>
           </div>
 
           <div class="booking-step-item">
             <span class="booking-step-num">2</span>
             <div>
-              <strong style="color: var(--c-earth-brown); display: block;">Toma captura de pantalla</strong>
-              <span style="color: var(--text-muted);">Guarda la imagen del comprobante de transferencia exitosa en tu teléfono.</span>
+              <strong style="color: var(--c-earth-brown); display: block;">Transfiere el 50% de anticipo</strong>
+              <span style="color: var(--text-muted);">Con la fecha aprobada, transfiere <strong>${advanceFormatted}</strong> al Nequi <strong>${siteConfig.brand.nequiNumber}</strong>.</span>
             </div>
           </div>
 
           <div class="booking-step-item" style="background: rgba(37, 211, 102, 0.08); border-color: rgba(37, 211, 102, 0.3);">
             <span class="booking-step-num" style="background: #25D366;">3</span>
             <div>
-              <strong style="color: #1E7E34; display: block;">Adjunta la captura en WhatsApp</strong>
-              <span style="color: #1E7E34;">Envía la imagen en el chat oficial de WhatsApp. ¡Validamos tu pago y apartamos la fecha de inmediato!</span>
+              <strong style="color: #1E7E34; display: block;">Envía el comprobante para asegurar tu cupo</strong>
+              <span style="color: #1E7E34;">Adjunta la captura en el chat para recibir la confirmación de tu reserva y las instrucciones de llegada a la montaña.</span>
             </div>
           </div>
         </div>
