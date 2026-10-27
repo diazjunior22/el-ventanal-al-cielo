@@ -430,8 +430,8 @@ export class BookingFlowModal {
 
         <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.09); border-radius: 8px; padding: 0.6rem 0.85rem; border: 1px solid rgba(255, 255, 255, 0.15); flex-wrap: wrap; gap: 0.5rem;">
           <div style="display: flex; align-items: center; gap: 0.65rem;">
-            <div style="width: 32px; height: 32px; border-radius: 50%; background: #FF007A; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.85rem; color: #FFFFFF; flex-shrink: 0; box-shadow: 0 2px 8px rgba(255, 0, 122, 0.4);">
-              N
+            <div style="background: #FFFFFF; padding: 3px 6px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+              <img src="/images/nequi-logo.png" alt="Logo Nequi Oficial" style="height: 20px; width: auto; object-fit: contain; display: block;">
             </div>
             <div>
               <span style="display: block; font-size: 0.65rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.06em;">Cuenta Nequi Oficial</span>
@@ -577,7 +577,8 @@ export class BookingFlowModal {
             <strong style="color: var(--c-earth-brown); font-size: var(--text-sm);">Aparta tu cupo con el 50% de anticipo</strong>
           </div>
           <div style="display: flex; align-items: center; gap: 0.4rem;">
-            <span style="font-family: monospace; font-weight: 700; color: #FFFFFF; background: #1C0A35; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem;">Nequi: ${siteConfig.brand.nequiNumber}</span>
+            <span class="nequi-logo-pill" style="padding: 2px 5px; vertical-align: middle;"><img src="/images/nequi-logo.png" alt="Nequi" style="height: 14px; vertical-align: middle;"></span>
+            <span style="font-family: monospace; font-weight: 700; color: #FFFFFF; background: #1C0A35; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem;">${siteConfig.brand.nequiNumber}</span>
             <button type="button" data-copy-nequi-action class="btn-copy-nequi" style="padding: 0.25rem 0.65rem; font-size: 0.68rem; cursor: pointer;">Copiar</button>
           </div>
         </div>
@@ -868,10 +869,8 @@ export class BookingFlowModal {
         <!-- Tarjeta Nequi Oficial -->
         <div class="nequi-card" style="max-width: 520px; margin: 0 auto 1.25rem; text-align: left; padding: 1.15rem 1.35rem;">
           <div class="nequi-header">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <div style="width: 28px; height: 28px; border-radius: 50%; background: #FF007A; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.8rem; color: #FFFFFF;">
-                N
-              </div>
+            <div style="display: flex; align-items: center; gap: 0.65rem;">
+              <img src="/images/nequi-logo.png" alt="Logo Nequi Oficial" style="height: 28px; width: auto; object-fit: contain; border-radius: 4px; background: #FFFFFF; padding: 2px 6px;">
               <span style="font-weight: 700; font-size: 0.85rem; letter-spacing: 0.03em;">Cuenta Nequi Oficial</span>
             </div>
             <span class="nequi-badge" style="background: rgba(255, 0, 122, 0.3); color: #FFF; border: 1px solid rgba(255, 0, 122, 0.5);">
@@ -881,7 +880,7 @@ export class BookingFlowModal {
 
           <div class="nequi-number-row" style="flex-wrap: wrap; gap: 0.5rem; padding: 0.65rem 1rem;">
             <div>
-              <span style="display: block; font-size: 0.65rem; color: rgba(255,255,255,0.7); text-transform: uppercase;">Número de celular</span>
+              <span style="display: block; font-size: 0.65rem; color: rgba(255,255,255,0.7); text-transform: uppercase;">Número de Nequi</span>
               <span class="nequi-number" style="font-size: 1.25rem;">${siteConfig.brand.nequiNumber}</span>
             </div>
             <button type="button" class="btn-copy-nequi" data-copy-nequi-action style="cursor: pointer;">
@@ -904,8 +903,8 @@ export class BookingFlowModal {
           <div class="booking-step-item" style="background: rgba(242, 140, 40, 0.06); border-color: rgba(242, 140, 40, 0.25);">
             <span class="booking-step-num" style="background: var(--c-orange-sunset);">1</span>
             <div>
-              <strong style="color: var(--c-earth-brown); display: block;">Validación de fecha en WhatsApp</strong>
-              <span style="color: var(--text-muted);">El anfitrión confirmará en el chat que tus fechas elegidas tienen cabaña disponible (cupos limitados a 3 VIP y 2 Palomeras).</span>
+              <strong style="color: var(--c-earth-brown); display: block;">Validación de fecha en WhatsApp Oficial</strong>
+              <span style="color: var(--text-muted);">El anfitrión confirmará en nuestro canal oficial <strong>(+57 318 055 6634)</strong> la disponibilidad de cabaña para tus fechas.</span>
             </div>
           </div>
 
@@ -913,7 +912,7 @@ export class BookingFlowModal {
             <span class="booking-step-num">2</span>
             <div>
               <strong style="color: var(--c-earth-brown); display: block;">Transfiere el 50% de anticipo</strong>
-              <span style="color: var(--text-muted);">Con la fecha aprobada, transfiere <strong>${advanceFormatted}</strong> al Nequi <strong>${siteConfig.brand.nequiNumber}</strong>.</span>
+              <span style="color: var(--text-muted);">Con la fecha aprobada, transfiere <strong>${advanceFormatted}</strong> al Nequi exclusivo <strong>${siteConfig.brand.nequiNumber}</strong>.</span>
             </div>
           </div>
 
@@ -921,7 +920,7 @@ export class BookingFlowModal {
             <span class="booking-step-num" style="background: #25D366;">3</span>
             <div>
               <strong style="color: #1E7E34; display: block;">Envía el comprobante para asegurar tu cupo</strong>
-              <span style="color: #1E7E34;">Adjunta la captura en el chat para recibir la confirmación de tu reserva y las instrucciones de llegada a la montaña.</span>
+              <span style="color: #1E7E34;">Adjunta la captura al WhatsApp <strong>+57 318 055 6634</strong> para recibir la confirmación formal y las indicaciones de llegada a la montaña.</span>
             </div>
           </div>
         </div>

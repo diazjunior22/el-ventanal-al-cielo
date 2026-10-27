@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.setAttribute('aria-hidden', 'false');
       btnHamburger.classList.add('active');
       btnHamburger.setAttribute('aria-expanded', 'true');
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
       btnCloseDrawer?.focus();
     };
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.setAttribute('aria-hidden', 'true');
       btnHamburger.classList.remove('active');
       btnHamburger.setAttribute('aria-expanded', 'false');
+      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
       btnHamburger.focus();
     };
@@ -238,6 +240,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     navSections.forEach(section => scrollSpyObserver.observe(section));
+  }
+
+  // 11. Selector interactivo de Fotogramas de Fototrampeo Yaguarundí (CVC)
+  const captureThumbs = document.querySelectorAll('.wildlife-capture-thumb');
+  const telemetryFrame = document.querySelector('#wildlife-telemetry-frame');
+  const telemetryImg = document.querySelector('#wildlife-telemetry-img');
+  const telemetryMeta = document.querySelector('#wildlife-telemetry-meta span');
+  const btnWildlifeDetail = document.querySelector('#btn-wildlife-detail');
+
+  if (captureThumbs.length > 0 && telemetryImg) {
+    captureThumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        captureThumbs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        thumb.classList.add('active');
+        thumb.setAttribute('aria-selected', 'true');
+
+        const newSrc = thumb.dataset.src;
+        const newAlt = thumb.dataset.alt;
+        const newGalleryId = thumb.dataset.galleryId;
+        const newTelemetry = thumb.dataset.telemetry;
+
+        if (newSrc) telemetryImg.src = newSrc;
+        if (newAlt) telemetryImg.alt = newAlt;
+        if (newGalleryId) {
+          telemetryFrame?.setAttribute('data-open-gallery-id', newGalleryId);
+          btnWildlifeDetail?.setAttribute('data-open-gallery-id', newGalleryId);
+        }
+        if (newTelemetry && telemetryMeta) {
+          telemetryMeta.textContent = newTelemetry;
+        }
+      });
+    });
   }
 });
 

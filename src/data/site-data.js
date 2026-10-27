@@ -45,8 +45,24 @@ export const siteConfig = {
         protectionStatus: "Especie silvestre protegida por la CVC y prioritaria en la biodiversidad del Valle del Cauca",
         altitude: "1.900 m s. n. m.",
         location: "La Buitrera de Palmira, Sector Arenillo Alto",
-        image: "/images/registrovisual/animal3.jpeg",
+        image: "/images/registrovisual/LOBO.jpg",
         galleryId: "gal-15",
+        captures: [
+          {
+            id: "gal-15",
+            image: "/images/registrovisual/LOBO.jpg",
+            telemetry: "23°C / 73°F · 03/12/2025 13:25:28",
+            title: "Toma 1 · Guardia erguido en sendero",
+            time: "13:25:28"
+          },
+          {
+            id: "gal-15b",
+            image: "/images/registrovisual/LOBO1.jpg",
+            telemetry: "23°C / 73°F · 09/12/2025 11:55:45",
+            title: "Toma 2 · Patrullaje diurno sobre roca",
+            time: "11:55:45"
+          }
+        ],
         keyTakeaway: "La presencia documentada de este felino silvestre certifica que la reserva de El Ventanal al Cielo es un corredor biológico activo, saludable y protegido."
       }
     },
@@ -58,8 +74,11 @@ export const siteConfig = {
     tiktokVideoId: "7656288507115097361",
     // Canales de contacto y pago
     nequiNumber: "3183831095",
-    whatsappNumber: "573183831095",
-    whatsappNumberFormatted: "+57 318 383 1095",
+    nequiLogo: "/images/nequi-logo.png",
+    whatsappNumber: "573180556634",
+    whatsappNumberFormatted: "+57 318 055 6634",
+    officialBookingNumber: "3180556634",
+    officialBookingNumberFormatted: "+57 318 055 6634",
     advancePercentage: 50,
     checkInTime: "3:00 pm",
     checkOutTime: "1:00 pm",
@@ -559,21 +578,30 @@ export const siteConfig = {
     },
     {
       id: "gal-15",
-      title: "Yaguarundí silvestre registrado por cámara trampa",
+      title: "Yaguarundí silvestre en sendero andino (Toma 1 · Sensor infrarrojo)",
       category: "fauna naturaleza",
       categoryLabel: "Fauna & Animales",
-      src: "/images/registrovisual/animal3.jpeg",
+      src: "/images/registrovisual/LOBO.jpg",
       aspect: "landscape",
-      alt: "Yaguarundí silvestre (Herpailurus yagouaroundi) registrado por cámara trampa en el bosque andino a 1.900 msnm"
+      alt: "Yaguarundí silvestre (Herpailurus yagouaroundi) erguido en el sendero andino captado por sensor de movimiento a 1.900 msnm"
+    },
+    {
+      id: "gal-15b",
+      title: "Yaguarundí silvestre en patrullaje diurno (Toma 2 · Cuerpo completo sobre roca)",
+      category: "fauna naturaleza",
+      categoryLabel: "Fauna & Animales",
+      src: "/images/registrovisual/LOBO1.jpg",
+      aspect: "landscape",
+      alt: "Yaguarundí silvestre (Herpailurus yagouaroundi) en patrullaje diurno de cuerpo completo sobre roca captado por cámara trampa"
     },
     {
       id: "gal-16",
-      title: "Caracara andino (Carancho) en la cordillera",
+      title: "Carriquí verdiamarillo (Cyanocorax yncas) en la reserva",
       category: "fauna naturaleza",
       categoryLabel: "Fauna & Animales",
-      src: "/images/registrovisual/animal4.jpg",
+      src: "/images/registrovisual/carraquil.jpg",
       aspect: "portrait",
-      alt: "Caracara andino (Caracara plancus) ave rapaz posada sobre estaca de madera mirando hacia la cordillera"
+      alt: "Trío de carriquíes verdiamarillos (Cyanocorax yncas) posados en tronco en el bosque andino"
     },
     {
       id: "gal-17",
@@ -595,12 +623,21 @@ export const siteConfig = {
     },
     {
       id: "gal-19",
-      title: "Mural artístico de biodiversidad y aves de La Buitrera",
-      category: "momentos experiencias",
-      categoryLabel: "Momentos",
-      src: "/images/registrovisual/naturaleza3.jpeg",
+      title: "Mural artístico de biodiversidad y fauna nativa (Yaguarundí, Buitre y Caracara)",
+      category: "cabañas momentos fauna experiencias",
+      categoryLabel: "Arte & Biodiversidad",
+      src: "/images/registrovisual/CASA1.jpg",
       aspect: "landscape",
-      alt: "Artista pintando mural ecológico con aves nativas como el caracara y el buitre en El Ventanal al Cielo"
+      alt: "Mural artístico de biodiversidad en la pared exterior de la cabaña con Yaguarundí, buitre andino, caracara y flora nativa en El Ventanal al Cielo"
+    },
+    {
+      id: "gal-19b",
+      title: "Mural ecológico y arte temático en la reserva andina",
+      category: "cabañas momentos fauna experiencias",
+      categoryLabel: "Arte & Biodiversidad",
+      src: "/images/registrovisual/CASA2.jpg",
+      aspect: "landscape",
+      alt: "Detalle del mural temático de conservación biológica y fauna silvestre pintado en El Ventanal al Cielo"
     },
     {
       id: "gal-ave-1",
@@ -637,6 +674,33 @@ export const siteConfig = {
       src: "/images/aves/naturaleza.jpg",
       aspect: "portrait",
       alt: "Loro frentirrojo (Psittacara wagleri) con frente escarlata y plumaje verde esmeralda alimentándose de vainas y semillas en árbol nativo"
+    },
+    {
+      id: "gal-ave-5",
+      title: "Carriquí verdiamarillo (Cyanocorax yncas) en la reserva natural",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/carraquil.jpg",
+      aspect: "portrait",
+      alt: "Trío de carriquíes verdiamarillos (Cyanocorax yncas) con plumaje verde lima, vientre amarillo brillante, antifaz negro y corona azul posados en tronco en El Ventanal al Cielo"
+    },
+    {
+      id: "gal-ave-6",
+      title: "Tangara cabecirrufa (Tangara gyrola) alimentándose en el dosel",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/tangara-gyrola.jpg",
+      aspect: "portrait",
+      alt: "Tangara cabecirrufa (Tangara gyrola) con cabeza castaño rojizo, collar dorado nucal y cuerpo azul turquesa alimentándose de fruto en El Ventanal al Cielo. Fotografía: Daniel Marín"
+    },
+    {
+      id: "gal-ave-7",
+      title: "Cuco ardilla (Piaya cayana) en el bosque andino",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/cuco-ardilla.jpg",
+      aspect: "portrait",
+      alt: "Cuco ardilla (Piaya cayana) con plumaje marrón canela, pico amarillo y cola larga graduada con puntas blancas posado en rama en El Ventanal al Cielo. Fotografía: Daniel Marín"
     }
   ],
 
@@ -696,6 +760,48 @@ export const siteConfig = {
       image: "/images/aves/naturaleza.jpg",
       credit: "Registro en El Ventanal al Cielo",
       tags: ["Bandadas", "Frugívoro", "Dosel Alto"]
+    },
+    {
+      id: "gal-ave-5",
+      commonName: "Carriquí Verdiamarillo / De Montaña",
+      scientificName: "Cyanocorax yncas",
+      family: "Corvidae (Orden Passeriformes)",
+      statusBadge: "Verde Lima & Amarillo · Corona Azul",
+      habitat: "Bosques andinos de niebla, bordes arbolados y senderos de montaña",
+      altitude: "1.900 m s. n. m.",
+      identification: "Llamativa combinación de verde lima en el dorso, vientre amarillo brillante, un rostro o 'máscara' negra, y detalles en azul intenso sobre la corona y las mejillas.",
+      behavior: "Miembro de la familia de los córvidos (parientes de cuervos y urracas), sumamente inteligentes, sociables y ruidosos. En la reserva se desplazan en grupos familiares activos entre los árboles nativos y arbustos de montaña.",
+      image: "/images/aves/carraquil.jpg",
+      credit: "Registro en El Ventanal al Cielo",
+      tags: ["Córvido Inteligente", "Sociable", "Verde y Amarillo"]
+    },
+    {
+      id: "gal-ave-6",
+      commonName: "Tangara Cabecirrufa / Cabecibaya",
+      scientificName: "Tangara gyrola",
+      family: "Thraupidae (Orden Passeriformes)",
+      statusBadge: "Azul Turquesa & Castaño · Frugívora",
+      habitat: "Estratos medios y altos del bosque andino húmedo y bordes arbolados",
+      altitude: "1.900 m s. n. m.",
+      identification: "Destaca por su cabeza de color castaño rojizo, un collar dorado muy delgado en la nuca y un vibrante cuerpo azul turquesa con alas verdes.",
+      behavior: "Especie principalmente frugívora que adora alimentarse de pequeños frutos y bayas silvestres en los estratos medios y altos del bosque húmedo. Como se aprecia en la fotografía de Daniel Marín, forrajea activamente entre las ramas del dosel en El Ventanal al Cielo.",
+      image: "/images/aves/tangara-gyrola.jpg",
+      credit: "Daniel Marín Fotografía",
+      tags: ["Frugívora", "Turquesa y Castaño", "Dosel Andino"]
+    },
+    {
+      id: "gal-ave-7",
+      commonName: "Cuco Ardilla / Pájaro Ardilla",
+      scientificName: "Piaya cayana",
+      family: "Cuculidae (Orden Cuculiformes)",
+      statusBadge: "Marrón Canela · Cola Larga Graduada",
+      habitat: "Bordes de bosque andino húmedo y estratos arbolados",
+      altitude: "1.900 m s. n. m.",
+      identification: "Plumaje marrón canela o rojizo en la parte superior y cabeza, con una espectacular cola larga graduada que termina en puntas blancas y negras, y pico amarillo o verdoso fuerte.",
+      behavior: "Se mueve con asombrosa agilidad saltando velozmente entre las ramas, lo que recuerda a una ardilla (de ahí su nombre común o bobo chiso). Es un controlador biológico clave que se alimenta principalmente de insectos grandes (orugas, cigarras), arañas y pequeños lagartos.",
+      image: "/images/aves/cuco-ardilla.jpg",
+      credit: "Daniel Marín Fotografía",
+      tags: ["Ágil Saltador", "Cola Larga", "Controlador Biológico"]
     }
   ],
 

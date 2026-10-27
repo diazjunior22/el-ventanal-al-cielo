@@ -110,7 +110,7 @@ export class LegalModal {
 
         <h4 style="font-size: 1rem; color: var(--c-earth-brown); margin: 1.25rem 0 0.5rem;">1. Solicitud y Confirmación de Reserva</h4>
         <p style="margin-bottom: 1rem;">
-          El diligenciamiento del formulario web constituye una <u>solicitud preliminar</u>. La reserva solo queda formalmente confirmada cuando el establecimiento verifique la disponibilidad, valide el comprobante de anticipo del 50% vía Nequi (3183831095) y expida la notificación oficial de confirmación.
+          El diligenciamiento del formulario web constituye una <u>solicitud preliminar</u>. La reserva solo queda formalmente confirmada cuando el establecimiento verifique la disponibilidad, valide el comprobante de anticipo del 50% vía Nequi (3183831095) y expida la notificación oficial de confirmación a través de su canal oficial de reservas (+57 318 055 6634).
         </p>
 
         <h4 style="font-size: 1rem; color: var(--c-earth-brown); margin: 1.25rem 0 0.5rem;">2. Cuidado del Entorno Natural</h4>

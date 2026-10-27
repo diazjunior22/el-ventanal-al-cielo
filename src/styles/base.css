@@ -21,6 +21,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent; /* Elimina destello gris/azul en móviles */
   -webkit-text-size-adjust: 100%; /* Previene inflación de tipografía al rotar pantalla */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 section[id] {
@@ -30,11 +33,20 @@ section[id] {
 body {
   min-height: 100dvh; /* Evita saltos de barra de navegación en Safari iOS */
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
   line-height: 1.65;
   background-color: var(--bg-primary);
   color: var(--text-main);
   display: flex;
   flex-direction: column;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Enlace accesible para saltar al contenido principal */
