@@ -658,15 +658,6 @@ export const siteConfig = {
       alt: "Barranquero andino coronado (Momotus aequatorialis) con su corona turquesa, antifaz negro y cola de péndulo. Fotografía: Daniel Marín"
     },
     {
-      id: "gal-ave-3",
-      title: "Barranquero andino en pleno despliegue alar sobre el dosel de niebla",
-      category: "fauna naturaleza",
-      categoryLabel: "Aves de La Buitrera",
-      src: "/images/aves/animal2.jpeg",
-      aspect: "landscape",
-      alt: "Barranquero andino desplegando alas azul cobalto y turquesa en pleno vuelo en el bosque andino. Fotografía: Daniel Marín"
-    },
-    {
       id: "gal-ave-4",
       title: "Loro frentirrojo (Psittacara wagleri) alimentándose en árbol nativo",
       category: "fauna naturaleza",
@@ -701,6 +692,15 @@ export const siteConfig = {
       src: "/images/aves/cuco-ardilla.jpg",
       aspect: "portrait",
       alt: "Cuco ardilla (Piaya cayana) con plumaje marrón canela, pico amarillo y cola larga graduada con puntas blancas posado en rama en El Ventanal al Cielo. Fotografía: Daniel Marín"
+    },
+    {
+      id: "gal-ave-8",
+      title: "Tucanete lomirrojo (Aulacorhynchus haematopygus) en el bosque andino",
+      category: "fauna naturaleza",
+      categoryLabel: "Aves de La Buitrera",
+      src: "/images/aves/tucanete-lomirrojo.jpg",
+      aspect: "portrait",
+      alt: "Tucanete lomirrojo (Aulacorhynchus haematopygus) con plumaje verde, garganta clara y pico curvado rojizo posado en rama en El Ventanal al Cielo"
     }
   ],
 
@@ -732,20 +732,6 @@ export const siteConfig = {
       image: "/images/aves/animal1.jpeg",
       credit: "Daniel Marín Fotografía",
       tags: ["Emblemático", "Bosque de Niebla", "Cola Raqueta"]
-    },
-    {
-      id: "gal-ave-3",
-      commonName: "Barranquero en Pleno Vuelo",
-      scientificName: "Familia Momotidae",
-      family: "Momotidae (Despliegue Alar)",
-      statusBadge: "Captura en Movimiento · Belleza Alar",
-      habitat: "Dosel medio y alto del bosque nativo regenerado",
-      altitude: "1.900 m s. n. m.",
-      identification: "Impresionante captura fotográfica en pleno vuelo que expone el contraste entre su dorso verde esmeralda y el encendido abanico azul cobalto y turquesa de sus plumas primarias.",
-      behavior: "El barranquero surca el aire con maniobras ágiles para cazar insectos grandes y frutos silvestres en los árboles nativos sembrados en nuestro plan de regeneración forestal.",
-      image: "/images/aves/animal2.jpeg",
-      credit: "Daniel Marín Fotografía",
-      tags: ["Vuelo Libre", "Alas Turquesa", "Dosel Andino"]
     },
     {
       id: "gal-ave-4",
@@ -802,6 +788,20 @@ export const siteConfig = {
       image: "/images/aves/cuco-ardilla.jpg",
       credit: "Daniel Marín Fotografía",
       tags: ["Ágil Saltador", "Cola Larga", "Controlador Biológico"]
+    },
+    {
+      id: "gal-ave-8",
+      commonName: "Tucanete Lomirrojo / Pichí Esmeralda",
+      scientificName: "Aulacorhynchus haematopygus",
+      family: "Ramphastidae (Orden Piciformes)",
+      statusBadge: "Pico Curvado Bicolor · Verde Esmeralda",
+      habitat: "Estratos medios y altos del bosque de niebla y bordes de montaña",
+      altitude: "1.900 m s. n. m.",
+      identification: "Reconocible por su plumaje verde esmeralda con reflejos azulados en la garganta y pecho, rabadilla roja y su distintivo pico grande, aserrado y curvado con tonalidades marrón rojizo y base blanca.",
+      behavior: "Especie frugívora clave en la dispersión de semillas del bosque andino. Se mueve con cautela y agilidad entre el dosel arbóreo consumiendo frutos silvestres nativos en la reserva de El Ventanal al Cielo.",
+      image: "/images/aves/tucanete-lomirrojo.jpg",
+      credit: "Registro en El Ventanal al Cielo",
+      tags: ["Frugívoro", "Tucancito Andino", "Dispersor de Semillas"]
     }
   ],
 
