@@ -168,6 +168,51 @@ export const siteConfig = {
         "Velas 🕯️"
       ],
       description: "La decoración cuesta $80.000 y lleva pétalos, letrero, globos, letrero con luz y velas. Perfecta para celebrar aniversarios, propuestas de matrimonio o cumpleaños en la cabaña."
+    },
+    familyPolicy: {
+      title: "¡Ven a disfrutar de la naturaleza en familia en El Ventanal al Cielo! 💚🌿",
+      intro: "Si deseas venir acompañado de tu hijo(a), te compartimos nuestras tarifas adicionales según su edad:",
+      closingNote: "Queremos que toda la familia pueda disfrutar de una experiencia especial, rodeada de naturaleza, tranquilidad y momentos inolvidables. 🏕️💚 Si deseas incluir a tu hijo(a) en la reserva, cuéntanos su edad y con mucho gusto te ayudamos a calcular el valor total.",
+      tiers: [
+        {
+          tier: "infant",
+          ageRange: "De 0 a 1 año",
+          rateText: "¡No tiene costo adicional!",
+          price: 0,
+          priceFormatted: "$0 (Gratis)",
+          icon: "👶",
+          description: "Los bebés de 0 a 1 año se hospedan sin costo adicional.",
+          inclusions: ["Hospedaje en cabaña", "Póliza turística"]
+        },
+        {
+          tier: "child",
+          ageRange: "De 2 a 14 años",
+          rateText: "$70.000 por niño(a)",
+          price: 70000,
+          priceFormatted: "$70.000 por niño(a)",
+          icon: "🧒",
+          description: "Tarifa por niño(a) que asegura una experiencia campestre completa.",
+          inclusions: [
+            "Póliza turística y seguro médico",
+            "Desayuno campestre tradicional",
+            "Acceso a las instalaciones y zonas comunes"
+          ]
+        },
+        {
+          tier: "teenAdult",
+          ageRange: "De 15 años en adelante",
+          rateText: "50% del valor del hospedaje",
+          percentage: 50,
+          priceFormatted: "50% del valor del hospedaje",
+          icon: "🧑",
+          description: "Se cobra el 50% del valor del hospedaje del plan seleccionado.",
+          inclusions: [
+            "Hospedaje completo",
+            "Desayuno campestre",
+            "Póliza turística y zonas comunes"
+          ]
+        }
+      ]
     }
   },
 
@@ -820,6 +865,11 @@ export const siteConfig = {
       id: "faq-3",
       question: "¿Cuáles son las tarifas y cuánto debo pagar de anticipo?",
       answer: "Nuestras tarifas oficiales confirmadas son: 1) Cabaña Privada con Jacuzzi (Plan Pareja): $240.000 entre semana (anticipo 50% = $120.000) / $280.000 fin de semana (anticipo 50% = $140.000); 2) Glamping Palomera: $120.000 entre semana / $160.000 fin de semana; 3) Cabaña Familiar (Plan 4 personas): $420.000 entre semana (anticipo 50% = $210.000) / $450.000 fin de semana (anticipo 50% = $225.000). El anticipo del 50% se transfiere vía Nequi al 3183831095 para apartar la fecha."
+    },
+    {
+      id: "faq-ninos",
+      question: "¿Puedo venir acompañado de mi hijo(a) o niños y cuáles son las tarifas según su edad?",
+      answer: "¡Sí! En El Ventanal al Cielo nos encanta recibir a las familias para disfrutar de la naturaleza 💚🌿. Nuestras tarifas adicionales por edad son: 1) 👶 De 0 a 1 año: ¡No tiene costo adicional!; 2) 🧒 De 2 a 14 años: $70.000 por niño(a), valor que incluye póliza turística, desayuno campestre tradicional y acceso a todas las instalaciones y zonas comunes; 3) 🧑 De 15 años en adelante: Se cobra el 50% del valor del hospedaje. Al consultar en el formulario web puedes habilitar las casillas de verificación (check) según las edades de tus hijos para calcular el total exacto."
     },
     {
       id: "faq-4",

@@ -31,6 +31,12 @@ export class BookingFlowModal {
       contactPhone: '',
       includeTransport: false,
       includeDecoration: false,
+      childInfant: false,
+      childInfantQty: 1,
+      childKid: false,
+      childKidQty: 1,
+      childTeen: false,
+      childTeenQty: 1,
       message: ''
     };
     this.lastWhatsappUrl = '';
@@ -101,7 +107,8 @@ export class BookingFlowModal {
       btn.addEventListener('click', (e) => {
         const cabinId = e.currentTarget.dataset.cabinId || '';
         const withDecoration = e.currentTarget.dataset.withDecoration === 'true';
-        this.open(cabinId, withDecoration);
+        const withFamily = e.currentTarget.dataset.withFamily === 'true';
+        this.open(cabinId, withDecoration, withFamily);
       });
     });
   }
@@ -110,6 +117,14 @@ export class BookingFlowModal {
     const isDayPass = this.formData.isDayPass || (this.formData.cabinId && this.formData.cabinId.startsWith('pasadia-'));
     const decorationCost = this.formData.includeDecoration ? (siteConfig.services?.decoration?.price || 80000) : 0;
 
+    // Costos adicionales de niños / acompañantes según edad
+    // 👶 0 a 1 año: $0 (Gratis)
+    // 🧒 2 a 14 años: $70.000 por niño (incluye póliza turística, desayuno campestre y zonas comunes)
+    // 🧑 15 años en adelante: 50% del valor del hospedaje
+    const kidQty = this.formData.childKid ? (parseInt(this.formData.childKidQty, 10) || 1) : 0;
+    const teenQty = this.formData.childTeen ? (parseInt(this.formData.childTeenQty, 10) || 1) : 0;
+    const infantQty = this.formData.childInfant ? (parseInt(this.formData.childInfantQty, 10) || 1) : 0;
+
     // Cálculo para Pasadías (1 día, horario 8:00 am a 4:00 pm, Lun-Jue)
     if (isDayPass) {
       if (!this.formData.checkin) return null;
@@ -117,8 +132,13 @@ export class BookingFlowModal {
       const dayPassObj = siteConfig.dayPasses?.find(d => d.id === this.formData.cabinId) || siteConfig.dayPasses?.[0];
       const baseCost = dayPassObj ? dayPassObj.price : 180000;
       const transportCost = this.formData.includeTransport ? (siteConfig.services.transport?.pricePerCouple || 60000) : 0;
-      const totalCost = baseCost + transportCost + decorationCost;
-      const advanceAmount = Math.round(baseCost * 0.5) + (this.formData.includeTransport ? 30000 : 0) + (this.formData.includeDecoration ? 40000 : 0);
+
+      const kidsCost = kidQty * 70000;
+      const teenCost = teenQty * Math.round(baseCost * 0.5);
+      const additionalGuestsCost = kidsCost + teenCost;
+
+      const totalCost = baseCost + transportCost + decorationCost + additionalGuestsCost;
+      const advanceAmount = Math.round(totalCost * 0.5);
       const remainingAmount = totalCost - advanceAmount;
 
       const dateObj = new Date(this.formData.checkin + 'T12:00:00');
@@ -137,6 +157,12 @@ export class BookingFlowModal {
         lodgingCost: baseCost,
         transportCost,
         decorationCost,
+        kidsCost,
+        teenCost,
+        infantQty,
+        kidQty,
+        teenQty,
+        additionalGuestsCost,
         totalCost,
         totalCostFormatted: '$' + totalCost.toLocaleString('es-CO'),
         advanceAmount,
@@ -180,9 +206,14 @@ export class BookingFlowModal {
 
     const lodgingCost = (weekdayNights * weekdayRate) + (weekendNights * weekendRate);
     const transportCost = this.formData.includeTransport ? (siteConfig.services.transport?.pricePerCouple || 60000) : 0;
-    const totalCost = lodgingCost + transportCost + decorationCost;
 
-    const advanceAmount = Math.round(lodgingCost * (siteConfig.brand.advancePercentage / 100)) + (this.formData.includeTransport ? 30000 : 0) + (this.formData.includeDecoration ? 40000 : 0);
+    const kidsCost = kidQty * 70000 * totalNights;
+    const teenCost = teenQty * Math.round(lodgingCost * 0.5);
+    const additionalGuestsCost = kidsCost + teenCost;
+
+    const totalCost = lodgingCost + transportCost + decorationCost + additionalGuestsCost;
+
+    const advanceAmount = Math.round(totalCost * (siteConfig.brand.advancePercentage / 100));
     const remainingAmount = totalCost - advanceAmount;
 
     return {
@@ -198,6 +229,12 @@ export class BookingFlowModal {
       lodgingCost,
       transportCost,
       decorationCost,
+      kidsCost,
+      teenCost,
+      infantQty,
+      kidQty,
+      teenQty,
+      additionalGuestsCost,
       totalCost,
       totalCostFormatted: '$' + totalCost.toLocaleString('es-CO'),
       advanceAmount,
@@ -207,10 +244,15 @@ export class BookingFlowModal {
     };
   }
 
-  open(preselectedCabinId = '', withDecoration = false) {
+  open(preselectedCabinId = '', withDecoration = false, withFamily = false) {
     const selectedId = preselectedCabinId || this.formData.cabinId || 'cabana-privada-plan-pareja';
     this.formData.cabinId = selectedId;
     this.formData.includeDecoration = withDecoration;
+
+    if (withFamily) {
+      this.formData.childKid = true;
+      this.formData.childKidQty = 1;
+    }
 
     const dayPass = siteConfig.dayPasses?.find(d => d.id === selectedId);
     const cabin = siteConfig.cabins?.find(c => c.id === selectedId);
@@ -275,7 +317,7 @@ export class BookingFlowModal {
         <p style="margin-bottom: 1.35rem; font-size: var(--text-sm); color: var(--text-muted); line-height: 1.6;">
           ${isDayPass
             ? 'Regálate un día de descanso rodeado de naturaleza. Selecciona tu fecha de <strong>lunes a jueves (8am - 4pm)</strong> y consulta directamente en WhatsApp.'
-            : 'Dinos tus fechas y preferencias de descanso. Al enviar el formulario, <strong>se abrirá directamente WhatsApp (+57 318 383 1095)</strong> con los detalles organizados para validar disponibilidad y confirmar tu reserva de inmediato.'
+            : 'Dinos tus fechas y preferencias de descanso. Al enviar el formulario, <strong>se abrirá directamente WhatsApp (+57 318 055 6634)</strong> con los detalles organizados para validar disponibilidad y confirmar tu reserva de inmediato.'
           }
         </p>
 
@@ -355,13 +397,89 @@ export class BookingFlowModal {
         </div>
 
         <!-- 4.2 Servicio Adicional de Decoración Especial -->
-        <div style="background: rgba(242, 140, 40, 0.06); border: 1px dashed rgba(242, 140, 40, 0.35); padding: 0.85rem 1rem; border-radius: var(--radius-inner-sm); margin-bottom: 1rem;">
+        <div style="background: rgba(242, 140, 40, 0.06); border: 1px dashed rgba(242, 140, 40, 0.35); padding: 0.85rem 1rem; border-radius: var(--radius-inner-sm); margin-bottom: 0.75rem;">
           <label class="checkbox-container" style="font-size: var(--text-xs); margin: 0; align-items: flex-start;">
             <input type="checkbox" id="consult-decoration" class="checkbox-input" ${this.formData.includeDecoration ? 'checked' : ''}>
             <span class="checkbox-label-text" style="color: var(--c-earth-brown); line-height: 1.45;">
               ✨ <strong>Decoración Especial (+$80.000):</strong> Incluye pétalos, letrero, globos, letrero con luz y velas. <em>Ideal para aniversarios, propuestas o cumpleaños.</em>
             </span>
           </label>
+        </div>
+
+        <!-- 4.3 Huéspedes adicionales / Hijos por Edad (Tipo Check) -->
+        <div class="family-booking-block" style="background: rgba(46, 125, 50, 0.05); border: 1px solid rgba(46, 125, 50, 0.28); padding: 0.95rem 1.1rem; border-radius: var(--radius-inner-sm); margin-bottom: 1.15rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.45rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.45rem;">
+              <span style="font-size: 1.2rem; line-height: 1;">💚🌿</span>
+              <strong style="color: var(--c-earth-brown); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.04em;">¿Vienes con tu hijo(a) o acompañante adicional?</strong>
+            </div>
+            <span style="font-size: 0.68rem; color: #1E7E34; font-weight: 700; background: rgba(46, 125, 50, 0.12); padding: 0.15rem 0.5rem; border-radius: var(--radius-pill);">Tarifas por edad</span>
+          </div>
+
+          <p style="margin: 0 0 0.75rem; font-size: 0.73rem; color: var(--text-muted); line-height: 1.45;">
+            Habilita las opciones según la edad de tus hijos o acompañantes para calcular el valor total e incluir su póliza turística y desayuno campestre:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <!-- Check 1: 0 a 1 año (Gratis) -->
+            <div style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; padding: 0.55rem 0.75rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+              <label class="checkbox-container" style="font-size: var(--text-xs); margin: 0; align-items: center; flex-grow: 1;">
+                <input type="checkbox" id="consult-child-infant" class="checkbox-input" ${this.formData.childInfant ? 'checked' : ''}>
+                <span class="checkbox-label-text" style="color: var(--c-earth-brown); line-height: 1.35;">
+                  👶 <strong>De 0 a 1 año:</strong> <span style="color: #2E7D32; font-weight: 700;">¡No tiene costo adicional!</span>
+                </span>
+              </label>
+              <div id="wrap-infant-qty" style="display: ${this.formData.childInfant ? 'flex' : 'none'}; align-items: center; gap: 0.35rem; flex-shrink: 0;">
+                <label for="consult-child-infant-qty" style="font-size: 0.68rem; color: var(--text-muted);">Cant:</label>
+                <select id="consult-child-infant-qty" class="form-select" style="width: auto; padding: 0.2rem 0.45rem; font-size: 0.72rem; min-height: unset; height: auto;">
+                  <option value="1" ${this.formData.childInfantQty === 1 ? 'selected' : ''}>1 bebé</option>
+                  <option value="2" ${this.formData.childInfantQty === 2 ? 'selected' : ''}>2 bebés</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Check 2: 2 a 14 años ($70.000) -->
+            <div style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; padding: 0.55rem 0.75rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+              <label class="checkbox-container" style="font-size: var(--text-xs); margin: 0; align-items: flex-start; flex-grow: 1;">
+                <input type="checkbox" id="consult-child-kid" class="checkbox-input" ${this.formData.childKid ? 'checked' : ''}>
+                <span class="checkbox-label-text" style="color: var(--c-earth-brown); line-height: 1.35;">
+                  🧒 <strong>De 2 a 14 años:</strong> <span style="color: var(--c-orange-sunset); font-weight: 700;">$70.000 por niño(a)</span>
+                  <small style="display: block; color: var(--text-muted); font-size: 0.68rem; margin-top: 0.15rem;">
+                    ✨ Incluye: Póliza turística, desayuno campestre y acceso a zonas comunes.
+                  </small>
+                </span>
+              </label>
+              <div id="wrap-kid-qty" style="display: ${this.formData.childKid ? 'flex' : 'none'}; align-items: center; gap: 0.35rem; flex-shrink: 0;">
+                <label for="consult-child-kid-qty" style="font-size: 0.68rem; color: var(--text-muted);">Cant:</label>
+                <select id="consult-child-kid-qty" class="form-select" style="width: auto; padding: 0.2rem 0.45rem; font-size: 0.72rem; min-height: unset; height: auto;">
+                  <option value="1" ${this.formData.childKidQty === 1 ? 'selected' : ''}>1 niño</option>
+                  <option value="2" ${this.formData.childKidQty === 2 ? 'selected' : ''}>2 niños</option>
+                  <option value="3" ${this.formData.childKidQty === 3 ? 'selected' : ''}>3 niños</option>
+                  <option value="4" ${this.formData.childKidQty === 4 ? 'selected' : ''}>4 niños</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Check 3: 15 años en adelante (50% hospedaje) -->
+            <div style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; padding: 0.55rem 0.75rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+              <label class="checkbox-container" style="font-size: var(--text-xs); margin: 0; align-items: flex-start; flex-grow: 1;">
+                <input type="checkbox" id="consult-child-teen" class="checkbox-input" ${this.formData.childTeen ? 'checked' : ''}>
+                <span class="checkbox-label-text" style="color: var(--c-earth-brown); line-height: 1.35;">
+                  🧑 <strong>De 15 años en adelante:</strong> <span style="color: var(--c-orange-sunset); font-weight: 700;">50% del valor del hospedaje</span>
+                  <small style="display: block; color: var(--text-muted); font-size: 0.68rem; margin-top: 0.15rem;">
+                    Se liquida el 50% sobre la tarifa de la cabaña seleccionada.
+                  </small>
+                </span>
+              </label>
+              <div id="wrap-teen-qty" style="display: ${this.formData.childTeen ? 'flex' : 'none'}; align-items: center; gap: 0.35rem; flex-shrink: 0;">
+                <label for="consult-child-teen-qty" style="font-size: 0.68rem; color: var(--text-muted);">Cant:</label>
+                <select id="consult-child-teen-qty" class="form-select" style="width: auto; padding: 0.2rem 0.45rem; font-size: 0.72rem; min-height: unset; height: auto;">
+                  <option value="1" ${this.formData.childTeenQty === 1 ? 'selected' : ''}>1 persona</option>
+                  <option value="2" ${this.formData.childTeenQty === 2 ? 'selected' : ''}>2 personas</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- 5. Mensaje o Solicitud Especial Opcional -->
@@ -511,6 +629,9 @@ export class BookingFlowModal {
                 ✓ Incluye uso de cabaña de día, snacks, piscina natural, zona de hamacas, malla catamarán y espacios naturales.
                 ${this.formData.includeTransport ? '<br>✓ Incluye servicio de transporte desde el Parque de La Buitrera.' : ''}
                 ${this.formData.includeDecoration ? '<br>✓ Incluye Decoración Especial (+$80.000: pétalos, letrero, globos, letrero con luz y velas).' : ''}
+                ${costInfo.infantQty > 0 ? `<br>✓ 👶 ${costInfo.infantQty} bebé(s) (0 a 1 año): <strong>¡Sin costo adicional!</strong>` : ''}
+                ${costInfo.kidQty > 0 ? `<br>✓ 🧒 ${costInfo.kidQty} niño(a)s (2 a 14 años): <strong>+$${costInfo.kidsCost.toLocaleString('es-CO')} COP</strong> (Póliza turística + desayuno campestre + zonas comunes)` : ''}
+                ${costInfo.teenQty > 0 ? `<br>✓ 🧑 ${costInfo.teenQty} acompañante(s) (15+ años): <strong>+$${costInfo.teenCost.toLocaleString('es-CO')} COP</strong> (50% valor del plan)` : ''}
               </p>
 
               ${this.getNequiPaymentBoxHtml(costInfo)}
@@ -561,6 +682,9 @@ export class BookingFlowModal {
               ✓ Incluye desayuno campestre tradicional, zona de fogata con masmelos, piscina natural y seguro médico.
               ${this.formData.includeTransport ? '<br>✓ Incluye servicio de transporte desde el Parque de La Buitrera.' : ''}
               ${this.formData.includeDecoration ? '<br>✓ Incluye Decoración Especial (+$80.000: pétalos, letrero, globos, letrero con luz y velas).' : ''}
+              ${costInfo.infantQty > 0 ? `<br>✓ 👶 ${costInfo.infantQty} bebé(s) (0 a 1 año): <strong>¡Sin costo adicional!</strong>` : ''}
+              ${costInfo.kidQty > 0 ? `<br>✓ 🧒 ${costInfo.kidQty} niño(a)s (2 a 14 años) x ${costInfo.totalNights} noche(s): <strong>+$${costInfo.kidsCost.toLocaleString('es-CO')} COP</strong> (Póliza turística + desayuno campestre + zonas comunes)` : ''}
+              ${costInfo.teenQty > 0 ? `<br>✓ 🧑 ${costInfo.teenQty} acompañante(s) (15+ años): <strong>+$${costInfo.teenCost.toLocaleString('es-CO')} COP</strong> (50% valor del hospedaje)` : ''}
             </p>
 
             ${this.getNequiPaymentBoxHtml(costInfo)}
@@ -697,6 +821,64 @@ export class BookingFlowModal {
       });
     }
 
+    // Opciones de Hijos / Acompañantes por Edad (Tipo Check)
+    const infantCheck = this.modalEl.querySelector('#consult-child-infant');
+    const infantQtySelect = this.modalEl.querySelector('#consult-child-infant-qty');
+    const wrapInfantQty = this.modalEl.querySelector('#wrap-infant-qty');
+
+    if (infantCheck) {
+      infantCheck.addEventListener('change', () => {
+        this.formData.childInfant = infantCheck.checked;
+        if (wrapInfantQty) wrapInfantQty.style.display = infantCheck.checked ? 'flex' : 'none';
+        this.updateLiveQuote();
+      });
+    }
+
+    if (infantQtySelect) {
+      infantQtySelect.addEventListener('change', () => {
+        this.formData.childInfantQty = parseInt(infantQtySelect.value, 10) || 1;
+        this.updateLiveQuote();
+      });
+    }
+
+    const kidCheck = this.modalEl.querySelector('#consult-child-kid');
+    const kidQtySelect = this.modalEl.querySelector('#consult-child-kid-qty');
+    const wrapKidQty = this.modalEl.querySelector('#wrap-kid-qty');
+
+    if (kidCheck) {
+      kidCheck.addEventListener('change', () => {
+        this.formData.childKid = kidCheck.checked;
+        if (wrapKidQty) wrapKidQty.style.display = kidCheck.checked ? 'flex' : 'none';
+        this.updateLiveQuote();
+      });
+    }
+
+    if (kidQtySelect) {
+      kidQtySelect.addEventListener('change', () => {
+        this.formData.childKidQty = parseInt(kidQtySelect.value, 10) || 1;
+        this.updateLiveQuote();
+      });
+    }
+
+    const teenCheck = this.modalEl.querySelector('#consult-child-teen');
+    const teenQtySelect = this.modalEl.querySelector('#consult-child-teen-qty');
+    const wrapTeenQty = this.modalEl.querySelector('#wrap-teen-qty');
+
+    if (teenCheck) {
+      teenCheck.addEventListener('change', () => {
+        this.formData.childTeen = teenCheck.checked;
+        if (wrapTeenQty) wrapTeenQty.style.display = teenCheck.checked ? 'flex' : 'none';
+        this.updateLiveQuote();
+      });
+    }
+
+    if (teenQtySelect) {
+      teenQtySelect.addEventListener('change', () => {
+        this.formData.childTeenQty = parseInt(teenQtySelect.value, 10) || 1;
+        this.updateLiveQuote();
+      });
+    }
+
     // Envío del formulario
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -749,6 +931,12 @@ export class BookingFlowModal {
       this.formData.contactPhone = contactPhone;
       this.formData.includeTransport = transportCheck.checked;
       this.formData.includeDecoration = decorationCheck ? decorationCheck.checked : false;
+      this.formData.childInfant = infantCheck ? infantCheck.checked : false;
+      this.formData.childInfantQty = infantQtySelect ? (parseInt(infantQtySelect.value, 10) || 1) : 1;
+      this.formData.childKid = kidCheck ? kidCheck.checked : false;
+      this.formData.childKidQty = kidQtySelect ? (parseInt(kidQtySelect.value, 10) || 1) : 1;
+      this.formData.childTeen = teenCheck ? teenCheck.checked : false;
+      this.formData.childTeenQty = teenQtySelect ? (parseInt(teenQtySelect.value, 10) || 1) : 1;
       this.formData.message = message;
 
       // Generar y enviar a WhatsApp
@@ -777,6 +965,21 @@ export class BookingFlowModal {
       msg += `🕗 *Horario:* 8:00 a. m. a 4:00 p. m. (Lunes a Jueves)\n`;
       msg += `🌅 *Modalidad:* Disfrute durante el día, sin hospedaje nocturno\n`;
       msg += `👥 *Huéspedes:* ${guestsLabel}\n`;
+      let familyDetails = '';
+      if (this.formData.childInfant) {
+        familyDetails += `   • 👶 ${this.formData.childInfantQty} bebé(s) (0 a 1 año): ¡Sin costo adicional!\n`;
+      }
+      if (this.formData.childKid) {
+        const kidTotalText = costInfo ? `+$${costInfo.kidsCost.toLocaleString('es-CO')} COP` : `$70.000 COP c/u`;
+        familyDetails += `   • 🧒 ${this.formData.childKidQty} niño(a)s (2 a 14 años): ${kidTotalText} (Póliza turística + desayuno campestre + zonas comunes)\n`;
+      }
+      if (this.formData.childTeen) {
+        const teenTotalText = costInfo && costInfo.teenCost > 0 ? `+$${costInfo.teenCost.toLocaleString('es-CO')} COP` : `50% valor del plan`;
+        familyDetails += `   • 🧑 ${this.formData.childTeenQty} acompañante(s) (15+ años): ${teenTotalText}\n`;
+      }
+      if (familyDetails) {
+        msg += `💚 *Hijos / Acompañantes adicionales:*\n${familyDetails}`;
+      }
       if (costInfo) {
         msg += `💰 *Tarifa pasadía:* ${costInfo.totalCostFormatted} COP\n`;
         msg += `💳 *Anticipo requerido (50%):* ${costInfo.advanceAmountFormatted} COP\n`;
@@ -812,6 +1015,21 @@ export class BookingFlowModal {
         msg += `💳 *Anticipo requerido (50%):* ${costInfo.advanceAmountFormatted} COP\n`;
       }
       msg += `👥 *Huéspedes:* ${guestsLabel}\n`;
+      let familyDetails = '';
+      if (this.formData.childInfant) {
+        familyDetails += `   • 👶 ${this.formData.childInfantQty} bebé(s) (0 a 1 año): ¡Sin costo adicional!\n`;
+      }
+      if (this.formData.childKid) {
+        const kidTotalText = costInfo ? `+$${costInfo.kidsCost.toLocaleString('es-CO')} COP` : `$70.000 COP c/u`;
+        familyDetails += `   • 🧒 ${this.formData.childKidQty} niño(a)s (2 a 14 años): ${kidTotalText} (Póliza turística + desayuno campestre + zonas comunes)\n`;
+      }
+      if (this.formData.childTeen) {
+        const teenTotalText = costInfo && costInfo.teenCost > 0 ? `+$${costInfo.teenCost.toLocaleString('es-CO')} COP` : `50% valor del hospedaje`;
+        familyDetails += `   • 🧑 ${this.formData.childTeenQty} acompañante(s) (15+ años): ${teenTotalText}\n`;
+      }
+      if (familyDetails) {
+        msg += `💚 *Hijos / Acompañantes adicionales:*\n${familyDetails}`;
+      }
       if (this.formData.includeTransport) {
         msg += `🚗 *Transporte adicional:* Sí, recogida desde Parque de La Buitrera (+$60.000 pareja)\n`;
       } else {
@@ -936,6 +1154,9 @@ export class BookingFlowModal {
                  <p style="margin: 0 0 0.25rem;"><strong>Horarios:</strong> Check-in ${costInfo ? costInfo.checkInTime : '3:00 pm'} · Check-out ${costInfo ? costInfo.checkOutTime : '1:00 pm'}</p>`
             }
             ${costInfo ? `<p style="margin: 0 0 0.25rem;"><strong>Tarifa total:</strong> <span style="color: var(--c-orange-sunset); font-weight: 700;">${costInfo.totalCostFormatted} COP</span> (Anticipo 50%: ${costInfo.advanceAmountFormatted})</p>` : ''}
+            ${this.formData.childInfant ? `<p style="margin: 0 0 0.25rem; color: #1E7E34;"><strong>Bebé(s) (0-1 año):</strong> ${this.formData.childInfantQty} bebé(s) (¡Sin costo adicional!).</p>` : ''}
+            ${this.formData.childKid ? `<p style="margin: 0 0 0.25rem; color: #1E7E34;"><strong>Niño(a)s (2-14 años):</strong> ${this.formData.childKidQty} niño(a)s (${costInfo ? `+$${costInfo.kidsCost.toLocaleString('es-CO')} COP` : '$70.000 COP c/u'} · Incluye póliza, desayuno y zonas comunes).</p>` : ''}
+            ${this.formData.childTeen ? `<p style="margin: 0 0 0.25rem; color: #1E7E34;"><strong>Acompañante(s) 15+ años:</strong> ${this.formData.childTeenQty} persona(s) (${costInfo && costInfo.teenCost > 0 ? `+$${costInfo.teenCost.toLocaleString('es-CO')} COP` : '50% tarifa de hospedaje'}).</p>` : ''}
             ${this.formData.includeTransport ? '<p style="margin: 0 0 0.25rem; color: #1E7E34;"><strong>Transporte:</strong> Sí, recogida desde el Parque de La Buitrera.</p>' : ''}
             ${this.formData.includeDecoration ? '<p style="margin: 0 0 0.25rem; color: var(--c-orange-sunset);"><strong>Decoración:</strong> Sí ($80.000 · pétalos, letrero, globos, letrero con luz y velas).</p>' : ''}
           </div>

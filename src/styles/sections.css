@@ -1137,6 +1137,196 @@
 }
 
 /* ==========================================================================
+   TARJETA DESTACADA: EXPERIENCIA EN FAMILIA Y POLÍTICAS DE NIÑOS
+   ========================================================================== */
+.family-showcase-shell {
+  margin-top: 2.25rem;
+  position: relative;
+  background: linear-gradient(135deg, rgba(247, 252, 248, 0.96) 0%, rgba(254, 250, 246, 0.98) 100%);
+  border: 1px solid rgba(46, 125, 50, 0.28);
+  box-shadow: 0 16px 36px -12px rgba(46, 125, 50, 0.12);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-fast);
+}
+
+.family-showcase-shell:hover {
+  border-color: rgba(46, 125, 50, 0.45);
+  box-shadow: 0 20px 42px -10px rgba(46, 125, 50, 0.18);
+}
+
+.family-showcase-core {
+  padding: clamp(1.25rem, 3vw, 2.25rem) !important;
+}
+
+.family-policy-box {
+  width: 100%;
+}
+
+.family-title {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  color: var(--c-earth-brown);
+  line-height: 1.2;
+  margin: 0.5rem 0 0.45rem;
+}
+
+.family-intro {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.15rem;
+}
+
+.family-tiers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+@media (min-width: 600px) {
+  .family-tiers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.family-tier-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-inner-sm);
+  padding: 0.95rem 1.05rem;
+  box-shadow: 0 2px 8px rgba(74, 59, 50, 0.04);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.family-tier-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(46, 125, 50, 0.35);
+  box-shadow: 0 6px 14px rgba(46, 125, 50, 0.08);
+}
+
+.family-tier-card.tier-free {
+  border-left: 3px solid #2E7D32;
+}
+
+.family-tier-card.tier-featured {
+  border: 1px solid rgba(242, 140, 40, 0.35);
+  border-left: 3px solid var(--c-orange-sunset);
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 248, 238, 0.4) 100%);
+}
+
+.family-tier-card.tier-teen {
+  border-left: 3px solid #6C5CE7;
+}
+
+.family-tier-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.45rem;
+}
+
+.family-tier-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.family-tier-age {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.family-tier-price {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--c-earth-brown);
+  line-height: 1.25;
+}
+
+.family-tier-price small {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.tier-featured .family-tier-price {
+  color: var(--c-orange-sunset);
+  font-size: 1.05rem;
+}
+
+.family-tier-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.family-tier-inclusions-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--c-earth-brown);
+  margin-top: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.family-tier-inclusions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.family-tier-inclusions li {
+  font-size: 0.7rem;
+  color: var(--c-earth-brown);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.family-tier-inclusions li svg {
+  color: #1E7E34;
+  flex-shrink: 0;
+}
+
+.family-helper-banner {
+  background: rgba(46, 125, 50, 0.07);
+  border: 1px dashed rgba(46, 125, 50, 0.32);
+  border-radius: var(--radius-inner-sm);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.family-helper-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.family-helper-text {
+  font-size: var(--text-xs);
+  color: var(--c-earth-brown);
+  line-height: 1.5;
+}
+
+
+
+.eyebrow-tag-forest {
+  background: rgba(46, 125, 50, 0.1);
+  color: #1E7E34;
+  border-color: rgba(46, 125, 50, 0.28);
+}
+
+/* ==========================================================================
    4. SECCIÓN EXPERIENCIAS (Bento Grid)
    ========================================================================== */
 .section-experiences {
